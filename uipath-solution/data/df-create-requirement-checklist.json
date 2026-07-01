@@ -1,0 +1,20 @@
+{
+  "displayName": "Provider Onboarding Requirement Checklist",
+  "description": "One row per required onboarding item.",
+  "fields": [
+    {
+      "fieldName": "ProviderRecord",
+      "type": "RELATIONSHIP",
+      "displayName": "Provider Record",
+      "referenceEntityId": "1c2defbb-9c74-f111-ac9b-000d3a68f6f7",
+      "referenceFieldId": "c7c861d0-e3b1-4f0e-b217-6165e6091ec9"
+    },
+    { "fieldName": "RequirementCategory", "type": "STRING", "displayName": "Requirement Category" },
+    { "fieldName": "OwnerGroup", "type": "STRING", "displayName": "Owner Group" },
+    { "fieldName": "DueDate", "type": "DATE", "displayName": "Due Date" },
+    { "fieldName": "CompletedAt", "type": "DATETIME_WITH_TZ", "displayName": "Completed At" },
+    { "fieldName": "RequirementState", "type": "STRING", "displayName": "Requirement State" },
+    { "fieldName": "IsBlocking", "type": "BOOLEAN", "displayName": "Is Blocking" },
+    { "fieldName": "RequirementNotes", "type": "MULTILINE_TEXT", "displayName": "Requirement Notes" }
+  ]
+}

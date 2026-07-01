@@ -1,0 +1,12 @@
+{
+  "appName": "provider-onboarding-review-action",
+  "displayName": "provider-onboarding-review-action",
+  "appVersion": "1.0.0",
+  "systemName": "ID458ff92633d740ffb8dd26bf4aa8ac33",
+  "appUrl": "https://uipathlabs.staging.uipath.host/pod-review-action",
+  "routingName": "pod-review-action",
+  "registeredAt": "2026-06-30T17:03:18.147Z",
+  "appType": "Action",
+  "deploymentId": "924e7044-7474-425e-94eb-8b1c5b2321d1",
+  "deployedAt": "2026-06-30T17:05:00.839Z"
+}

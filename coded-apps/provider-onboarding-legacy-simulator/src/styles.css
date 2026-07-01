@@ -1,0 +1,301 @@
+:root {
+  --uipath-blue-900: #0b1f3a;
+  --uipath-blue-800: #112b4f;
+  --uipath-blue-700: #173b6d;
+  --uipath-orange-500: #ff6d00;
+  --uipath-orange-600: #e85f00;
+  --uipath-teal-500: #00a99d;
+  --surface: #f6f8fb;
+  --canvas: #ffffff;
+  --border: #d9e1ea;
+  --text: #102033;
+  --muted: #5b6b7f;
+  font-family: Inter, Poppins, "Segoe UI", Arial, sans-serif;
+  color: var(--text);
+  letter-spacing: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: var(--surface);
+}
+
+button,
+input,
+select {
+  font: inherit;
+  letter-spacing: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+.sim-shell {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 248px minmax(0, 1fr);
+}
+
+.sim-nav {
+  background: var(--uipath-blue-900);
+  color: white;
+  padding: 22px 16px;
+}
+
+.brand-lockup {
+  display: grid;
+  grid-template-columns: 38px minmax(0, 1fr);
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 28px;
+}
+
+.brand-lockup strong,
+.brand-lockup span {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.brand-lockup span {
+  color: #b8c9dc;
+  font-size: 0.8rem;
+}
+
+.brand-mark {
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  background: var(--uipath-orange-500);
+  color: white;
+  border-radius: 6px;
+  font-weight: 800;
+}
+
+.sim-nav nav {
+  display: grid;
+  gap: 6px;
+}
+
+.sim-nav button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  color: #dbe8f6;
+  padding: 10px;
+  text-align: left;
+}
+
+.sim-nav button.active,
+.sim-nav button:hover {
+  background: rgba(255, 255, 255, 0.12);
+  color: white;
+}
+
+.sim-nav svg,
+.lookup-box svg,
+.status-row svg {
+  width: 18px;
+  height: 18px;
+  flex: 0 0 auto;
+}
+
+.sim-content {
+  min-width: 0;
+  padding: 24px;
+}
+
+.sim-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 14px;
+}
+
+.sim-header h1 {
+  margin: 0;
+  color: var(--uipath-blue-900);
+}
+
+.eyebrow {
+  margin: 0 0 6px;
+  color: var(--uipath-orange-600);
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.lookup-box {
+  width: min(360px, 100%);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--canvas);
+  padding: 0 10px;
+}
+
+.lookup-box input {
+  width: 100%;
+  min-width: 0;
+  height: 40px;
+  border: 0;
+  outline: 0;
+}
+
+.status-row {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid #b7ebe6;
+  border-radius: 999px;
+  background: #ecfbf9;
+  color: #08756e;
+  padding: 8px 12px;
+  margin-bottom: 16px;
+  font-weight: 800;
+}
+
+.legacy-panel {
+  background: var(--canvas);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 18px;
+}
+
+.panel-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 16px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 14px;
+  margin-bottom: 18px;
+}
+
+.panel-title h2 {
+  margin: 0;
+  color: var(--uipath-blue-900);
+}
+
+.panel-title span {
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(180px, 1fr));
+  gap: 14px;
+}
+
+.field {
+  display: grid;
+  gap: 6px;
+}
+
+.field span {
+  color: var(--muted);
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+
+.field input,
+.field select {
+  width: 100%;
+  min-width: 0;
+  height: 40px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: white;
+  color: var(--text);
+  padding: 0 10px;
+}
+
+.action-bar {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 18px;
+}
+
+.action-bar button {
+  border: 0;
+  border-radius: 6px;
+  background: var(--uipath-orange-500);
+  color: white;
+  font-weight: 800;
+  padding: 11px 16px;
+}
+
+.action-bar button:hover {
+  background: var(--uipath-orange-600);
+}
+
+@media (max-width: 960px) {
+  .sim-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .sim-nav {
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 12px 16px;
+  }
+
+  .brand-lockup {
+    margin: 0;
+  }
+
+  .sim-nav nav {
+    display: flex;
+    overflow: auto;
+  }
+
+  .sim-nav button {
+    width: auto;
+    white-space: nowrap;
+  }
+
+  .form-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 680px) {
+  .sim-content {
+    padding: 16px;
+  }
+
+  .sim-header,
+  .panel-title {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .brand-lockup div:last-child {
+    display: none;
+  }
+}

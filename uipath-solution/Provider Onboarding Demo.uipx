@@ -1,0 +1,12 @@
+{
+    "DocVersion": "1.0.0",
+    "StudioMinVersion": "2025.10.0",
+    "SolutionId": "2e27098c-5e94-4448-8537-08ded61edffe",
+    "Projects": [
+        {
+            "Type": "CaseManagement",
+            "ProjectRelativePath": "provider-onboarding-case/project.uiproj",
+            "Id": "6440e220-b953-4a61-9c32-4f2b7f25a77e"
+        }
+    ]
+}

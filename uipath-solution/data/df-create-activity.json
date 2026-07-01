@@ -1,0 +1,20 @@
+{
+  "displayName": "Provider Onboarding Activity",
+  "description": "Timeline, audit, communication, and automation events.",
+  "fields": [
+    {
+      "fieldName": "ProviderRecord",
+      "type": "RELATIONSHIP",
+      "displayName": "Provider Record",
+      "referenceEntityId": "1c2defbb-9c74-f111-ac9b-000d3a68f6f7",
+      "referenceFieldId": "c7c861d0-e3b1-4f0e-b217-6165e6091ec9"
+    },
+    { "fieldName": "ActivityCategory", "type": "STRING", "displayName": "Activity Category" },
+    { "fieldName": "SourceSystem", "type": "STRING", "displayName": "Source System" },
+    { "fieldName": "ActivityOwner", "type": "STRING", "displayName": "Activity Owner" },
+    { "fieldName": "ActivityTimestamp", "type": "DATETIME_WITH_TZ", "displayName": "Activity Timestamp" },
+    { "fieldName": "ActivityOutcome", "type": "STRING", "displayName": "Activity Outcome" },
+    { "fieldName": "MessageSummary", "type": "MULTILINE_TEXT", "displayName": "Message Summary" },
+    { "fieldName": "ExternalReference", "type": "STRING", "displayName": "External Reference" }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "displayName": "Provider Onboarding Communication Draft",
+  "description": "Optional audit table for AI-drafted communications.",
+  "fields": [
+    {
+      "fieldName": "ProviderRecord",
+      "type": "RELATIONSHIP",
+      "displayName": "Provider Record",
+      "referenceEntityId": "1c2defbb-9c74-f111-ac9b-000d3a68f6f7",
+      "referenceFieldId": "c7c861d0-e3b1-4f0e-b217-6165e6091ec9"
+    },
+    { "fieldName": "DraftCategory", "type": "STRING", "displayName": "Draft Category" },
+    { "fieldName": "Audience", "type": "STRING", "displayName": "Audience" },
+    { "fieldName": "DraftText", "type": "MULTILINE_TEXT", "displayName": "Draft Text" },
+    { "fieldName": "DraftState", "type": "STRING", "displayName": "Draft State" },
+    { "fieldName": "ReviewerDecision", "type": "STRING", "displayName": "Reviewer Decision" },
+    { "fieldName": "ApprovedAt", "type": "DATETIME_WITH_TZ", "displayName": "Approved At" }
+  ]
+}

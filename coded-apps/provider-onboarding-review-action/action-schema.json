@@ -1,0 +1,48 @@
+{
+  "inputs": {
+    "type": "object",
+    "properties": {
+      "reviewType": { "type": "string", "required": true, "description": "Review context such as intake, document exception, HRIS approval, credentialing, start confirmation, start-date push, touchpoint, or closeout." },
+      "providerRecordId": { "type": "string", "required": true, "description": "Data Fabric provider record identifier." },
+      "candidateName": { "type": "string", "required": false },
+      "hireCategory": { "type": "string", "required": false },
+      "providerSpecialty": { "type": "string", "required": false },
+      "facilityName": { "type": "string", "required": false },
+      "targetStartDate": { "type": "string", "required": false },
+      "onboardingPhase": { "type": "string", "required": false },
+      "clearanceState": { "type": "string", "required": false },
+      "slaRiskLevel": { "type": "string", "required": false },
+      "assignedNavigator": { "type": "string", "required": false },
+      "nextAction": { "type": "string", "required": false },
+      "documents": { "type": "array", "required": false, "items": { "type": "object" } },
+      "requirements": { "type": "array", "required": false, "items": { "type": "object" } },
+      "activities": { "type": "array", "required": false, "items": { "type": "object" } },
+      "communicationDraft": { "type": "object", "required": false }
+    }
+  },
+  "outputs": {
+    "type": "object",
+    "properties": {
+      "reviewerDecision": { "type": "string", "required": true },
+      "reviewerNotes": { "type": "string", "required": false },
+      "resolvedMissingFields": { "type": "string", "required": false },
+      "updatedStartDate": { "type": "string", "required": false },
+      "approvedCommunicationText": { "type": "string", "required": false },
+      "escalationReason": { "type": "string", "required": false }
+    }
+  },
+  "inOuts": {
+    "type": "object",
+    "properties": {}
+  },
+  "outcomes": {
+    "type": "object",
+    "properties": {
+      "Approve": { "type": "string" },
+      "RequestInfo": { "type": "string" },
+      "Reject": { "type": "string" },
+      "Escalate": { "type": "string" },
+      "Close": { "type": "string" }
+    }
+  }
+}

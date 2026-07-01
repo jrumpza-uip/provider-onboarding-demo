@@ -1,0 +1,9 @@
+{
+  "name": "provider-onboarding-legacy-simulator",
+  "displayName": "provider-onboarding-legacy-simulator",
+  "version": "1.0.0",
+  "description": "Provider onboarding legacy simulator coded web app",
+  "author": "UiPath Developer",
+  "contentType": "webapp",
+  "createdAt": "2026-06-30T17:01:36.369Z"
+}

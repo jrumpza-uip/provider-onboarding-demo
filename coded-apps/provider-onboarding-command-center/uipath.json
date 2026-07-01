@@ -1,0 +1,8 @@
+{
+  "clientId": "8b521978-361e-4f1f-85cf-9ab26468788f",
+  "scope": "DataFabric.Schema.Read DataFabric.Data.Read",
+  "baseUrl": "https://staging.api.uipath.com",
+  "orgName": "uipathlabs",
+  "tenantName": "Playground",
+  "redirectUri": ""
+}

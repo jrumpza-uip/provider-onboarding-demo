@@ -1,0 +1,12 @@
+{
+  "appName": "provider-onboarding-command-center",
+  "displayName": "provider-onboarding-command-center",
+  "appVersion": "1.0.1",
+  "systemName": "IDfb83dd50b76245fab4a1c1945368a591",
+  "appUrl": "https://uipathlabs.staging.uipath.host/pod-command-center",
+  "routingName": "pod-command-center",
+  "registeredAt": "2026-06-30T17:41:08.187Z",
+  "appType": "Web",
+  "deploymentId": "8c83659f-c221-40ee-b125-bc8f42555d65",
+  "deployedAt": "2026-06-30T17:45:57.000Z"
+}

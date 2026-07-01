@@ -1,0 +1,12 @@
+[
+  {
+    "ProviderRecord": "a995ece3-0cec-45ce-a500-019f19440cdc",
+    "ActivityCategory": "Document Review",
+    "SourceSystem": "Maestro Case",
+    "ActivityOwner": "Avery Morgan",
+    "ActivityTimestamp": "2026-06-29T15:10:00-05:00",
+    "ActivityOutcome": "Exception Raised",
+    "MessageSummary": "Document agent flagged missing credential evidence.",
+    "ExternalReference": "POD-DEMO-0001"
+  }
+]

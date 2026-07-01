@@ -1,0 +1,38 @@
+{
+  "docVersion": "1.0.0",
+  "resource": {
+    "name": "provider-onboarding-case",
+    "kind": "process",
+    "type": "caseManagement",
+    "apiVersion": "orchestrator.uipath.com/v1",
+    "projectKey": "6440e220-b953-4a61-9c32-4f2b7f25a77e",
+    "dependencies": [
+      {
+        "kind": "package",
+        "name": "provider-onboarding-case"
+      }
+    ],
+    "runtimeDependencies": [],
+    "folders": [
+      {
+        "fullyQualifiedName": "solution_folder"
+      }
+    ],
+    "spec": {
+      "type": "CaseManagement",
+      "name": "provider-onboarding-case",
+      "package": {
+        "key": "8853a4bf-1fdc-4861-bf0b-ababf2351aba"
+      },
+      "packageName": "Provider.Onboarding.Demo.caseManagement.provider-onboarding-case",
+      "targetFrameworkValue": "Portable",
+      "retentionAction": "Delete",
+      "retentionPeriod": 30,
+      "staleRetentionAction": "Delete",
+      "staleRetentionPeriod": 180
+    },
+    "locks": [],
+    "key": "c0e2e864-38e5-47cd-892b-61632dee9ef8",
+    "files": []
+  }
+}

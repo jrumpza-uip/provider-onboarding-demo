@@ -1,0 +1,19 @@
+{
+  "displayName": "Provider Onboarding Main Record",
+  "description": "One row per provider onboarding case.",
+  "fields": [
+    { "fieldName": "CandidateName", "type": "STRING", "displayName": "Candidate Name" },
+    { "fieldName": "HireCategory", "type": "STRING", "displayName": "Hire Category" },
+    { "fieldName": "ProviderSpecialty", "type": "STRING", "displayName": "Provider Specialty" },
+    { "fieldName": "FacilityName", "type": "STRING", "displayName": "Facility Name" },
+    { "fieldName": "TargetStartDate", "type": "DATE", "displayName": "Target Start Date" },
+    { "fieldName": "OnboardingPhase", "type": "STRING", "displayName": "Onboarding Phase" },
+    { "fieldName": "ClearanceState", "type": "STRING", "displayName": "Clearance State" },
+    { "fieldName": "SlaRiskLevel", "type": "STRING", "displayName": "SLA Risk Level" },
+    { "fieldName": "AssignedNavigator", "type": "STRING", "displayName": "Assigned Navigator" },
+    { "fieldName": "EmployeeIdentifier", "type": "STRING", "displayName": "Employee Identifier" },
+    { "fieldName": "PositionControlNumber", "type": "STRING", "displayName": "Position Control Number" },
+    { "fieldName": "ItsmTicketNumber", "type": "STRING", "displayName": "ITSM Ticket Number" },
+    { "fieldName": "NextAction", "type": "STRING", "displayName": "Next Action" }
+  ]
+}

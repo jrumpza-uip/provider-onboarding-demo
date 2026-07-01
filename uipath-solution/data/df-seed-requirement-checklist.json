@@ -1,0 +1,21 @@
+[
+  {
+    "ProviderRecord": "a995ece3-0cec-45ce-a500-019f19440cdc",
+    "RequirementCategory": "License",
+    "OwnerGroup": "Credentialing",
+    "DueDate": "2026-07-10",
+    "RequirementState": "Missing Evidence",
+    "IsBlocking": true,
+    "RequirementNotes": "Awaiting uploaded license evidence."
+  },
+  {
+    "ProviderRecord": "fdf5ab38-264d-4db9-abe9-019f19440cdd",
+    "RequirementCategory": "Transfer Ticket",
+    "OwnerGroup": "ITSM",
+    "DueDate": "2026-07-15",
+    "CompletedAt": "2026-06-29T14:30:00-05:00",
+    "RequirementState": "Complete",
+    "IsBlocking": false,
+    "RequirementNotes": "Transfer ticket created in simulator."
+  }
+]

@@ -1,0 +1,46 @@
+{
+  "tenant": {
+    "baseUrl": "https://staging.uipath.com",
+    "organization": "uipathlabs",
+    "tenant": "Playground"
+  },
+  "entities": {
+    "ProviderOnboarding_MainRecord": {
+      "id": "1c2defbb-9c74-f111-ac9b-000d3a68f6f7",
+      "recordCount": 2,
+      "records": {
+        "Jordan Avery": "a995ece3-0cec-45ce-a500-019f19440cdc",
+        "Riley Chen": "fdf5ab38-264d-4db9-abe9-019f19440cdd"
+      }
+    },
+    "ProviderOnboarding_Documents": {
+      "id": "289c15eb-9c74-f111-ac9b-000d3a68f6f7",
+      "recordCount": 1,
+      "records": {
+        "jordan-avery-new-hire-data-sheet.pdf": "3a75d835-9d74-f111-ac9a-000d3adae0ea"
+      }
+    },
+    "ProviderOnboarding_RequirementChecklist": {
+      "id": "489c15eb-9c74-f111-ac9b-000d3a68f6f7",
+      "recordCount": 2,
+      "records": {
+        "Jordan Avery License": "09bb13e5-d3a8-47a3-87e0-019f19455220",
+        "Riley Chen Transfer Ticket": "2531046c-f5ed-43eb-9aec-019f19455221"
+      }
+    },
+    "ProviderOnboarding_Activity": {
+      "id": "619c15eb-9c74-f111-ac9b-000d3a68f6f7",
+      "recordCount": 1,
+      "records": {
+        "POD-DEMO-0001": "3d75d835-9d74-f111-ac9a-000d3adae0ea"
+      }
+    },
+    "ProviderOnboarding_CommunicationDraft": {
+      "id": "799c15eb-9c74-f111-ac9b-000d3a68f6f7",
+      "recordCount": 1,
+      "records": {
+        "Jordan Avery Start Date Push": "3e75d835-9d74-f111-ac9a-000d3adae0ea"
+      }
+    }
+  }
+}

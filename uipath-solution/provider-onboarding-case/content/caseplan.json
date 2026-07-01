@@ -1,0 +1,1138 @@
+{
+    "id": "case-GSYapiV5lh",
+    "name": "Provider Onboarding Demo",
+    "version": "20.0.0",
+    "description": "ACME Health provider onboarding case from intake through post-start follow-up.",
+    "bindings": [
+        {
+            "id": "bPODRVN01",
+            "name": "name",
+            "type": "string",
+            "resource": "app",
+            "resourceKey": "joseph.rumpza@uipath.com's workspace.provider-onboarding-review-action",
+            "default": "provider-onboarding-review-action",
+            "propertyAttribute": "name"
+        },
+        {
+            "id": "bPODRVF01",
+            "name": "folderPath",
+            "type": "string",
+            "resource": "app",
+            "resourceKey": "joseph.rumpza@uipath.com's workspace.provider-onboarding-review-action",
+            "default": "joseph.rumpza@uipath.com's workspace",
+            "propertyAttribute": "folderPath"
+        }
+    ],
+    "variables": {
+        "inputOutputs": []
+    },
+    "metadata": {
+        "caseIdentifier": "POD",
+        "caseAppEnabled": false,
+        "caseIdentifierType": "constant",
+        "publishVersion": 2,
+        "caseExitRules": [
+            {
+                "id": "Condition_Rie7CQ",
+                "displayName": "All required onboarding stages complete",
+                "rules": [
+                    [
+                        {
+                            "rule": "required-stages-completed",
+                            "id": "Rule_0J1Mwr"
+                        }
+                    ]
+                ],
+                "marksCaseComplete": true
+            }
+        ]
+    },
+    "nodes": [
+        {
+            "id": "Stage_055Tue",
+            "type": "case-management:Stage",
+            "position": {
+                "x": 3100,
+                "y": 200
+            },
+            "style": {
+                "width": 304,
+                "opacity": 0.8
+            },
+            "measured": {
+                "width": 304,
+                "height": 128
+            },
+            "width": 304,
+            "zIndex": 1001,
+            "data": {
+                "label": "Closeout and Reporting",
+                "parentElement": {
+                    "id": "root",
+                    "type": "case-management:root"
+                },
+                "isInvalidDropTarget": false,
+                "isPendingParent": false,
+                "tasks": [
+                    [
+                        {
+                            "id": "thIjapaA6",
+                            "displayName": "Weekly Report-Out Process",
+                            "shouldRunOnlyOnce": true,
+                            "description": "Placeholder process for weekly report-out and dashboard summary refresh.",
+                            "type": "process",
+                            "data": {
+                                "name": "Provider Onboarding Weekly Report-Out",
+                                "folderPath": "Shared"
+                            },
+                            "entryConditions": [
+                                {
+                                    "id": "Condition_2oBe51",
+                                    "displayName": "Start Weekly Report-Out Process",
+                                    "rules": [
+                                        [
+                                            {
+                                                "rule": "current-stage-entered",
+                                                "id": "Rule_5vTDNh"
+                                            }
+                                        ]
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "id": "tmM92drpd",
+                            "displayName": "Closeout Review",
+                            "shouldRunOnlyOnce": true,
+                            "description": "Human reviewer confirms completion, exceptions, report-out data, and audit trail before case close.",
+                            "isRequired": true,
+                            "type": "action",
+                            "data": {
+                                "taskTitle": "Close provider onboarding case",
+                                "priority": "Medium",
+                                "assignmentCriteria": "user",
+                                "recipient": {
+                                    "Type": 2,
+                                    "Value": "onboarding.navigator@acme.example"
+                                },
+                                "name": "=bindings.bPODRVN01",
+                                "folderPath": "=bindings.bPODRVF01"
+                            },
+                            "entryConditions": [
+                                {
+                                    "id": "Condition_zYuG8K",
+                                    "displayName": "Start Closeout Review",
+                                    "rules": [
+                                        [
+                                            {
+                                                "rule": "current-stage-entered",
+                                                "id": "Rule_biqUQs"
+                                            }
+                                        ]
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                ],
+                "description": "Close the onboarding case, capture timeline activity, and produce weekly report-out data.",
+                "isRequired": true,
+                "entryConditions": [
+                    {
+                        "id": "Condition_FflZt8",
+                        "displayName": "Touchpoints complete",
+                        "rules": [
+                            [
+                                {
+                                    "rule": "selected-stage-completed",
+                                    "id": "Rule_AqZsK5",
+                                    "selectedStageId": "Stage_VtP3ja"
+                                }
+                            ]
+                        ],
+                        "isInterrupting": false
+                    }
+                ],
+                "exitConditions": [
+                    {
+                        "id": "Condition_P6lND3",
+                        "displayName": "Closeout and Reporting complete",
+                        "rules": [
+                            [
+                                {
+                                    "rule": "required-tasks-completed",
+                                    "id": "Rule_axRerB"
+                                }
+                            ]
+                        ],
+                        "type": "exit-only",
+                        "marksStageComplete": true
+                    }
+                ]
+            }
+        },
+        {
+            "id": "Stage_VtP3ja",
+            "type": "case-management:Stage",
+            "position": {
+                "x": 2600,
+                "y": 200
+            },
+            "style": {
+                "width": 304,
+                "opacity": 0.8
+            },
+            "measured": {
+                "width": 304,
+                "height": 128
+            },
+            "width": 304,
+            "zIndex": 1001,
+            "data": {
+                "label": "Post-Start Touchpoints",
+                "parentElement": {
+                    "id": "root",
+                    "type": "case-management:root"
+                },
+                "isInvalidDropTarget": false,
+                "isPendingParent": false,
+                "tasks": [
+                    [
+                        {
+                            "id": "t09iKgLIp",
+                            "displayName": "Touchpoint Concierge Agent",
+                            "shouldRunOnlyOnce": true,
+                            "description": "Drafts Day 1, 5-day, 30-day, and 90-day provider and manager follow-up messages.",
+                            "isRequired": true,
+                            "type": "agent",
+                            "data": {
+                                "name": "Touchpoint Concierge Agent",
+                                "folderPath": "Shared"
+                            },
+                            "entryConditions": [
+                                {
+                                    "id": "Condition_7uctCG",
+                                    "displayName": "Start Touchpoint Concierge Agent",
+                                    "rules": [
+                                        [
+                                            {
+                                                "rule": "current-stage-entered",
+                                                "id": "Rule_XdmtOJ"
+                                            }
+                                        ]
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "id": "tyk87g7kX",
+                            "displayName": "Touchpoint Approval",
+                            "shouldRunOnlyOnce": true,
+                            "description": "Human reviewer approves AI-drafted employee and manager touchpoint messages before sending.",
+                            "isRequired": true,
+                            "type": "action",
+                            "data": {
+                                "taskTitle": "Approve provider touchpoints",
+                                "priority": "Medium",
+                                "assignmentCriteria": "user",
+                                "recipient": {
+                                    "Type": 2,
+                                    "Value": "onboarding.navigator@acme.example"
+                                },
+                                "name": "=bindings.bPODRVN01",
+                                "folderPath": "=bindings.bPODRVF01"
+                            },
+                            "entryConditions": [
+                                {
+                                    "id": "Condition_kNVg04",
+                                    "displayName": "Start Touchpoint Approval",
+                                    "rules": [
+                                        [
+                                            {
+                                                "rule": "current-stage-entered",
+                                                "id": "Rule_3HzJpY"
+                                            }
+                                        ]
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "id": "tmp6x8kYn",
+                            "displayName": "30-Day Follow-up Timer",
+                            "shouldRunOnlyOnce": true,
+                            "description": "Demo timer for 30-day follow-up.",
+                            "type": "wait-for-timer",
+                            "data": {
+                                "timerType": "timeDuration",
+                                "timeDuration": "PT30M"
+                            },
+                            "entryConditions": [
+                                {
+                                    "id": "Condition_0DT8Tp",
+                                    "displayName": "Start 30-Day Follow-up Timer",
+                                    "rules": [
+                                        [
+                                            {
+                                                "rule": "current-stage-entered",
+                                                "id": "Rule_UgaKN6"
+                                            }
+                                        ]
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "id": "tmwLWnaJq",
+                            "displayName": "90-Day Follow-up Timer",
+                            "shouldRunOnlyOnce": true,
+                            "description": "Demo timer for 90-day follow-up.",
+                            "type": "wait-for-timer",
+                            "data": {
+                                "timerType": "timeDuration",
+                                "timeDuration": "PT90M"
+                            },
+                            "entryConditions": [
+                                {
+                                    "id": "Condition_t2Onv2",
+                                    "displayName": "Start 90-Day Follow-up Timer",
+                                    "rules": [
+                                        [
+                                            {
+                                                "rule": "current-stage-entered",
+                                                "id": "Rule_ktaWwD"
+                                            }
+                                        ]
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                ],
+                "description": "Draft and approve Day 1, 5-day, 30-day, and 90-day follow-up messages.",
+                "isRequired": true,
+                "entryConditions": [
+                    {
+                        "id": "Condition_mUrwYF",
+                        "displayName": "Start confirmed",
+                        "rules": [
+                            [
+                                {
+                                    "rule": "selected-stage-completed",
+                                    "id": "Rule_IXmG37",
+                                    "selectedStageId": "Stage_Im9O2V"
+                                }
+                            ]
+                        ],
+                        "isInterrupting": false
+                    }
+                ],
+                "exitConditions": [
+                    {
+                        "id": "Condition_mS8tEV",
+                        "displayName": "Post-Start Touchpoints complete",
+                        "rules": [
+                            [
+                                {
+                                    "rule": "required-tasks-completed",
+                                    "id": "Rule_h4KXUr"
+                                }
+                            ]
+                        ],
+                        "type": "exit-only",
+                        "marksStageComplete": true
+                    }
+                ]
+            }
+        },
+        {
+            "id": "Stage_Im9O2V",
+            "type": "case-management:Stage",
+            "position": {
+                "x": 2100,
+                "y": 200
+            },
+            "style": {
+                "width": 304,
+                "opacity": 0.8
+            },
+            "measured": {
+                "width": 304,
+                "height": 128
+            },
+            "width": 304,
+            "zIndex": 1001,
+            "data": {
+                "label": "Pre-Start Readiness",
+                "parentElement": {
+                    "id": "root",
+                    "type": "case-management:root"
+                },
+                "isInvalidDropTarget": false,
+                "isPendingParent": false,
+                "tasks": [
+                    [
+                        {
+                            "id": "tS9W0f0hH",
+                            "displayName": "Start Confirmation Review",
+                            "shouldRunOnlyOnce": true,
+                            "description": "Reviewer confirms badge, orientation, start date, and clearance readiness.",
+                            "isRequired": true,
+                            "type": "action",
+                            "data": {
+                                "taskTitle": "Confirm provider start readiness",
+                                "priority": "Critical",
+                                "assignmentCriteria": "user",
+                                "recipient": {
+                                    "Type": 2,
+                                    "Value": "onboarding.navigator@acme.example"
+                                },
+                                "name": "=bindings.bPODRVN01",
+                                "folderPath": "=bindings.bPODRVF01"
+                            },
+                            "entryConditions": [
+                                {
+                                    "id": "Condition_tgBuo0",
+                                    "displayName": "Start Start Confirmation Review",
+                                    "rules": [
+                                        [
+                                            {
+                                                "rule": "current-stage-entered",
+                                                "id": "Rule_D6KsRi"
+                                            }
+                                        ]
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "id": "t6WJo59CD",
+                            "displayName": "Start-Date Push Draft Agent",
+                            "shouldRunOnlyOnce": true,
+                            "description": "Drafts a sanitized explanation when clearances require a revised start date.",
+                            "type": "agent",
+                            "data": {
+                                "name": "Touchpoint Concierge Agent",
+                                "folderPath": "Shared"
+                            },
+                            "entryConditions": [
+                                {
+                                    "id": "Condition_txnmf9",
+                                    "displayName": "Start Start-Date Push Draft Agent",
+                                    "rules": [
+                                        [
+                                            {
+                                                "rule": "current-stage-entered",
+                                                "id": "Rule_E1TIi2"
+                                            }
+                                        ]
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "id": "trH8tYQMM",
+                            "displayName": "Start-Date Push Approval",
+                            "shouldRunOnlyOnce": true,
+                            "description": "Human reviewer approves revised start date and generated explanation before sending.",
+                            "type": "action",
+                            "data": {
+                                "taskTitle": "Approve start-date push",
+                                "priority": "High",
+                                "assignmentCriteria": "user",
+                                "recipient": {
+                                    "Type": 2,
+                                    "Value": "onboarding.navigator@acme.example"
+                                },
+                                "name": "=bindings.bPODRVN01",
+                                "folderPath": "=bindings.bPODRVF01"
+                            },
+                            "entryConditions": [
+                                {
+                                    "id": "Condition_uNqxH0",
+                                    "displayName": "Start Start-Date Push Approval",
+                                    "rules": [
+                                        [
+                                            {
+                                                "rule": "current-stage-entered",
+                                                "id": "Rule_LyZGI7"
+                                            }
+                                        ]
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                ],
+                "description": "Confirm badge, orientation, clearances, start date, and start-date push decisions.",
+                "isRequired": true,
+                "entryConditions": [
+                    {
+                        "id": "Condition_AIADTS",
+                        "displayName": "Clearances complete",
+                        "rules": [
+                            [
+                                {
+                                    "rule": "selected-stage-completed",
+                                    "id": "Rule_gZpPbO",
+                                    "selectedStageId": "Stage_oqtm3x"
+                                }
+                            ]
+                        ],
+                        "isInterrupting": false
+                    }
+                ],
+                "exitConditions": [
+                    {
+                        "id": "Condition_Q8HGl5",
+                        "displayName": "Pre-Start Readiness complete",
+                        "rules": [
+                            [
+                                {
+                                    "rule": "required-tasks-completed",
+                                    "id": "Rule_FDA6b0"
+                                }
+                            ]
+                        ],
+                        "type": "exit-only",
+                        "marksStageComplete": true
+                    }
+                ]
+            }
+        },
+        {
+            "id": "Stage_oqtm3x",
+            "type": "case-management:Stage",
+            "position": {
+                "x": 1600,
+                "y": 200
+            },
+            "style": {
+                "width": 304,
+                "opacity": 0.8
+            },
+            "measured": {
+                "width": 304,
+                "height": 128
+            },
+            "width": 304,
+            "zIndex": 1001,
+            "data": {
+                "label": "Employee Health and Credentialing",
+                "parentElement": {
+                    "id": "root",
+                    "type": "case-management:root"
+                },
+                "isInvalidDropTarget": false,
+                "isPendingParent": false,
+                "tasks": [
+                    [
+                        {
+                            "id": "t08Vu2zfd",
+                            "displayName": "Credential Readiness Agent",
+                            "shouldRunOnlyOnce": true,
+                            "description": "Evaluates license, CDS, DEA, exclusion, payor, MSO, and employee-health readiness signals.",
+                            "isRequired": true,
+                            "type": "agent",
+                            "data": {
+                                "name": "Credential Readiness Agent",
+                                "folderPath": "Shared"
+                            },
+                            "entryConditions": [
+                                {
+                                    "id": "Condition_lVRAdp",
+                                    "displayName": "Start Credential Readiness Agent",
+                                    "rules": [
+                                        [
+                                            {
+                                                "rule": "current-stage-entered",
+                                                "id": "Rule_I77bmL"
+                                            }
+                                        ]
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "id": "ty4Sh4b0X",
+                            "displayName": "ACME Employee Health Clearance Update",
+                            "shouldRunOnlyOnce": true,
+                            "description": "RPA placeholder for simulator updates to employee-health clearance status.",
+                            "type": "rpa",
+                            "data": {
+                                "name": "ACME Employee Health Clearance Update",
+                                "folderPath": "Shared"
+                            },
+                            "entryConditions": [
+                                {
+                                    "id": "Condition_QoLEBP",
+                                    "displayName": "Start ACME Employee Health Clearance Update",
+                                    "rules": [
+                                        [
+                                            {
+                                                "rule": "current-stage-entered",
+                                                "id": "Rule_H7VIhy"
+                                            }
+                                        ]
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "id": "tiqZ6nTUj",
+                            "displayName": "Credentialing Exception Review",
+                            "shouldRunOnlyOnce": true,
+                            "description": "Human reviewer resolves missing license, DEA/CDS, background, exclusion, payor, or MSO evidence.",
+                            "type": "action",
+                            "data": {
+                                "taskTitle": "Review credentialing exception",
+                                "priority": "High",
+                                "assignmentCriteria": "user",
+                                "recipient": {
+                                    "Type": 2,
+                                    "Value": "credentialing.team@acme.example"
+                                },
+                                "name": "=bindings.bPODRVN01",
+                                "folderPath": "=bindings.bPODRVF01"
+                            },
+                            "entryConditions": [
+                                {
+                                    "id": "Condition_4yGD9U",
+                                    "displayName": "Start Credentialing Exception Review",
+                                    "rules": [
+                                        [
+                                            {
+                                                "rule": "current-stage-entered",
+                                                "id": "Rule_LsOL6G"
+                                            }
+                                        ]
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "id": "tbO1hXOgN",
+                            "displayName": "Clearance SLA Risk Timer",
+                            "shouldRunOnlyOnce": true,
+                            "description": "Demo timer representing delayed clearance and SLA risk escalation.",
+                            "type": "wait-for-timer",
+                            "data": {
+                                "timerType": "timeDuration",
+                                "timeDuration": "PT4H"
+                            },
+                            "entryConditions": [
+                                {
+                                    "id": "Condition_QExc5S",
+                                    "displayName": "Start Clearance SLA Risk Timer",
+                                    "rules": [
+                                        [
+                                            {
+                                                "rule": "current-stage-entered",
+                                                "id": "Rule_V38Btd"
+                                            }
+                                        ]
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                ],
+                "description": "Run credential readiness and employee-health clearance workstreams with exception review for delays.",
+                "isRequired": true,
+                "entryConditions": [
+                    {
+                        "id": "Condition_6oikTj",
+                        "displayName": "HRIS setup complete",
+                        "rules": [
+                            [
+                                {
+                                    "rule": "selected-stage-completed",
+                                    "id": "Rule_pyjgRK",
+                                    "selectedStageId": "Stage_l7iuCf"
+                                }
+                            ]
+                        ],
+                        "isInterrupting": false
+                    }
+                ],
+                "exitConditions": [
+                    {
+                        "id": "Condition_AdmnbS",
+                        "displayName": "Employee Health and Credentialing complete",
+                        "rules": [
+                            [
+                                {
+                                    "rule": "required-tasks-completed",
+                                    "id": "Rule_PJnfhC"
+                                }
+                            ]
+                        ],
+                        "type": "exit-only",
+                        "marksStageComplete": true
+                    }
+                ]
+            }
+        },
+        {
+            "id": "Stage_l7iuCf",
+            "type": "case-management:Stage",
+            "position": {
+                "x": 1100,
+                "y": 200
+            },
+            "style": {
+                "width": 304,
+                "opacity": 0.8
+            },
+            "measured": {
+                "width": 304,
+                "height": 128
+            },
+            "width": 304,
+            "zIndex": 1001,
+            "data": {
+                "label": "HRIS / Transfer Setup",
+                "parentElement": {
+                    "id": "root",
+                    "type": "case-management:root"
+                },
+                "isInvalidDropTarget": false,
+                "isPendingParent": false,
+                "tasks": [
+                    [
+                        {
+                            "id": "tFXMRYhr9",
+                            "displayName": "HRIS Approval Gate",
+                            "shouldRunOnlyOnce": true,
+                            "description": "Human gate confirms packet, I-9, and background prerequisites before HRIS submission.",
+                            "isRequired": true,
+                            "type": "action",
+                            "data": {
+                                "taskTitle": "Approve HRIS submission",
+                                "priority": "Critical",
+                                "assignmentCriteria": "user",
+                                "recipient": {
+                                    "Type": 2,
+                                    "Value": "onboarding.navigator@acme.example"
+                                },
+                                "name": "=bindings.bPODRVN01",
+                                "folderPath": "=bindings.bPODRVF01"
+                            },
+                            "entryConditions": [
+                                {
+                                    "id": "Condition_e461Db",
+                                    "displayName": "Start HRIS Approval Gate",
+                                    "rules": [
+                                        [
+                                            {
+                                                "rule": "current-stage-entered",
+                                                "id": "Rule_GjzxVm"
+                                            }
+                                        ]
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "id": "t5RatyDVS",
+                            "displayName": "ACME HRIS Create PCN and EID",
+                            "shouldRunOnlyOnce": true,
+                            "description": "RPA placeholder for simulator automation that creates or updates PCN and EID values.",
+                            "isRequired": true,
+                            "type": "rpa",
+                            "data": {
+                                "name": "ACME HRIS Create PCN and EID",
+                                "folderPath": "Shared"
+                            },
+                            "entryConditions": [
+                                {
+                                    "id": "Condition_NMtwXy",
+                                    "displayName": "Start ACME HRIS Create PCN and EID",
+                                    "rules": [
+                                        [
+                                            {
+                                                "rule": "current-stage-entered",
+                                                "id": "Rule_oWsn1g"
+                                            }
+                                        ]
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "id": "tFi4cOjhp",
+                            "displayName": "ACME ITSM Transfer Ticket",
+                            "shouldRunOnlyOnce": true,
+                            "description": "RPA placeholder for transfer setup ticket creation in the ACME ITSM simulator.",
+                            "type": "rpa",
+                            "data": {
+                                "name": "ACME ITSM Transfer Ticket",
+                                "folderPath": "Shared"
+                            },
+                            "entryConditions": [
+                                {
+                                    "id": "Condition_OTtGUJ",
+                                    "displayName": "Start ACME ITSM Transfer Ticket",
+                                    "rules": [
+                                        [
+                                            {
+                                                "rule": "current-stage-entered",
+                                                "id": "Rule_ufjHHp"
+                                            }
+                                        ]
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                ],
+                "description": "Gate HRIS submission until packet, I-9, and background prerequisites are complete; create PCN, EID, and transfer tickets.",
+                "isRequired": true,
+                "entryConditions": [
+                    {
+                        "id": "Condition_PJKjse",
+                        "displayName": "Documents approved",
+                        "rules": [
+                            [
+                                {
+                                    "rule": "selected-stage-completed",
+                                    "id": "Rule_tZdTao",
+                                    "selectedStageId": "Stage_aZolUr"
+                                }
+                            ]
+                        ],
+                        "isInterrupting": false
+                    }
+                ],
+                "exitConditions": [
+                    {
+                        "id": "Condition_IwrxLL",
+                        "displayName": "HRIS / Transfer Setup complete",
+                        "rules": [
+                            [
+                                {
+                                    "rule": "required-tasks-completed",
+                                    "id": "Rule_ChFvEU"
+                                }
+                            ]
+                        ],
+                        "type": "exit-only",
+                        "marksStageComplete": true
+                    }
+                ]
+            }
+        },
+        {
+            "id": "Stage_aZolUr",
+            "type": "case-management:Stage",
+            "position": {
+                "x": 600,
+                "y": 200
+            },
+            "style": {
+                "width": 304,
+                "opacity": 0.8
+            },
+            "measured": {
+                "width": 304,
+                "height": 128
+            },
+            "width": 304,
+            "zIndex": 1001,
+            "data": {
+                "label": "Document Collection",
+                "parentElement": {
+                    "id": "root",
+                    "type": "case-management:root"
+                },
+                "isInvalidDropTarget": false,
+                "isPendingParent": false,
+                "tasks": [
+                    [
+                        {
+                            "id": "tyBh6bVDB",
+                            "displayName": "Document Extraction and Validation Agent",
+                            "shouldRunOnlyOnce": true,
+                            "description": "Extracts sanitized onboarding forms and flags missing or low-confidence fields.",
+                            "isRequired": true,
+                            "type": "agent",
+                            "data": {
+                                "name": "Document Extraction and Validation Agent",
+                                "folderPath": "Shared"
+                            },
+                            "entryConditions": [
+                                {
+                                    "id": "Condition_NUNx51",
+                                    "displayName": "Start Document Extraction and Validation Agent",
+                                    "rules": [
+                                        [
+                                            {
+                                                "rule": "current-stage-entered",
+                                                "id": "Rule_6k3a2S"
+                                            }
+                                        ]
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "id": "tLEIt4KHb",
+                            "displayName": "Document Exception Review",
+                            "shouldRunOnlyOnce": true,
+                            "description": "Reviewer approves extracted data, resolves missing fields, and records document decisions.",
+                            "isRequired": true,
+                            "type": "action",
+                            "data": {
+                                "taskTitle": "Resolve document exceptions",
+                                "priority": "High",
+                                "assignmentCriteria": "user",
+                                "recipient": {
+                                    "Type": 2,
+                                    "Value": "onboarding.navigator@acme.example"
+                                },
+                                "name": "=bindings.bPODRVN01",
+                                "folderPath": "=bindings.bPODRVF01"
+                            },
+                            "entryConditions": [
+                                {
+                                    "id": "Condition_qdH2dD",
+                                    "displayName": "Start Document Exception Review",
+                                    "rules": [
+                                        [
+                                            {
+                                                "rule": "current-stage-entered",
+                                                "id": "Rule_5NJ9TZ"
+                                            }
+                                        ]
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "id": "tUDp2KRyy",
+                            "displayName": "Missing Document Follow-up Timer",
+                            "shouldRunOnlyOnce": true,
+                            "description": "Demo timer representing a pause while requested evidence is collected.",
+                            "type": "wait-for-timer",
+                            "data": {
+                                "timerType": "timeDuration",
+                                "timeDuration": "PT2H"
+                            },
+                            "entryConditions": [
+                                {
+                                    "id": "Condition_Ozt5KT",
+                                    "displayName": "Start Missing Document Follow-up Timer",
+                                    "rules": [
+                                        [
+                                            {
+                                                "rule": "current-stage-entered",
+                                                "id": "Rule_k7zjq0"
+                                            }
+                                        ]
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                ],
+                "description": "Extract and validate onboarding forms, credentials, background, I-9, license, and missing-field summaries.",
+                "isRequired": true,
+                "entryConditions": [
+                    {
+                        "id": "Condition_C885IU",
+                        "displayName": "Intake complete",
+                        "rules": [
+                            [
+                                {
+                                    "rule": "selected-stage-completed",
+                                    "id": "Rule_iCvr1f",
+                                    "selectedStageId": "Stage_g43Pmt"
+                                }
+                            ]
+                        ],
+                        "isInterrupting": false
+                    }
+                ],
+                "exitConditions": [
+                    {
+                        "id": "Condition_9aX29f",
+                        "displayName": "Document Collection complete",
+                        "rules": [
+                            [
+                                {
+                                    "rule": "required-tasks-completed",
+                                    "id": "Rule_4oOjkq"
+                                }
+                            ]
+                        ],
+                        "type": "exit-only",
+                        "marksStageComplete": true
+                    }
+                ]
+            }
+        },
+        {
+            "id": "Stage_g43Pmt",
+            "type": "case-management:Stage",
+            "position": {
+                "x": 100,
+                "y": 200
+            },
+            "style": {
+                "width": 304,
+                "opacity": 0.8
+            },
+            "measured": {
+                "width": 304,
+                "height": 128
+            },
+            "width": 304,
+            "zIndex": 1001,
+            "data": {
+                "label": "Intake",
+                "parentElement": {
+                    "id": "root",
+                    "type": "case-management:root"
+                },
+                "isInvalidDropTarget": false,
+                "isPendingParent": false,
+                "tasks": [
+                    [
+                        {
+                            "id": "ttgdOeDmr",
+                            "displayName": "Intake Triage Agent",
+                            "shouldRunOnlyOnce": true,
+                            "description": "Classify hire category, provider specialty, source packet type, and initial required forms.",
+                            "isRequired": true,
+                            "type": "agent",
+                            "data": {
+                                "name": "Intake Triage Agent",
+                                "folderPath": "Shared"
+                            },
+                            "entryConditions": [
+                                {
+                                    "id": "Condition_iGFco9",
+                                    "displayName": "Start Intake Triage Agent",
+                                    "rules": [
+                                        [
+                                            {
+                                                "rule": "current-stage-entered",
+                                                "id": "Rule_O95guU"
+                                            }
+                                        ]
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "id": "tHSvxafQK",
+                            "displayName": "Provider Intake Review",
+                            "shouldRunOnlyOnce": true,
+                            "description": "Human reviewer confirms demographics, role, facility, hire category, compensation notes, and missing documents.",
+                            "isRequired": true,
+                            "type": "action",
+                            "data": {
+                                "taskTitle": "Review provider intake",
+                                "priority": "High",
+                                "assignmentCriteria": "user",
+                                "recipient": {
+                                    "Type": 2,
+                                    "Value": "onboarding.navigator@acme.example"
+                                },
+                                "name": "=bindings.bPODRVN01",
+                                "folderPath": "=bindings.bPODRVF01"
+                            },
+                            "entryConditions": [
+                                {
+                                    "id": "Condition_uAoSjj",
+                                    "displayName": "Start Provider Intake Review",
+                                    "rules": [
+                                        [
+                                            {
+                                                "rule": "current-stage-entered",
+                                                "id": "Rule_DRMFVL"
+                                            }
+                                        ]
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                ],
+                "description": "Start from uploaded onboarding packet or manual intake; classify hire category and initial requirements.",
+                "isRequired": true,
+                "entryConditions": [
+                    {
+                        "id": "Condition_gL6uBj",
+                        "displayName": "Case started",
+                        "rules": [
+                            [
+                                {
+                                    "rule": "case-entered",
+                                    "id": "Rule_5pDYW4"
+                                }
+                            ]
+                        ],
+                        "isInterrupting": false
+                    }
+                ],
+                "exitConditions": [
+                    {
+                        "id": "Condition_bMzPkq",
+                        "displayName": "Intake complete",
+                        "rules": [
+                            [
+                                {
+                                    "rule": "required-tasks-completed",
+                                    "id": "Rule_WUxTpF"
+                                }
+                            ]
+                        ],
+                        "type": "exit-only",
+                        "marksStageComplete": true
+                    }
+                ]
+            }
+        },
+        {
+            "id": "trigger_1",
+            "type": "case-management:Trigger",
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "data": {
+                "label": "Trigger 1"
+            }
+        }
+    ],
+    "edges": []
+}

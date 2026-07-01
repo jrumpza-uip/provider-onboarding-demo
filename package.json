@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "@uipath/case-tool": "^1.196.0",
+    "@uipath/cli": "^1.196.2",
+    "@uipath/codedapp-tool": "^1.196.0",
+    "@uipath/data-fabric-tool": "^1.196.0",
+    "@uipath/maestro-tool": "^1.196.1",
+    "@uipath/orchestrator-tool": "^1.196.0",
+    "@uipath/solution-tool": "^1.196.0"
+  }
+}

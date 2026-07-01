@@ -1,0 +1,92 @@
+{
+  "ProviderOnboarding_MainRecord": [
+    {
+      "CandidateName": "Jordan Avery",
+      "HireCategory": "Full-time provider",
+      "ProviderSpecialty": "Family Medicine",
+      "FacilityName": "ACME Health North Clinic",
+      "TargetStartDate": "2026-08-03",
+      "OnboardingPhase": "Document Collection",
+      "ClearanceState": "Pending",
+      "SlaRiskLevel": "Medium",
+      "AssignedNavigator": "Avery Morgan",
+      "EmployeeIdentifier": "",
+      "PositionControlNumber": "",
+      "ItsmTicketNumber": "",
+      "NextAction": "Resolve missing license evidence"
+    },
+    {
+      "CandidateName": "Riley Chen",
+      "HireCategory": "Internal transfer",
+      "ProviderSpecialty": "Urgent Care",
+      "FacilityName": "ACME Health West Campus",
+      "TargetStartDate": "2026-08-17",
+      "OnboardingPhase": "HRIS / Transfer Setup",
+      "ClearanceState": "Ready for HRIS",
+      "SlaRiskLevel": "Low",
+      "AssignedNavigator": "Taylor Brooks",
+      "EmployeeIdentifier": "EID-41092",
+      "PositionControlNumber": "",
+      "ItsmTicketNumber": "ITSM-20418",
+      "NextAction": "Approve HRIS submission"
+    }
+  ],
+  "ProviderOnboarding_Documents": [
+    {
+      "ProviderRecord": "Jordan Avery",
+      "DocumentCategory": "New Hire Data Sheet",
+      "SourceFileName": "jordan-avery-new-hire-data-sheet.pdf",
+      "ReceivedAt": "2026-06-29T15:00:00-05:00",
+      "ExtractionState": "Needs Review",
+      "ExtractionConfidence": 0.82,
+      "MissingFieldSummary": "License expiration date and background confirmation missing.",
+      "ReviewerDecision": "Pending",
+      "StorageBucketPath": "provider-onboarding/JordanAvery/new-hire-data-sheet.pdf"
+    }
+  ],
+  "ProviderOnboarding_RequirementChecklist": [
+    {
+      "ProviderRecord": "Jordan Avery",
+      "RequirementCategory": "License",
+      "OwnerGroup": "Credentialing",
+      "DueDate": "2026-07-10",
+      "CompletedAt": "",
+      "RequirementState": "Missing Evidence",
+      "IsBlocking": true,
+      "RequirementNotes": "Awaiting uploaded license evidence."
+    },
+    {
+      "ProviderRecord": "Riley Chen",
+      "RequirementCategory": "Transfer Ticket",
+      "OwnerGroup": "ITSM",
+      "DueDate": "2026-07-15",
+      "CompletedAt": "2026-06-29T14:30:00-05:00",
+      "RequirementState": "Complete",
+      "IsBlocking": false,
+      "RequirementNotes": "Transfer ticket created in simulator."
+    }
+  ],
+  "ProviderOnboarding_Activity": [
+    {
+      "ProviderRecord": "Jordan Avery",
+      "ActivityCategory": "Document Review",
+      "SourceSystem": "Maestro Case",
+      "ActivityOwner": "Avery Morgan",
+      "ActivityTimestamp": "2026-06-29T15:10:00-05:00",
+      "ActivityOutcome": "Exception Raised",
+      "MessageSummary": "Document agent flagged missing credential evidence.",
+      "ExternalReference": "POD-DEMO-0001"
+    }
+  ],
+  "ProviderOnboarding_CommunicationDraft": [
+    {
+      "ProviderRecord": "Jordan Avery",
+      "DraftCategory": "Start Date Push",
+      "Audience": "Provider and hiring manager",
+      "DraftText": "Draft pending human approval.",
+      "DraftState": "Drafted",
+      "ReviewerDecision": "Pending",
+      "ApprovedAt": ""
+    }
+  ]
+}

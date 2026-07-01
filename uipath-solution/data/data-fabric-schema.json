@@ -1,0 +1,80 @@
+{
+  "solution": "Provider Onboarding Demo",
+  "entities": [
+    {
+      "name": "ProviderOnboarding_MainRecord",
+      "description": "One row per provider onboarding case.",
+      "fields": [
+        { "name": "CandidateName", "type": "Text" },
+        { "name": "HireCategory", "type": "Text" },
+        { "name": "ProviderSpecialty", "type": "Text" },
+        { "name": "FacilityName", "type": "Text" },
+        { "name": "TargetStartDate", "type": "Date" },
+        { "name": "OnboardingPhase", "type": "Text" },
+        { "name": "ClearanceState", "type": "Text" },
+        { "name": "SlaRiskLevel", "type": "Text" },
+        { "name": "AssignedNavigator", "type": "Text" },
+        { "name": "EmployeeIdentifier", "type": "Text" },
+        { "name": "PositionControlNumber", "type": "Text" },
+        { "name": "ItsmTicketNumber", "type": "Text" },
+        { "name": "NextAction", "type": "Text" }
+      ]
+    },
+    {
+      "name": "ProviderOnboarding_Documents",
+      "description": "One row per submitted document or form.",
+      "fields": [
+        { "name": "ProviderRecord", "type": "Relationship" },
+        { "name": "DocumentCategory", "type": "Text" },
+        { "name": "SourceFileName", "type": "Text" },
+        { "name": "ReceivedAt", "type": "DateTime" },
+        { "name": "ExtractionState", "type": "Text" },
+        { "name": "ExtractionConfidence", "type": "Decimal" },
+        { "name": "MissingFieldSummary", "type": "Text" },
+        { "name": "ReviewerDecision", "type": "Text" },
+        { "name": "StorageBucketPath", "type": "Text" }
+      ]
+    },
+    {
+      "name": "ProviderOnboarding_RequirementChecklist",
+      "description": "One row per required onboarding item.",
+      "fields": [
+        { "name": "ProviderRecord", "type": "Relationship" },
+        { "name": "RequirementCategory", "type": "Text" },
+        { "name": "OwnerGroup", "type": "Text" },
+        { "name": "DueDate", "type": "Date" },
+        { "name": "CompletedAt", "type": "DateTime" },
+        { "name": "RequirementState", "type": "Text" },
+        { "name": "IsBlocking", "type": "Boolean" },
+        { "name": "RequirementNotes", "type": "Text" }
+      ]
+    },
+    {
+      "name": "ProviderOnboarding_Activity",
+      "description": "Timeline, audit, communication, and automation events.",
+      "fields": [
+        { "name": "ProviderRecord", "type": "Relationship" },
+        { "name": "ActivityCategory", "type": "Text" },
+        { "name": "SourceSystem", "type": "Text" },
+        { "name": "ActivityOwner", "type": "Text" },
+        { "name": "ActivityTimestamp", "type": "DateTime" },
+        { "name": "ActivityOutcome", "type": "Text" },
+        { "name": "MessageSummary", "type": "Text" },
+        { "name": "ExternalReference", "type": "Text" }
+      ]
+    },
+    {
+      "name": "ProviderOnboarding_CommunicationDraft",
+      "description": "Optional audit table for AI-drafted communications.",
+      "fields": [
+        { "name": "ProviderRecord", "type": "Relationship" },
+        { "name": "DraftCategory", "type": "Text" },
+        { "name": "Audience", "type": "Text" },
+        { "name": "DraftText", "type": "Text" },
+        { "name": "DraftState", "type": "Text" },
+        { "name": "ReviewerDecision", "type": "Text" },
+        { "name": "ApprovedAt", "type": "DateTime" }
+      ]
+    }
+  ]
+}

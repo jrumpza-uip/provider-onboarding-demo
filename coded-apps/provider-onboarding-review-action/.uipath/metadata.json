@@ -1,0 +1,9 @@
+{
+  "name": "provider-onboarding-review-action",
+  "displayName": "provider-onboarding-review-action",
+  "version": "1.0.0",
+  "description": "Provider onboarding reusable review action app",
+  "author": "UiPath Developer",
+  "contentType": "webapp",
+  "createdAt": "2026-06-30T17:01:36.320Z"
+}

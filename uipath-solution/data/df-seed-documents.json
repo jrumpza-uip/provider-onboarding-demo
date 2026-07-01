@@ -1,0 +1,13 @@
+[
+  {
+    "ProviderRecord": "a995ece3-0cec-45ce-a500-019f19440cdc",
+    "DocumentCategory": "New Hire Data Sheet",
+    "SourceFileName": "jordan-avery-new-hire-data-sheet.pdf",
+    "ReceivedAt": "2026-06-29T15:00:00-05:00",
+    "ExtractionState": "Needs Review",
+    "ExtractionConfidence": 0.82,
+    "MissingFieldSummary": "License expiration date and background confirmation missing.",
+    "ReviewerDecision": "Pending",
+    "StorageBucketPath": "provider-onboarding/JordanAvery/new-hire-data-sheet.pdf"
+  }
+]

@@ -1,0 +1,22 @@
+{
+  "docVersion": "1.0.0",
+  "resource": {
+    "name": "provider-onboarding-case",
+    "kind": "package",
+    "apiVersion": "orchestrator.uipath.com/v1",
+    "projectKey": "6440e220-b953-4a61-9c32-4f2b7f25a77e",
+    "dependencies": [],
+    "runtimeDependencies": [],
+    "folders": [
+      {
+        "fullyQualifiedName": "solution_folder"
+      }
+    ],
+    "spec": {
+      "name": "provider-onboarding-case"
+    },
+    "locks": [],
+    "key": "8853a4bf-1fdc-4861-bf0b-ababf2351aba",
+    "files": []
+  }
+}

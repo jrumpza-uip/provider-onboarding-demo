@@ -1,0 +1,21 @@
+{
+  "displayName": "Provider Onboarding Documents",
+  "description": "One row per submitted document or form.",
+  "fields": [
+    {
+      "fieldName": "ProviderRecord",
+      "type": "RELATIONSHIP",
+      "displayName": "Provider Record",
+      "referenceEntityId": "1c2defbb-9c74-f111-ac9b-000d3a68f6f7",
+      "referenceFieldId": "c7c861d0-e3b1-4f0e-b217-6165e6091ec9"
+    },
+    { "fieldName": "DocumentCategory", "type": "STRING", "displayName": "Document Category" },
+    { "fieldName": "SourceFileName", "type": "STRING", "displayName": "Source File Name" },
+    { "fieldName": "ReceivedAt", "type": "DATETIME_WITH_TZ", "displayName": "Received At" },
+    { "fieldName": "ExtractionState", "type": "STRING", "displayName": "Extraction State" },
+    { "fieldName": "ExtractionConfidence", "type": "DECIMAL", "displayName": "Extraction Confidence", "decimalPrecision": 2 },
+    { "fieldName": "MissingFieldSummary", "type": "MULTILINE_TEXT", "displayName": "Missing Field Summary" },
+    { "fieldName": "ReviewerDecision", "type": "STRING", "displayName": "Reviewer Decision" },
+    { "fieldName": "StorageBucketPath", "type": "STRING", "displayName": "Storage Bucket Path" }
+  ]
+}

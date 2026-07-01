@@ -1,0 +1,12 @@
+{
+  "appName": "provider-onboarding-legacy-simulator",
+  "displayName": "provider-onboarding-legacy-simulator",
+  "appVersion": "1.0.0",
+  "systemName": "ID2bfb88a1bf244ef7be22f84c1d362657",
+  "appUrl": "https://uipathlabs.staging.uipath.host/pod-legacy-simulator",
+  "routingName": "pod-legacy-simulator",
+  "registeredAt": "2026-06-30T17:03:40.393Z",
+  "appType": "Web",
+  "deploymentId": "72bd3997-8b4c-4072-acb6-b409b1954c50",
+  "deployedAt": "2026-06-30T17:05:15.547Z"
+}

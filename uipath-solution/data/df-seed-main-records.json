@@ -1,0 +1,32 @@
+[
+  {
+    "CandidateName": "Jordan Avery",
+    "HireCategory": "Full-time provider",
+    "ProviderSpecialty": "Family Medicine",
+    "FacilityName": "ACME Health North Clinic",
+    "TargetStartDate": "2026-08-03",
+    "OnboardingPhase": "Document Collection",
+    "ClearanceState": "Pending",
+    "SlaRiskLevel": "Medium",
+    "AssignedNavigator": "Avery Morgan",
+    "EmployeeIdentifier": "",
+    "PositionControlNumber": "",
+    "ItsmTicketNumber": "",
+    "NextAction": "Resolve missing license evidence"
+  },
+  {
+    "CandidateName": "Riley Chen",
+    "HireCategory": "Internal transfer",
+    "ProviderSpecialty": "Urgent Care",
+    "FacilityName": "ACME Health West Campus",
+    "TargetStartDate": "2026-08-17",
+    "OnboardingPhase": "HRIS / Transfer Setup",
+    "ClearanceState": "Ready for HRIS",
+    "SlaRiskLevel": "Low",
+    "AssignedNavigator": "Taylor Brooks",
+    "EmployeeIdentifier": "EID-41092",
+    "PositionControlNumber": "",
+    "ItsmTicketNumber": "ITSM-20418",
+    "NextAction": "Approve HRIS submission"
+  }
+]
