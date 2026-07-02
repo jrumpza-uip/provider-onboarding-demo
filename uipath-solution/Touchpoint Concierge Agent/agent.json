@@ -1,0 +1,134 @@
+{
+  "version": "1.1.0",
+  "settings": {
+    "model": "gpt-5.4-mini-2026-03-17",
+    "maxTokens": 4096,
+    "temperature": 0,
+    "engine": "basic-v2",
+    "maxIterations": 5,
+    "mode": "standard"
+  },
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "caseContext": {
+        "type": "string",
+        "description": "Sanitized ACME Health provider onboarding case details."
+      },
+      "touchpointRequest": {
+        "type": "string",
+        "description": "Optional touchpoint or drafting request, such as Day 1, five-day, 30-day, 90-day, or start-date push."
+      },
+      "audience": {
+        "type": "string",
+        "description": "Optional target audience, such as provider, manager, onboarding navigator, or mixed."
+      },
+      "startDatePushReason": {
+        "type": "string",
+        "description": "Optional sanitized reason for a revised start date."
+      }
+    },
+    "required": [
+      "caseContext"
+    ]
+  },
+  "outputSchema": {
+    "type": "object",
+    "properties": {
+      "cadence": {
+        "type": "string",
+        "description": "Touchpoint cadence or drafting scenario used for the response."
+      },
+      "providerMessage": {
+        "type": "string",
+        "description": "Draft message for the provider, grounded in the case context."
+      },
+      "managerMessage": {
+        "type": "string",
+        "description": "Draft message for the manager or onboarding owner, grounded in the case context."
+      },
+      "startDatePushMessage": {
+        "type": "string",
+        "description": "Sanitized start-date-push message when requested, otherwise an empty string."
+      },
+      "requiresApproval": {
+        "type": "boolean",
+        "description": "True when the draft should be approved before sending."
+      },
+      "complianceNotes": {
+        "type": "string",
+        "description": "Short notes about what must be reviewed before sending."
+      }
+    },
+    "required": [
+      "cadence",
+      "providerMessage",
+      "managerMessage",
+      "startDatePushMessage",
+      "requiresApproval",
+      "complianceNotes"
+    ]
+  },
+  "metadata": {
+    "storageVersion": "50.0.0",
+    "isConversational": false,
+    "showProjectCreationExperience": false,
+    "targetRuntime": "pythonAgent"
+  },
+  "type": "lowCode",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are a touchpoint concierge agent for ACME Health provider onboarding. Draft clear, sanitized follow-up messages for providers and managers.\n\nScope:\n- In scope: Day 1, five-day, 30-day, 90-day, manager follow-up, and start-date-push draft language.\n- Out of scope: sending messages, approving messages, changing case state, making HR or credentialing decisions, or inventing facts not present in the input.\n\nOutput:\n- Return a result conforming to the output schema.\n- providerMessage and managerMessage must be ready for human review, not automatic sending.\n- startDatePushMessage must be populated only when touchpointRequest or caseContext indicates a revised start date or start-date delay.\n- Use neutral, concise language and avoid disclosing sensitive clearance details beyond what the input explicitly permits.\n- Set requiresApproval=true for every draft.\n- Never include protected health information, real patient data, or non-ACME details not present in the caseContext.\n\nUncertainty:\n- If timing or audience is unclear, pick a conservative generic onboarding follow-up and note the ambiguity in complianceNotes.",
+      "contentTokens": [
+        {
+          "type": "simpleText",
+          "rawString": "You are a touchpoint concierge agent for ACME Health provider onboarding. Draft clear, sanitized follow-up messages for providers and managers.\n\nScope:\n- In scope: Day 1, five-day, 30-day, 90-day, manager follow-up, and start-date-push draft language.\n- Out of scope: sending messages, approving messages, changing case state, making HR or credentialing decisions, or inventing facts not present in the input.\n\nOutput:\n- Return a result conforming to the output schema.\n- providerMessage and managerMessage must be ready for human review, not automatic sending.\n- startDatePushMessage must be populated only when touchpointRequest or caseContext indicates a revised start date or start-date delay.\n- Use neutral, concise language and avoid disclosing sensitive clearance details beyond what the input explicitly permits.\n- Set requiresApproval=true for every draft.\n- Never include protected health information, real patient data, or non-ACME details not present in the caseContext.\n\nUncertainty:\n- If timing or audience is unclear, pick a conservative generic onboarding follow-up and note the ambiguity in complianceNotes."
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "content": "Draft provider onboarding touchpoint communications for ACME Health.\n\nCase context:\n{{input.caseContext}}\n\nTouchpoint request:\n{{input.touchpointRequest}}\n\nAudience:\n{{input.audience}}\n\nStart-date push reason:\n{{input.startDatePushReason}}\n\nReturn cadence, provider message, manager message, start-date-push message when applicable, approval flag, and compliance notes.",
+      "contentTokens": [
+        {
+          "type": "simpleText",
+          "rawString": "Draft provider onboarding touchpoint communications for ACME Health.\n\nCase context:\n"
+        },
+        {
+          "type": "variable",
+          "rawString": "input.caseContext"
+        },
+        {
+          "type": "simpleText",
+          "rawString": "\n\nTouchpoint request:\n"
+        },
+        {
+          "type": "variable",
+          "rawString": "input.touchpointRequest"
+        },
+        {
+          "type": "simpleText",
+          "rawString": "\n\nAudience:\n"
+        },
+        {
+          "type": "variable",
+          "rawString": "input.audience"
+        },
+        {
+          "type": "simpleText",
+          "rawString": "\n\nStart-date push reason:\n"
+        },
+        {
+          "type": "variable",
+          "rawString": "input.startDatePushReason"
+        },
+        {
+          "type": "simpleText",
+          "rawString": "\n\nReturn cadence, provider message, manager message, start-date-push message when applicable, approval flag, and compliance notes."
+        }
+      ]
+    }
+  ],
+  "projectId": "42af343c-25c5-4e1d-bf1d-bbdc7e5780d1"
+}

@@ -1,0 +1,136 @@
+{
+  "version": "1.1.0",
+  "settings": {
+    "model": "gpt-5.4-mini-2026-03-17",
+    "maxTokens": 4096,
+    "temperature": 0,
+    "engine": "basic-v2",
+    "maxIterations": 5,
+    "mode": "standard"
+  },
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "caseContext": {
+        "type": "string",
+        "description": "Sanitized ACME Health provider onboarding case details."
+      },
+      "credentialEvidence": {
+        "type": "string",
+        "description": "Optional credentialing evidence, status notes, or checklist details."
+      },
+      "employeeHealthStatus": {
+        "type": "string",
+        "description": "Optional employee-health clearance status or pending items."
+      }
+    },
+    "required": [
+      "caseContext"
+    ]
+  },
+  "outputSchema": {
+    "type": "object",
+    "properties": {
+      "readinessStatus": {
+        "type": "string",
+        "description": "ready, blocked, at-risk, or unknown."
+      },
+      "blockers": {
+        "type": "array",
+        "description": "Credentialing or clearance blockers grounded in the input.",
+        "items": {
+          "type": "string"
+        }
+      },
+      "expiringOrMissingItems": {
+        "type": "array",
+        "description": "Missing, expired, or soon-to-expire license, CDS, DEA, exclusion, payor, MSO, or clearance items.",
+        "items": {
+          "type": "string"
+        }
+      },
+      "recommendedActions": {
+        "type": "array",
+        "description": "Next actions for the onboarding navigator or credentialing team.",
+        "items": {
+          "type": "string"
+        }
+      },
+      "employeeHealthClearance": {
+        "type": "string",
+        "description": "cleared, pending, blocked, or unknown."
+      },
+      "exceptionNeeded": {
+        "type": "boolean",
+        "description": "True when a credentialing exception review is needed."
+      },
+      "escalationReason": {
+        "type": "string",
+        "description": "Short reason for exception review or escalation, or an empty string when none is needed."
+      }
+    },
+    "required": [
+      "readinessStatus",
+      "blockers",
+      "expiringOrMissingItems",
+      "recommendedActions",
+      "employeeHealthClearance",
+      "exceptionNeeded",
+      "escalationReason"
+    ]
+  },
+  "metadata": {
+    "storageVersion": "50.0.0",
+    "isConversational": false,
+    "showProjectCreationExperience": false,
+    "targetRuntime": "pythonAgent"
+  },
+  "type": "lowCode",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are a credential readiness agent for ACME Health provider onboarding. Assess whether the provider is ready for start-date clearance based on supplied credentialing and employee-health evidence.\n\nScope:\n- In scope: license, CDS, DEA, exclusion, payor, MSO, background, and employee-health readiness signals.\n- Out of scope: final credentialing approval, legal advice, clinical privileging decisions, contacting external agencies, or inventing evidence.\n\nOutput:\n- Return a result conforming to the output schema.\n- readinessStatus must be ready, blocked, at-risk, or unknown.\n- employeeHealthClearance must be cleared, pending, blocked, or unknown.\n- blockers, expiringOrMissingItems, and recommendedActions must be concise and grounded in the input.\n- Set exceptionNeeded=true when any blocker could delay onboarding or requires credentialing review.\n- Never include protected health information, real patient data, or non-ACME details not present in the caseContext.\n\nUncertainty:\n- If evidence is insufficient, use unknown or at-risk and explain the missing evidence in escalationReason.",
+      "contentTokens": [
+        {
+          "type": "simpleText",
+          "rawString": "You are a credential readiness agent for ACME Health provider onboarding. Assess whether the provider is ready for start-date clearance based on supplied credentialing and employee-health evidence.\n\nScope:\n- In scope: license, CDS, DEA, exclusion, payor, MSO, background, and employee-health readiness signals.\n- Out of scope: final credentialing approval, legal advice, clinical privileging decisions, contacting external agencies, or inventing evidence.\n\nOutput:\n- Return a result conforming to the output schema.\n- readinessStatus must be ready, blocked, at-risk, or unknown.\n- employeeHealthClearance must be cleared, pending, blocked, or unknown.\n- blockers, expiringOrMissingItems, and recommendedActions must be concise and grounded in the input.\n- Set exceptionNeeded=true when any blocker could delay onboarding or requires credentialing review.\n- Never include protected health information, real patient data, or non-ACME details not present in the caseContext.\n\nUncertainty:\n- If evidence is insufficient, use unknown or at-risk and explain the missing evidence in escalationReason."
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "content": "Assess credential readiness for this ACME Health provider onboarding case.\n\nCase context:\n{{input.caseContext}}\n\nCredential evidence:\n{{input.credentialEvidence}}\n\nEmployee-health status:\n{{input.employeeHealthStatus}}\n\nReturn readiness status, blockers, missing or expiring items, recommended actions, employee-health clearance, exception flag, and escalation reason.",
+      "contentTokens": [
+        {
+          "type": "simpleText",
+          "rawString": "Assess credential readiness for this ACME Health provider onboarding case.\n\nCase context:\n"
+        },
+        {
+          "type": "variable",
+          "rawString": "input.caseContext"
+        },
+        {
+          "type": "simpleText",
+          "rawString": "\n\nCredential evidence:\n"
+        },
+        {
+          "type": "variable",
+          "rawString": "input.credentialEvidence"
+        },
+        {
+          "type": "simpleText",
+          "rawString": "\n\nEmployee-health status:\n"
+        },
+        {
+          "type": "variable",
+          "rawString": "input.employeeHealthStatus"
+        },
+        {
+          "type": "simpleText",
+          "rawString": "\n\nReturn readiness status, blockers, missing or expiring items, recommended actions, employee-health clearance, exception flag, and escalation reason."
+        }
+      ]
+    }
+  ],
+  "projectId": "f093f7ba-f99a-4e47-ad98-c03cb5cec778"
+}

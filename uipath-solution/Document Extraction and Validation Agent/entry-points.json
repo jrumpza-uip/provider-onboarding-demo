@@ -1,0 +1,79 @@
+{
+  "$schema": "https://cloud.uipath.com/draft/2024-12/entry-point",
+  "$id": "entry-points.json",
+  "entryPoints": [
+    {
+      "filePath": "/content/agent.json",
+      "uniqueId": "91d250c0-e2cf-4363-a12f-6ddaab94a1dc",
+      "type": "agent",
+      "input": {
+        "type": "object",
+        "properties": {
+          "caseContext": {
+            "type": "string",
+            "description": "Sanitized ACME Health provider onboarding case details."
+          },
+          "documentSummary": {
+            "type": "string",
+            "description": "Optional summary of forms, licenses, credentials, or background evidence."
+          },
+          "extractedFields": {
+            "type": "string",
+            "description": "Optional extracted field JSON or text from document processing."
+          }
+        },
+        "required": [
+          "caseContext"
+        ]
+      },
+      "output": {
+        "type": "object",
+        "properties": {
+          "validationSummary": {
+            "type": "string",
+            "description": "Brief validation result for the supplied onboarding documents."
+          },
+          "extractedFieldsSummary": {
+            "type": "string",
+            "description": "Grounded summary of the important extracted fields."
+          },
+          "missingFields": {
+            "type": "array",
+            "description": "Required fields or documents that appear missing.",
+            "items": {
+              "type": "string"
+            }
+          },
+          "lowConfidenceFields": {
+            "type": "array",
+            "description": "Fields that need reviewer confirmation because evidence is unclear.",
+            "items": {
+              "type": "string"
+            }
+          },
+          "exceptionNeeded": {
+            "type": "boolean",
+            "description": "True when document issues should route to human review."
+          },
+          "exceptionReason": {
+            "type": "string",
+            "description": "Short explanation for the exception, or an empty string when none is needed."
+          },
+          "recommendedReviewerNotes": {
+            "type": "string",
+            "description": "Concise notes for the Document Exception Review task."
+          }
+        },
+        "required": [
+          "validationSummary",
+          "extractedFieldsSummary",
+          "missingFields",
+          "lowConfidenceFields",
+          "exceptionNeeded",
+          "exceptionReason",
+          "recommendedReviewerNotes"
+        ]
+      }
+    }
+  ]
+}

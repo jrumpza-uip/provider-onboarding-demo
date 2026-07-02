@@ -6,13 +6,30 @@
     "type": "caseManagement",
     "apiVersion": "orchestrator.uipath.com/v1",
     "projectKey": "6440e220-b953-4a61-9c32-4f2b7f25a77e",
+    "isOverridable": true,
     "dependencies": [
       {
         "kind": "package",
         "name": "provider-onboarding-case"
       }
     ],
-    "runtimeDependencies": [],
+    "runtimeDependencies": [
+      {
+        "bindingType": "app",
+        "bindingKey": "joseph.rumpza@uipath.com's workspace.provider-onboarding-review-action",
+        "bindingValues": {
+          "name": {
+            "defaultValue": "provider-onboarding-review-action",
+            "isExpression": false
+          },
+          "folderPath": {
+            "defaultValue": "joseph.rumpza@uipath.com's workspace",
+            "isExpression": false
+          }
+        },
+        "resourceKind": "App"
+      }
+    ],
     "folders": [
       {
         "fullyQualifiedName": "solution_folder"

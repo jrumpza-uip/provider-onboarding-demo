@@ -1,0 +1,72 @@
+{
+  "$schema": "https://cloud.uipath.com/draft/2024-12/entry-point",
+  "$id": "entry-points.json",
+  "entryPoints": [
+    {
+      "filePath": "/content/agent.json",
+      "uniqueId": "fbf1dc58-5a00-45b8-9d78-f0434bab281a",
+      "type": "agent",
+      "input": {
+        "type": "object",
+        "properties": {
+          "caseContext": {
+            "type": "string",
+            "description": "Sanitized ACME Health provider onboarding case details."
+          },
+          "touchpointRequest": {
+            "type": "string",
+            "description": "Optional touchpoint or drafting request, such as Day 1, five-day, 30-day, 90-day, or start-date push."
+          },
+          "audience": {
+            "type": "string",
+            "description": "Optional target audience, such as provider, manager, onboarding navigator, or mixed."
+          },
+          "startDatePushReason": {
+            "type": "string",
+            "description": "Optional sanitized reason for a revised start date."
+          }
+        },
+        "required": [
+          "caseContext"
+        ]
+      },
+      "output": {
+        "type": "object",
+        "properties": {
+          "cadence": {
+            "type": "string",
+            "description": "Touchpoint cadence or drafting scenario used for the response."
+          },
+          "providerMessage": {
+            "type": "string",
+            "description": "Draft message for the provider, grounded in the case context."
+          },
+          "managerMessage": {
+            "type": "string",
+            "description": "Draft message for the manager or onboarding owner, grounded in the case context."
+          },
+          "startDatePushMessage": {
+            "type": "string",
+            "description": "Sanitized start-date-push message when requested, otherwise an empty string."
+          },
+          "requiresApproval": {
+            "type": "boolean",
+            "description": "True when the draft should be approved before sending."
+          },
+          "complianceNotes": {
+            "type": "string",
+            "description": "Short notes about what must be reviewed before sending."
+          }
+        },
+        "required": [
+          "cadence",
+          "providerMessage",
+          "managerMessage",
+          "startDatePushMessage",
+          "requiresApproval",
+          "complianceNotes"
+        ]
+      }
+    }
+  ]
+}

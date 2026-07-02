@@ -1,0 +1,84 @@
+{
+  "$schema": "https://cloud.uipath.com/draft/2024-12/entry-point",
+  "$id": "entry-points.json",
+  "entryPoints": [
+    {
+      "filePath": "/content/agent.json",
+      "uniqueId": "0df34e8d-55d5-4175-9594-a179150a5b81",
+      "type": "agent",
+      "input": {
+        "type": "object",
+        "properties": {
+          "caseContext": {
+            "type": "string",
+            "description": "Sanitized ACME Health provider onboarding case details."
+          },
+          "intakePacketText": {
+            "type": "string",
+            "description": "Optional text from the intake packet, email, or uploaded forms."
+          },
+          "sourceChannel": {
+            "type": "string",
+            "description": "Optional source channel for the intake packet, such as manual intake, upload, email, or transfer."
+          }
+        },
+        "required": [
+          "caseContext"
+        ]
+      },
+      "output": {
+        "type": "object",
+        "properties": {
+          "hireCategory": {
+            "type": "string",
+            "description": "Classified hire category, such as new hire, transfer, reactivation, locum, or unknown."
+          },
+          "providerSpecialty": {
+            "type": "string",
+            "description": "Provider specialty or unknown when not grounded in the input."
+          },
+          "sourcePacketType": {
+            "type": "string",
+            "description": "Classified packet type or unknown when not grounded in the input."
+          },
+          "requiredForms": {
+            "type": "array",
+            "description": "Forms or evidence required for this case.",
+            "items": {
+              "type": "string"
+            }
+          },
+          "missingItems": {
+            "type": "array",
+            "description": "Required intake items that appear missing or incomplete.",
+            "items": {
+              "type": "string"
+            }
+          },
+          "reviewNeeded": {
+            "type": "boolean",
+            "description": "True when a human reviewer should resolve ambiguity or missing data."
+          },
+          "reviewReason": {
+            "type": "string",
+            "description": "Short reason for human review, or an empty string when review is not needed."
+          },
+          "confidence": {
+            "type": "string",
+            "description": "high, medium, or low confidence."
+          }
+        },
+        "required": [
+          "hireCategory",
+          "providerSpecialty",
+          "sourcePacketType",
+          "requiredForms",
+          "missingItems",
+          "reviewNeeded",
+          "reviewReason",
+          "confidence"
+        ]
+      }
+    }
+  ]
+}

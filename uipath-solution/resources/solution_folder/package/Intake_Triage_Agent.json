@@ -1,0 +1,23 @@
+{
+  "docVersion": "1.0.0",
+  "resource": {
+    "name": "Intake Triage Agent",
+    "kind": "package",
+    "apiVersion": "orchestrator.uipath.com/v1",
+    "projectKey": "f1254443-f542-4ab4-99cb-6596e7436090",
+    "isOverridable": true,
+    "dependencies": [],
+    "runtimeDependencies": [],
+    "folders": [
+      {
+        "fullyQualifiedName": "solution_folder"
+      }
+    ],
+    "spec": {
+      "name": "Intake Triage Agent"
+    },
+    "locks": [],
+    "key": "d2db919d-6333-4920-9d50-5f8762b0a83c",
+    "files": []
+  }
+}

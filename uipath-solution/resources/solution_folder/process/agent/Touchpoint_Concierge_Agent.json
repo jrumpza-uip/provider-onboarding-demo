@@ -1,0 +1,39 @@
+{
+  "docVersion": "1.0.0",
+  "resource": {
+    "name": "Touchpoint Concierge Agent",
+    "kind": "process",
+    "type": "agent",
+    "apiVersion": "orchestrator.uipath.com/v1",
+    "projectKey": "9a853874-7c1d-43b8-b763-a065b50c36b9",
+    "isOverridable": true,
+    "dependencies": [
+      {
+        "kind": "package",
+        "name": "Touchpoint Concierge Agent"
+      }
+    ],
+    "runtimeDependencies": [],
+    "folders": [
+      {
+        "fullyQualifiedName": "solution_folder"
+      }
+    ],
+    "spec": {
+      "type": "Agent",
+      "name": "Touchpoint Concierge Agent",
+      "package": {
+        "key": "2a97087f-46ab-423b-8747-824a60a2d756"
+      },
+      "packageName": "uipath-solution.agent.Touchpoint.Concierge.Agent",
+      "targetFrameworkValue": "Portable",
+      "retentionAction": "Delete",
+      "retentionPeriod": 30,
+      "staleRetentionAction": "Delete",
+      "staleRetentionPeriod": 180
+    },
+    "locks": [],
+    "key": "626213aa-21e6-4bbb-8ad9-76ee95ede928",
+    "files": []
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "$schema": "https://cloud.uipath.com/draft/2024-12/entry-point",
+  "$id": "entry-points.json",
+  "entryPoints": [
+    {
+      "filePath": "/content/agent.json",
+      "uniqueId": "58c62bc2-3dbb-46e7-9410-d895a5f0216d",
+      "type": "agent",
+      "input": {
+        "type": "object",
+        "properties": {
+          "caseContext": {
+            "type": "string",
+            "description": "Sanitized ACME Health provider onboarding case details."
+          },
+          "credentialEvidence": {
+            "type": "string",
+            "description": "Optional credentialing evidence, status notes, or checklist details."
+          },
+          "employeeHealthStatus": {
+            "type": "string",
+            "description": "Optional employee-health clearance status or pending items."
+          }
+        },
+        "required": [
+          "caseContext"
+        ]
+      },
+      "output": {
+        "type": "object",
+        "properties": {
+          "readinessStatus": {
+            "type": "string",
+            "description": "ready, blocked, at-risk, or unknown."
+          },
+          "blockers": {
+            "type": "array",
+            "description": "Credentialing or clearance blockers grounded in the input.",
+            "items": {
+              "type": "string"
+            }
+          },
+          "expiringOrMissingItems": {
+            "type": "array",
+            "description": "Missing, expired, or soon-to-expire license, CDS, DEA, exclusion, payor, MSO, or clearance items.",
+            "items": {
+              "type": "string"
+            }
+          },
+          "recommendedActions": {
+            "type": "array",
+            "description": "Next actions for the onboarding navigator or credentialing team.",
+            "items": {
+              "type": "string"
+            }
+          },
+          "employeeHealthClearance": {
+            "type": "string",
+            "description": "cleared, pending, blocked, or unknown."
+          },
+          "exceptionNeeded": {
+            "type": "boolean",
+            "description": "True when a credentialing exception review is needed."
+          },
+          "escalationReason": {
+            "type": "string",
+            "description": "Short reason for exception review or escalation, or an empty string when none is needed."
+          }
+        },
+        "required": [
+          "readinessStatus",
+          "blockers",
+          "expiringOrMissingItems",
+          "recommendedActions",
+          "employeeHealthClearance",
+          "exceptionNeeded",
+          "escalationReason"
+        ]
+      }
+    }
+  ]
+}

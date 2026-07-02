@@ -7,6 +7,26 @@
             "Type": "CaseManagement",
             "ProjectRelativePath": "provider-onboarding-case/project.uiproj",
             "Id": "6440e220-b953-4a61-9c32-4f2b7f25a77e"
+        },
+        {
+            "Type": "Agent",
+            "ProjectRelativePath": "Intake Triage Agent/project.uiproj",
+            "Id": "f1254443-f542-4ab4-99cb-6596e7436090"
+        },
+        {
+            "Type": "Agent",
+            "ProjectRelativePath": "Document Extraction and Validation Agent/project.uiproj",
+            "Id": "2216df5d-7622-4ab3-967c-2a389bbbcb9d"
+        },
+        {
+            "Type": "Agent",
+            "ProjectRelativePath": "Credential Readiness Agent/project.uiproj",
+            "Id": "3f3e8611-4c0a-4e85-9163-296648a83987"
+        },
+        {
+            "Type": "Agent",
+            "ProjectRelativePath": "Touchpoint Concierge Agent/project.uiproj",
+            "Id": "9a853874-7c1d-43b8-b763-a065b50c36b9"
         }
     ]
 }

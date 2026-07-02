@@ -1,0 +1,23 @@
+{
+  "docVersion": "1.0.0",
+  "resource": {
+    "name": "Document Extraction and Validation Agent",
+    "kind": "package",
+    "apiVersion": "orchestrator.uipath.com/v1",
+    "projectKey": "2216df5d-7622-4ab3-967c-2a389bbbcb9d",
+    "isOverridable": true,
+    "dependencies": [],
+    "runtimeDependencies": [],
+    "folders": [
+      {
+        "fullyQualifiedName": "solution_folder"
+      }
+    ],
+    "spec": {
+      "name": "Document Extraction and Validation Agent"
+    },
+    "locks": [],
+    "key": "5197ca82-6fc0-4bac-9835-938d69a3f8e8",
+    "files": []
+  }
+}

@@ -1,0 +1,138 @@
+{
+  "version": "1.1.0",
+  "settings": {
+    "model": "gpt-5.4-mini-2026-03-17",
+    "maxTokens": 4096,
+    "temperature": 0,
+    "engine": "basic-v2",
+    "maxIterations": 5,
+    "mode": "standard"
+  },
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "caseContext": {
+        "type": "string",
+        "description": "Sanitized ACME Health provider onboarding case details."
+      },
+      "intakePacketText": {
+        "type": "string",
+        "description": "Optional text from the intake packet, email, or uploaded forms."
+      },
+      "sourceChannel": {
+        "type": "string",
+        "description": "Optional source channel for the intake packet, such as manual intake, upload, email, or transfer."
+      }
+    },
+    "required": [
+      "caseContext"
+    ]
+  },
+  "outputSchema": {
+    "type": "object",
+    "properties": {
+      "hireCategory": {
+        "type": "string",
+        "description": "Classified hire category, such as new hire, transfer, reactivation, locum, or unknown."
+      },
+      "providerSpecialty": {
+        "type": "string",
+        "description": "Provider specialty or unknown when not grounded in the input."
+      },
+      "sourcePacketType": {
+        "type": "string",
+        "description": "Classified packet type or unknown when not grounded in the input."
+      },
+      "requiredForms": {
+        "type": "array",
+        "description": "Forms or evidence required for this case.",
+        "items": {
+          "type": "string"
+        }
+      },
+      "missingItems": {
+        "type": "array",
+        "description": "Required intake items that appear missing or incomplete.",
+        "items": {
+          "type": "string"
+        }
+      },
+      "reviewNeeded": {
+        "type": "boolean",
+        "description": "True when a human reviewer should resolve ambiguity or missing data."
+      },
+      "reviewReason": {
+        "type": "string",
+        "description": "Short reason for human review, or an empty string when review is not needed."
+      },
+      "confidence": {
+        "type": "string",
+        "description": "high, medium, or low confidence."
+      }
+    },
+    "required": [
+      "hireCategory",
+      "providerSpecialty",
+      "sourcePacketType",
+      "requiredForms",
+      "missingItems",
+      "reviewNeeded",
+      "reviewReason",
+      "confidence"
+    ]
+  },
+  "metadata": {
+    "storageVersion": "50.0.0",
+    "isConversational": false,
+    "showProjectCreationExperience": false,
+    "targetRuntime": "pythonAgent"
+  },
+  "type": "lowCode",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are an intake triage agent for ACME Health provider onboarding. Classify the provider intake case and identify the first required onboarding evidence.\n\nScope:\n- In scope: hire category, provider specialty, packet type, required forms, missing intake items, and whether human review is needed.\n- Out of scope: changing the case, contacting the provider, making credentialing decisions, or inventing facts not present in the input.\n\nOutput:\n- Return a result conforming to the output schema.\n- Use unknown for classification fields when the input does not support a value.\n- requiredForms and missingItems must contain concise item names only.\n- Set reviewNeeded=true when required data is missing, conflicting, or ambiguous.\n- Never include protected health information, real patient data, or non-ACME details not present in the caseContext.\n\nUncertainty:\n- If caseContext is empty or unusable, set confidence=low, reviewNeeded=true, and explain the gap in reviewReason.",
+      "contentTokens": [
+        {
+          "type": "simpleText",
+          "rawString": "You are an intake triage agent for ACME Health provider onboarding. Classify the provider intake case and identify the first required onboarding evidence.\n\nScope:\n- In scope: hire category, provider specialty, packet type, required forms, missing intake items, and whether human review is needed.\n- Out of scope: changing the case, contacting the provider, making credentialing decisions, or inventing facts not present in the input.\n\nOutput:\n- Return a result conforming to the output schema.\n- Use unknown for classification fields when the input does not support a value.\n- requiredForms and missingItems must contain concise item names only.\n- Set reviewNeeded=true when required data is missing, conflicting, or ambiguous.\n- Never include protected health information, real patient data, or non-ACME details not present in the caseContext.\n\nUncertainty:\n- If caseContext is empty or unusable, set confidence=low, reviewNeeded=true, and explain the gap in reviewReason."
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "content": "Analyze this ACME Health provider onboarding intake.\n\nCase context:\n{{input.caseContext}}\n\nIntake packet text:\n{{input.intakePacketText}}\n\nSource channel:\n{{input.sourceChannel}}\n\nReturn hire category, specialty, packet type, required forms, missing items, review flag, review reason, and confidence.",
+      "contentTokens": [
+        {
+          "type": "simpleText",
+          "rawString": "Analyze this ACME Health provider onboarding intake.\n\nCase context:\n"
+        },
+        {
+          "type": "variable",
+          "rawString": "input.caseContext"
+        },
+        {
+          "type": "simpleText",
+          "rawString": "\n\nIntake packet text:\n"
+        },
+        {
+          "type": "variable",
+          "rawString": "input.intakePacketText"
+        },
+        {
+          "type": "simpleText",
+          "rawString": "\n\nSource channel:\n"
+        },
+        {
+          "type": "variable",
+          "rawString": "input.sourceChannel"
+        },
+        {
+          "type": "simpleText",
+          "rawString": "\n\nReturn hire category, specialty, packet type, required forms, missing items, review flag, review reason, and confidence."
+        }
+      ]
+    }
+  ],
+  "projectId": "a3e24508-b8e7-4e60-ae81-f04a70ade805"
+}

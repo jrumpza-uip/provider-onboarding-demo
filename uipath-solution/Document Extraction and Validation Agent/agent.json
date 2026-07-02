@@ -1,0 +1,133 @@
+{
+  "version": "1.1.0",
+  "settings": {
+    "model": "gpt-5.4-mini-2026-03-17",
+    "maxTokens": 4096,
+    "temperature": 0,
+    "engine": "basic-v2",
+    "maxIterations": 5,
+    "mode": "standard"
+  },
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "caseContext": {
+        "type": "string",
+        "description": "Sanitized ACME Health provider onboarding case details."
+      },
+      "documentSummary": {
+        "type": "string",
+        "description": "Optional summary of forms, licenses, credentials, or background evidence."
+      },
+      "extractedFields": {
+        "type": "string",
+        "description": "Optional extracted field JSON or text from document processing."
+      }
+    },
+    "required": [
+      "caseContext"
+    ]
+  },
+  "outputSchema": {
+    "type": "object",
+    "properties": {
+      "validationSummary": {
+        "type": "string",
+        "description": "Brief validation result for the supplied onboarding documents."
+      },
+      "extractedFieldsSummary": {
+        "type": "string",
+        "description": "Grounded summary of the important extracted fields."
+      },
+      "missingFields": {
+        "type": "array",
+        "description": "Required fields or documents that appear missing.",
+        "items": {
+          "type": "string"
+        }
+      },
+      "lowConfidenceFields": {
+        "type": "array",
+        "description": "Fields that need reviewer confirmation because evidence is unclear.",
+        "items": {
+          "type": "string"
+        }
+      },
+      "exceptionNeeded": {
+        "type": "boolean",
+        "description": "True when document issues should route to human review."
+      },
+      "exceptionReason": {
+        "type": "string",
+        "description": "Short explanation for the exception, or an empty string when none is needed."
+      },
+      "recommendedReviewerNotes": {
+        "type": "string",
+        "description": "Concise notes for the Document Exception Review task."
+      }
+    },
+    "required": [
+      "validationSummary",
+      "extractedFieldsSummary",
+      "missingFields",
+      "lowConfidenceFields",
+      "exceptionNeeded",
+      "exceptionReason",
+      "recommendedReviewerNotes"
+    ]
+  },
+  "metadata": {
+    "storageVersion": "50.0.0",
+    "isConversational": false,
+    "showProjectCreationExperience": false,
+    "targetRuntime": "pythonAgent"
+  },
+  "type": "lowCode",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are a document extraction and validation agent for ACME Health provider onboarding. Review sanitized document evidence and flag missing or low-confidence fields.\n\nScope:\n- In scope: validating onboarding forms, credentials, background, I-9, license, and other required provider evidence from the supplied text.\n- Out of scope: reading files directly, certifying credentials, changing case state, or inventing extracted values.\n\nOutput:\n- Return a result conforming to the output schema.\n- Ground every extractedFieldsSummary statement in caseContext, documentSummary, or extractedFields.\n- missingFields and lowConfidenceFields must contain concise field or document names only.\n- Set exceptionNeeded=true when any required evidence is missing, conflicting, expired, unclear, or low confidence.\n- Never include protected health information, real patient data, or non-ACME details not present in the input.\n\nUncertainty:\n- If the supplied evidence is empty or unusable, set exceptionNeeded=true and explain the gap in exceptionReason.",
+      "contentTokens": [
+        {
+          "type": "simpleText",
+          "rawString": "You are a document extraction and validation agent for ACME Health provider onboarding. Review sanitized document evidence and flag missing or low-confidence fields.\n\nScope:\n- In scope: validating onboarding forms, credentials, background, I-9, license, and other required provider evidence from the supplied text.\n- Out of scope: reading files directly, certifying credentials, changing case state, or inventing extracted values.\n\nOutput:\n- Return a result conforming to the output schema.\n- Ground every extractedFieldsSummary statement in caseContext, documentSummary, or extractedFields.\n- missingFields and lowConfidenceFields must contain concise field or document names only.\n- Set exceptionNeeded=true when any required evidence is missing, conflicting, expired, unclear, or low confidence.\n- Never include protected health information, real patient data, or non-ACME details not present in the input.\n\nUncertainty:\n- If the supplied evidence is empty or unusable, set exceptionNeeded=true and explain the gap in exceptionReason."
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "content": "Validate this ACME Health onboarding document evidence.\n\nCase context:\n{{input.caseContext}}\n\nDocument summary:\n{{input.documentSummary}}\n\nExtracted fields:\n{{input.extractedFields}}\n\nReturn validation summary, extracted fields summary, missing fields, low-confidence fields, exception flag, exception reason, and reviewer notes.",
+      "contentTokens": [
+        {
+          "type": "simpleText",
+          "rawString": "Validate this ACME Health onboarding document evidence.\n\nCase context:\n"
+        },
+        {
+          "type": "variable",
+          "rawString": "input.caseContext"
+        },
+        {
+          "type": "simpleText",
+          "rawString": "\n\nDocument summary:\n"
+        },
+        {
+          "type": "variable",
+          "rawString": "input.documentSummary"
+        },
+        {
+          "type": "simpleText",
+          "rawString": "\n\nExtracted fields:\n"
+        },
+        {
+          "type": "variable",
+          "rawString": "input.extractedFields"
+        },
+        {
+          "type": "simpleText",
+          "rawString": "\n\nReturn validation summary, extracted fields summary, missing fields, low-confidence fields, exception flag, exception reason, and reviewer notes."
+        }
+      ]
+    }
+  ],
+  "projectId": "beed4a5d-d62d-4cb6-98ca-1d328219d145"
+}

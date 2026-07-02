@@ -1,0 +1,25 @@
+{
+  "docVersion": "1.0.0",
+  "resource": {
+    "name": "provider-onboarding-review-action",
+    "kind": "app",
+    "type": "codedAction",
+    "apiVersion": "apps.uipath.com/v1",
+    "isOverridable": true,
+    "dependencies": [],
+    "runtimeDependencies": [],
+    "folders": [
+      {
+        "fullyQualifiedName": "joseph.rumpza@uipath.com's workspace"
+      }
+    ],
+    "spec": {
+      "name": "provider-onboarding-review-action",
+      "version": "",
+      "appVersionRef": ""
+    },
+    "locks": [],
+    "key": "24d4a65a-c422-4617-99be-71456c3792d5",
+    "files": []
+  }
+}

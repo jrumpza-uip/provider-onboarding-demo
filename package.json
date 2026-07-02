@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@uipath/agent-tool": "^1.196.0",
     "@uipath/case-tool": "^1.196.0",
     "@uipath/cli": "^1.196.2",
     "@uipath/codedapp-tool": "^1.196.0",

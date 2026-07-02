@@ -1,0 +1,23 @@
+{
+  "docVersion": "1.0.0",
+  "resource": {
+    "name": "Touchpoint Concierge Agent",
+    "kind": "package",
+    "apiVersion": "orchestrator.uipath.com/v1",
+    "projectKey": "9a853874-7c1d-43b8-b763-a065b50c36b9",
+    "isOverridable": true,
+    "dependencies": [],
+    "runtimeDependencies": [],
+    "folders": [
+      {
+        "fullyQualifiedName": "solution_folder"
+      }
+    ],
+    "spec": {
+      "name": "Touchpoint Concierge Agent"
+    },
+    "locks": [],
+    "key": "2a97087f-46ab-423b-8747-824a60a2d756",
+    "files": []
+  }
+}

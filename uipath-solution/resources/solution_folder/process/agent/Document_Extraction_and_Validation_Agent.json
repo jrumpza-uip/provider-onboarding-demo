@@ -1,0 +1,39 @@
+{
+  "docVersion": "1.0.0",
+  "resource": {
+    "name": "Document Extraction and Validation Agent",
+    "kind": "process",
+    "type": "agent",
+    "apiVersion": "orchestrator.uipath.com/v1",
+    "projectKey": "2216df5d-7622-4ab3-967c-2a389bbbcb9d",
+    "isOverridable": true,
+    "dependencies": [
+      {
+        "kind": "package",
+        "name": "Document Extraction and Validation Agent"
+      }
+    ],
+    "runtimeDependencies": [],
+    "folders": [
+      {
+        "fullyQualifiedName": "solution_folder"
+      }
+    ],
+    "spec": {
+      "type": "Agent",
+      "name": "Document Extraction and Validation Agent",
+      "package": {
+        "key": "5197ca82-6fc0-4bac-9835-938d69a3f8e8"
+      },
+      "packageName": "uipath-solution.agent.Document.Extraction.and.Validation.Agent",
+      "targetFrameworkValue": "Portable",
+      "retentionAction": "Delete",
+      "retentionPeriod": 30,
+      "staleRetentionAction": "Delete",
+      "staleRetentionPeriod": 180
+    },
+    "locks": [],
+    "key": "de2934b8-c05e-43a1-8af4-26885531a398",
+    "files": []
+  }
+}
