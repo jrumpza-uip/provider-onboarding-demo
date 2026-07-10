@@ -1,0 +1,251 @@
+{
+  "field_types": [
+    {
+      "name": "Exact Text",
+      "kind": "text",
+      "input_value": "exact-match",
+      "instructions": "Extract text exactly as it appears in the document. Preserve punctuation, capitalization, IDs, phone formatting, and account identifiers."
+    },
+    {
+      "name": "Date",
+      "kind": "date",
+      "instructions": "Extract dates from the document and normalize them as dates. Accept numeric and written date formats."
+    },
+    {
+      "name": "Number",
+      "kind": "number",
+      "instructions": "Extract numeric values only. Do not include labels or surrounding explanatory text."
+    },
+    {
+      "name": "Boolean Checkbox",
+      "kind": "boolean",
+      "instructions": "Return true when the corresponding checkbox or selection is marked, such as [X]. Return false only when the document explicitly shows the option is not selected."
+    }
+  ],
+  "label_group": {
+    "name": "New Hire Paperwork",
+    "instructions": "Extract onboarding data from physician or provider new hire paperwork. Use values from the form tables and signature block. Ignore page headers, footers, page numbers, synthetic-data notices, and the diagonal SAMPLE - NOT VALID watermark unless a field specifically asks for that content. Do not infer values that are not present.",
+    "fields": [
+      {
+        "name": "Full Legal Name",
+        "type": "Exact Text",
+        "instructions": "Extract the employee's full legal name from the Employee Information section."
+      },
+      {
+        "name": "Employee ID",
+        "type": "Exact Text",
+        "instructions": "Extract the employee ID from the Employee Information section or header."
+      },
+      {
+        "name": "Home Address",
+        "type": "Exact Text",
+        "instructions": "Extract the street address from the Home address row."
+      },
+      {
+        "name": "City State ZIP",
+        "type": "Exact Text",
+        "instructions": "Extract the complete City/State/ZIP value exactly as shown."
+      },
+      {
+        "name": "Phone",
+        "type": "Exact Text",
+        "instructions": "Extract the employee phone number exactly as shown."
+      },
+      {
+        "name": "Email",
+        "type": "Exact Text",
+        "instructions": "Extract the employee email address exactly as shown."
+      },
+      {
+        "name": "Date Of Birth",
+        "type": "Date",
+        "instructions": "Extract the date of birth from the Employee Information section."
+      },
+      {
+        "name": "SSN",
+        "type": "Exact Text",
+        "instructions": "Extract the Social Security number exactly as shown, preserving masking or placeholder digits."
+      },
+      {
+        "name": "Position",
+        "type": "Exact Text",
+        "instructions": "Extract the position or job title from the Employee Information section."
+      },
+      {
+        "name": "Department",
+        "type": "Exact Text",
+        "instructions": "Extract the department from the Employee Information section."
+      },
+      {
+        "name": "Worksite",
+        "type": "Exact Text",
+        "instructions": "Extract the worksite value from the Employee Information section."
+      },
+      {
+        "name": "Start Date",
+        "type": "Date",
+        "instructions": "Extract the employee start date from the Employee Information section."
+      },
+      {
+        "name": "Medical School",
+        "type": "Exact Text",
+        "instructions": "Extract the Medical school generated entry from the Professional Profile section."
+      },
+      {
+        "name": "Residency",
+        "type": "Exact Text",
+        "instructions": "Extract the Residency generated entry from the Professional Profile section."
+      },
+      {
+        "name": "Board Certification",
+        "type": "Exact Text",
+        "instructions": "Extract the Board certification generated entry from the Professional Profile section."
+      },
+      {
+        "name": "NPI",
+        "type": "Exact Text",
+        "instructions": "Extract the NPI exactly as shown. Treat it as text to preserve all digits."
+      },
+      {
+        "name": "Federal W-4 Received",
+        "type": "Boolean Checkbox",
+        "instructions": "Extract whether the Federal W-4 received row is checked in the Tax and Payroll Setup section."
+      },
+      {
+        "name": "Federal W-4 Filing Status",
+        "type": "Exact Text",
+        "instructions": "Extract the filing status from the Federal W-4 generated response."
+      },
+      {
+        "name": "Federal W-4 Additional Withholding",
+        "type": "Exact Text",
+        "instructions": "Extract the additional withholding amount from the Federal W-4 generated response."
+      },
+      {
+        "name": "NJ W-4 Received",
+        "type": "Boolean Checkbox",
+        "instructions": "Extract whether the NJ W-4 received row is checked in the Tax and Payroll Setup section."
+      },
+      {
+        "name": "NJ W-4 Filing Status",
+        "type": "Exact Text",
+        "instructions": "Extract the NJ filing status from the NJ W-4 generated response."
+      },
+      {
+        "name": "NJ W-4 Allowances",
+        "type": "Number",
+        "instructions": "Extract the allowances number from the NJ W-4 generated response."
+      },
+      {
+        "name": "Direct Deposit Authorization Received",
+        "type": "Boolean Checkbox",
+        "instructions": "Extract whether the Direct deposit authorization received row is checked in the Tax and Payroll Setup section."
+      },
+      {
+        "name": "Direct Deposit Bank Name",
+        "type": "Exact Text",
+        "instructions": "Extract the bank name from the Direct deposit authorization generated response."
+      },
+      {
+        "name": "Direct Deposit Routing Number",
+        "type": "Exact Text",
+        "instructions": "Extract the routing number exactly as shown in the Direct deposit authorization generated response."
+      },
+      {
+        "name": "Direct Deposit Account Identifier",
+        "type": "Exact Text",
+        "instructions": "Extract the account identifier exactly as shown in the Direct deposit authorization generated response."
+      },
+      {
+        "name": "Payroll Portal Invite Sent",
+        "type": "Boolean Checkbox",
+        "instructions": "Extract whether the Payroll portal invite sent row is checked in the Tax and Payroll Setup section."
+      },
+      {
+        "name": "Payroll Portal Invite Recipient",
+        "type": "Exact Text",
+        "instructions": "Extract the email address or recipient from the Payroll portal invite sent generated response."
+      },
+      {
+        "name": "Emergency Contact Name",
+        "type": "Exact Text",
+        "instructions": "Extract the emergency contact name from the Emergency Contact section."
+      },
+      {
+        "name": "Emergency Contact Relationship",
+        "type": "Exact Text",
+        "instructions": "Extract the emergency contact relationship from the Emergency Contact section."
+      },
+      {
+        "name": "Emergency Contact Phone",
+        "type": "Exact Text",
+        "instructions": "Extract the emergency contact phone number exactly as shown."
+      },
+      {
+        "name": "Emergency Contact Address",
+        "type": "Exact Text",
+        "instructions": "Extract the emergency contact address from the Emergency Contact section."
+      },
+      {
+        "name": "Employee Handbook Received",
+        "type": "Boolean Checkbox",
+        "instructions": "Extract whether the Employee handbook received acknowledgement row is checked."
+      },
+      {
+        "name": "Employee Handbook Status",
+        "type": "Exact Text",
+        "instructions": "Extract the status for the Employee handbook received acknowledgement row."
+      },
+      {
+        "name": "HIPAA Privacy Training Assigned",
+        "type": "Boolean Checkbox",
+        "instructions": "Extract whether the HIPAA and privacy training assigned acknowledgement row is checked."
+      },
+      {
+        "name": "HIPAA Privacy Training Status",
+        "type": "Exact Text",
+        "instructions": "Extract the status for the HIPAA and privacy training assigned acknowledgement row."
+      },
+      {
+        "name": "Code Of Conduct Reviewed",
+        "type": "Boolean Checkbox",
+        "instructions": "Extract whether the Code of conduct reviewed acknowledgement row is checked."
+      },
+      {
+        "name": "Code Of Conduct Status",
+        "type": "Exact Text",
+        "instructions": "Extract the status for the Code of conduct reviewed acknowledgement row."
+      },
+      {
+        "name": "Conflict Of Interest Disclosure Completed",
+        "type": "Boolean Checkbox",
+        "instructions": "Extract whether the Conflict of interest disclosure completed acknowledgement row is checked."
+      },
+      {
+        "name": "Conflict Of Interest Disclosure Status",
+        "type": "Exact Text",
+        "instructions": "Extract the status for the Conflict of interest disclosure completed acknowledgement row."
+      },
+      {
+        "name": "IT Access EHR Provisioning Requested",
+        "type": "Boolean Checkbox",
+        "instructions": "Extract whether the IT access and EHR provisioning requested acknowledgement row is checked."
+      },
+      {
+        "name": "IT Access EHR Provisioning Status",
+        "type": "Exact Text",
+        "instructions": "Extract the status for the IT access and EHR provisioning requested acknowledgement row."
+      },
+      {
+        "name": "Employee Signature",
+        "type": "Exact Text",
+        "instructions": "Extract the employee signature name from the signature block."
+      },
+      {
+        "name": "Signature Date",
+        "type": "Date",
+        "instructions": "Extract the date from the signature block."
+      }
+    ]
+  }
+}
