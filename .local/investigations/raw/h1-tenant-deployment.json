@@ -1,0 +1,12 @@
+❌ Failed to register commands from tool 'solution-tool': program4.command(...).description(...).addOption(...).argument(...).option(...).option(...).option(...).option(...).option(...).examples is not a function   This might be due to a command name conflict with existing commands.❌ Failed to register commands from tool 'codedapp-tool': program2.command(...).description(...).argument(...).option(...).option(...).option(...).examples is not a function   This might be due to a command name conflict with existing commands.❌ Failed to register commands from tool 'orchestrator-tool': assets.command(...).description(...).addOption(...).option(...).option(...).option(...).option(...).option(...).option(...).option(...).option(...).option(...).examples is not a function   This might be due to a command name conflict with existing commands.❌ Failed to register commands from tool 'case-tool': program2.command(...).description(...).argument(...).option(...).option(...).examples is not a function   This might be due to a command name conflict with existing commands.❌ Failed to register commands from tool 'maestro-tool': program2.command(...).description(...).argument(...).option(...).option(...).option(...).examples is not a function   This might be due to a command name conflict with existing commands.{
+  "Result": "ValidationError",
+  "Message": "error: unknown command 'gov'",
+  "Instructions": "Check command arguments and options. Use --help for usage information."
+}
+ApplicationInsights:Sender [
+  'Ingestion endpoint could not be reached. This batch of telemetry items has been lost. Use Disk Retry Caching to enable resending of failed telemetry. Error:',
+  [
+    "[object Error]{ stack: 'Error: getaddrinfo ENOTFOUND westeurope-5.in.applicationinsights.azure.com\n" +
+      "    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)', message: 'getaddrinfo ENOTFOUND westeurope-5.in.applicationinsights.azure.com', name: 'Error'"
+  ]
+]

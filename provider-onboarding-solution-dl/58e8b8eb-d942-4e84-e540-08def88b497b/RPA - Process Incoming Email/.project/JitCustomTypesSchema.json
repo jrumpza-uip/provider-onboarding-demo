@@ -1,0 +1,1010 @@
+{
+  "ExportedBy": "StudioWeb",
+  "BundleHash": "qfLUFjPgCFAoB56d5NBFaUodMr6Lixp1itln0Hvjc",
+  "Version": "1.0.0.0",
+  "JitAssemblyCompilerCommands": [
+    {
+      "ProviderName": "CustomEntities",
+      "BundleOptions": {
+        "EntitiesBundle": {
+          "Types": {
+            "RPA___Process_Received_Documents_Input": {
+              "Name": "RPA___Process_Received_Documents_Input",
+              "Properties": [
+                {
+                  "Name": "documentsReceived_Data",
+                  "Type": {
+                    "ClrType": "System.Object, System.Private.CoreLib"
+                  },
+                  "Attributes": {
+                    "Values": [
+                      {
+                        "Type": {
+                          "ClrType": "Newtonsoft.Json.JsonPropertyAttribute, Newtonsoft.Json"
+                        },
+                        "ConstructorArguments": [
+                          {
+                            "Value": "\"documentsReceived_Data\"",
+                            "Type": {
+                              "ClrType": "System.String, System.Private.CoreLib"
+                            }
+                          }
+                        ],
+                        "NamedArguments": []
+                      },
+                      {
+                        "Type": {
+                          "ClrType": "System.ComponentModel.DisplayNameAttribute, System.ComponentModel.Primitives"
+                        },
+                        "ConstructorArguments": [
+                          {
+                            "Value": "\"documentsReceived_Data\"",
+                            "Type": {
+                              "ClrType": "System.String, System.Private.CoreLib"
+                            }
+                          }
+                        ],
+                        "NamedArguments": []
+                      }
+                    ]
+                  },
+                  "IsCollection": true
+                },
+                {
+                  "Name": "documentsReceived_Files",
+                  "Type": {
+                    "ClrType": "UiPath.Platform.ResourceHandling.IResource, UiPath.Platform"
+                  },
+                  "Attributes": {
+                    "Values": [
+                      {
+                        "Type": {
+                          "ClrType": "Newtonsoft.Json.JsonPropertyAttribute, Newtonsoft.Json"
+                        },
+                        "ConstructorArguments": [
+                          {
+                            "Value": "\"documentsReceived_Files\"",
+                            "Type": {
+                              "ClrType": "System.String, System.Private.CoreLib"
+                            }
+                          }
+                        ],
+                        "NamedArguments": []
+                      },
+                      {
+                        "Type": {
+                          "ClrType": "System.ComponentModel.DisplayNameAttribute, System.ComponentModel.Primitives"
+                        },
+                        "ConstructorArguments": [
+                          {
+                            "Value": "\"documentsReceived_Files\"",
+                            "Type": {
+                              "ClrType": "System.String, System.Private.CoreLib"
+                            }
+                          }
+                        ],
+                        "NamedArguments": []
+                      }
+                    ]
+                  },
+                  "IsCollection": true
+                },
+                {
+                  "Name": "recordId",
+                  "Type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  },
+                  "Attributes": {
+                    "Values": [
+                      {
+                        "Type": {
+                          "ClrType": "Newtonsoft.Json.JsonPropertyAttribute, Newtonsoft.Json"
+                        },
+                        "ConstructorArguments": [
+                          {
+                            "Value": "\"recordId\"",
+                            "Type": {
+                              "ClrType": "System.String, System.Private.CoreLib"
+                            }
+                          }
+                        ],
+                        "NamedArguments": []
+                      },
+                      {
+                        "Type": {
+                          "ClrType": "System.ComponentModel.DisplayNameAttribute, System.ComponentModel.Primitives"
+                        },
+                        "ConstructorArguments": [
+                          {
+                            "Value": "\"recordId\"",
+                            "Type": {
+                              "ClrType": "System.String, System.Private.CoreLib"
+                            }
+                          }
+                        ],
+                        "NamedArguments": []
+                      }
+                    ]
+                  }
+                }
+              ],
+              "Values": [],
+              "BaseType": null
+            }
+          },
+          "Metadata": {
+            "UniqueAssemblyIdentityId": "69a67f7c-a73c-4b31-9d23-927e44a29708"
+          },
+          "Version": 1
+        },
+        "Hash": "zQfGtjwgd5U9ziyKxshKzEsSM/ITlegOMi+s0kEB5cQ=",
+        "BundleName": "RPA___Process_Received_Documents_Input"
+      },
+      "EntityAssemblyKey": {
+        "Name": "UiPath.System.Activities.ViewModels.SWEntities.RPA___Process_Received_Documents_Input",
+        "Hash": "elFmR3Rqd2dkNVU5eml5S3hzaEt6RXNTTS9JVGxlZ09NaStzMGtFQjVjUT0",
+        "AssemblyName": "RPA___Process_Receiv.3oJ1duK9fS1E944Q1U71db4"
+      }
+    },
+    {
+      "ProviderName": "CustomEntities",
+      "BundleOptions": {
+        "EntitiesBundle": {
+          "Types": {
+            "RPA___Process_Received_Documents_Main_xaml_Input": {
+              "Name": "RPA___Process_Received_Documents_Main_xaml_Input",
+              "Properties": [
+                {
+                  "Name": "documentsReceived_Data",
+                  "Type": {
+                    "ClrType": "System.Object, System.Private.CoreLib"
+                  },
+                  "Attributes": {
+                    "Values": [
+                      {
+                        "Type": {
+                          "ClrType": "Newtonsoft.Json.JsonPropertyAttribute, Newtonsoft.Json"
+                        },
+                        "ConstructorArguments": [
+                          {
+                            "Value": "\"documentsReceived_Data\"",
+                            "Type": {
+                              "ClrType": "System.String, System.Private.CoreLib"
+                            }
+                          }
+                        ],
+                        "NamedArguments": []
+                      },
+                      {
+                        "Type": {
+                          "ClrType": "System.ComponentModel.DisplayNameAttribute, System.ComponentModel.Primitives"
+                        },
+                        "ConstructorArguments": [
+                          {
+                            "Value": "\"documentsReceived_Data\"",
+                            "Type": {
+                              "ClrType": "System.String, System.Private.CoreLib"
+                            }
+                          }
+                        ],
+                        "NamedArguments": []
+                      }
+                    ]
+                  },
+                  "IsCollection": true
+                },
+                {
+                  "Name": "documentsReceived_Files",
+                  "Type": {
+                    "ClrType": "UiPath.Platform.ResourceHandling.IResource, UiPath.Platform"
+                  },
+                  "Attributes": {
+                    "Values": [
+                      {
+                        "Type": {
+                          "ClrType": "Newtonsoft.Json.JsonPropertyAttribute, Newtonsoft.Json"
+                        },
+                        "ConstructorArguments": [
+                          {
+                            "Value": "\"documentsReceived_Files\"",
+                            "Type": {
+                              "ClrType": "System.String, System.Private.CoreLib"
+                            }
+                          }
+                        ],
+                        "NamedArguments": []
+                      },
+                      {
+                        "Type": {
+                          "ClrType": "System.ComponentModel.DisplayNameAttribute, System.ComponentModel.Primitives"
+                        },
+                        "ConstructorArguments": [
+                          {
+                            "Value": "\"documentsReceived_Files\"",
+                            "Type": {
+                              "ClrType": "System.String, System.Private.CoreLib"
+                            }
+                          }
+                        ],
+                        "NamedArguments": []
+                      }
+                    ]
+                  },
+                  "IsCollection": true
+                },
+                {
+                  "Name": "recordId",
+                  "Type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  },
+                  "Attributes": {
+                    "Values": [
+                      {
+                        "Type": {
+                          "ClrType": "Newtonsoft.Json.JsonPropertyAttribute, Newtonsoft.Json"
+                        },
+                        "ConstructorArguments": [
+                          {
+                            "Value": "\"recordId\"",
+                            "Type": {
+                              "ClrType": "System.String, System.Private.CoreLib"
+                            }
+                          }
+                        ],
+                        "NamedArguments": []
+                      },
+                      {
+                        "Type": {
+                          "ClrType": "System.ComponentModel.DisplayNameAttribute, System.ComponentModel.Primitives"
+                        },
+                        "ConstructorArguments": [
+                          {
+                            "Value": "\"recordId\"",
+                            "Type": {
+                              "ClrType": "System.String, System.Private.CoreLib"
+                            }
+                          }
+                        ],
+                        "NamedArguments": []
+                      }
+                    ]
+                  }
+                }
+              ],
+              "Values": [],
+              "BaseType": null
+            }
+          },
+          "Metadata": {
+            "UniqueAssemblyIdentityId": "1230a263-36a6-4b00-8f45-17b4a70eb17b"
+          },
+          "Version": 1
+        },
+        "Hash": "aGB5yDThp57ztGSvkH+wS9kHmSWVbWGU5+pI6nypCYE=",
+        "BundleName": "RPA___Process_Received_Documents_Main_xaml_Input"
+      },
+      "EntityAssemblyKey": {
+        "Name": "UiPath.System.Activities.ViewModels.SWEntities.RPA___Process_Received_Documents_Main_xaml_Input",
+        "Hash": "YUdCNXlEVGhwNTd6dEdTdmtIK3dTOWtIbVNXVmJXR1U1K3BJNm55cENZRT0",
+        "AssemblyName": "RPA___Process_Receiv.znjfE4DXeAQ11SH6H268X2w"
+      }
+    },
+    {
+      "ProviderName": "CustomEntities",
+      "BundleOptions": {
+        "EntitiesBundle": {
+          "Types": {
+            "Agent___Email_Intake__content_agent_json_Input": {
+              "Name": "Agent___Email_Intake__content_agent_json_Input",
+              "Properties": [
+                {
+                  "Name": "attachments",
+                  "Type": {
+                    "ClrType": "UiPath.Platform.ResourceHandling.IResource, UiPath.Platform"
+                  },
+                  "Attributes": {
+                    "Values": [
+                      {
+                        "Type": {
+                          "ClrType": "Newtonsoft.Json.JsonPropertyAttribute, Newtonsoft.Json"
+                        },
+                        "ConstructorArguments": [
+                          {
+                            "Value": "\"attachments\"",
+                            "Type": {
+                              "ClrType": "System.String, System.Private.CoreLib"
+                            }
+                          }
+                        ],
+                        "NamedArguments": []
+                      },
+                      {
+                        "Type": {
+                          "ClrType": "System.ComponentModel.DisplayNameAttribute, System.ComponentModel.Primitives"
+                        },
+                        "ConstructorArguments": [
+                          {
+                            "Value": "\"attachments\"",
+                            "Type": {
+                              "ClrType": "System.String, System.Private.CoreLib"
+                            }
+                          }
+                        ],
+                        "NamedArguments": []
+                      }
+                    ]
+                  },
+                  "IsCollection": true
+                },
+                {
+                  "Name": "emailBody",
+                  "Type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  },
+                  "Attributes": {
+                    "Values": [
+                      {
+                        "Type": {
+                          "ClrType": "Newtonsoft.Json.JsonPropertyAttribute, Newtonsoft.Json"
+                        },
+                        "ConstructorArguments": [
+                          {
+                            "Value": "\"emailBody\"",
+                            "Type": {
+                              "ClrType": "System.String, System.Private.CoreLib"
+                            }
+                          }
+                        ],
+                        "NamedArguments": []
+                      },
+                      {
+                        "Type": {
+                          "ClrType": "System.ComponentModel.DisplayNameAttribute, System.ComponentModel.Primitives"
+                        },
+                        "ConstructorArguments": [
+                          {
+                            "Value": "\"emailBody\"",
+                            "Type": {
+                              "ClrType": "System.String, System.Private.CoreLib"
+                            }
+                          }
+                        ],
+                        "NamedArguments": []
+                      }
+                    ]
+                  }
+                },
+                {
+                  "Name": "emailSender",
+                  "Type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  },
+                  "Attributes": {
+                    "Values": [
+                      {
+                        "Type": {
+                          "ClrType": "Newtonsoft.Json.JsonPropertyAttribute, Newtonsoft.Json"
+                        },
+                        "ConstructorArguments": [
+                          {
+                            "Value": "\"emailSender\"",
+                            "Type": {
+                              "ClrType": "System.String, System.Private.CoreLib"
+                            }
+                          }
+                        ],
+                        "NamedArguments": []
+                      },
+                      {
+                        "Type": {
+                          "ClrType": "System.ComponentModel.DisplayNameAttribute, System.ComponentModel.Primitives"
+                        },
+                        "ConstructorArguments": [
+                          {
+                            "Value": "\"emailSender\"",
+                            "Type": {
+                              "ClrType": "System.String, System.Private.CoreLib"
+                            }
+                          }
+                        ],
+                        "NamedArguments": []
+                      }
+                    ]
+                  }
+                },
+                {
+                  "Name": "emailSubject",
+                  "Type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  },
+                  "Attributes": {
+                    "Values": [
+                      {
+                        "Type": {
+                          "ClrType": "Newtonsoft.Json.JsonPropertyAttribute, Newtonsoft.Json"
+                        },
+                        "ConstructorArguments": [
+                          {
+                            "Value": "\"emailSubject\"",
+                            "Type": {
+                              "ClrType": "System.String, System.Private.CoreLib"
+                            }
+                          }
+                        ],
+                        "NamedArguments": []
+                      },
+                      {
+                        "Type": {
+                          "ClrType": "System.ComponentModel.DisplayNameAttribute, System.ComponentModel.Primitives"
+                        },
+                        "ConstructorArguments": [
+                          {
+                            "Value": "\"emailSubject\"",
+                            "Type": {
+                              "ClrType": "System.String, System.Private.CoreLib"
+                            }
+                          }
+                        ],
+                        "NamedArguments": []
+                      }
+                    ]
+                  }
+                }
+              ],
+              "Values": [],
+              "BaseType": null
+            }
+          },
+          "Metadata": {
+            "UniqueAssemblyIdentityId": "9f85ee23-2a85-4711-88c3-ea3e6da821cf"
+          },
+          "Version": 1
+        },
+        "Hash": "CAPT1yglnGqQKP3neUxV9tBX4Ultbqc5N5ENJRCZ/V0=",
+        "BundleName": "Agent___Email_Intake__content_agent_json_Input"
+      },
+      "EntityAssemblyKey": {
+        "Name": "UiPath.System.Activities.ViewModels.SWEntities.Agent___Email_Intake__content_agent_json_Input",
+        "Hash": "Q0FQVDF5Z2xuR3FRS1AzbmVVeFY5dEJYNFVsdGJxYzVONUVOSlJDWi9WMD0",
+        "AssemblyName": "Agent___Email_Intake.6Kq9a3GsShO1nhb0T27czyV4"
+      }
+    },
+    {
+      "ProviderName": "CustomEntities",
+      "BundleOptions": {
+        "EntitiesBundle": {
+          "Types": {
+            "Agent___Email_Intake__content_agent_json_Output": {
+              "Name": "Agent___Email_Intake__content_agent_json_Output",
+              "Properties": [
+                {
+                  "Name": "actionItems",
+                  "Type": {
+                    "DefinitionName": "actionItems"
+                  },
+                  "Attributes": {
+                    "Values": [
+                      {
+                        "Type": {
+                          "ClrType": "Newtonsoft.Json.JsonPropertyAttribute, Newtonsoft.Json"
+                        },
+                        "ConstructorArguments": [
+                          {
+                            "Value": "\"actionItems\"",
+                            "Type": {
+                              "ClrType": "System.String, System.Private.CoreLib"
+                            }
+                          }
+                        ],
+                        "NamedArguments": []
+                      },
+                      {
+                        "Type": {
+                          "ClrType": "System.ComponentModel.DisplayNameAttribute, System.ComponentModel.Primitives"
+                        },
+                        "ConstructorArguments": [
+                          {
+                            "Value": "\"actionItems\"",
+                            "Type": {
+                              "ClrType": "System.String, System.Private.CoreLib"
+                            }
+                          }
+                        ],
+                        "NamedArguments": []
+                      }
+                    ]
+                  },
+                  "IsCollection": true
+                },
+                {
+                  "Name": "attachedDocumentInfo",
+                  "Type": {
+                    "DefinitionName": "attachedDocumentInfo"
+                  },
+                  "Attributes": {
+                    "Values": [
+                      {
+                        "Type": {
+                          "ClrType": "Newtonsoft.Json.JsonPropertyAttribute, Newtonsoft.Json"
+                        },
+                        "ConstructorArguments": [
+                          {
+                            "Value": "\"attachedDocumentInfo\"",
+                            "Type": {
+                              "ClrType": "System.String, System.Private.CoreLib"
+                            }
+                          }
+                        ],
+                        "NamedArguments": []
+                      },
+                      {
+                        "Type": {
+                          "ClrType": "System.ComponentModel.DisplayNameAttribute, System.ComponentModel.Primitives"
+                        },
+                        "ConstructorArguments": [
+                          {
+                            "Value": "\"attachedDocumentInfo\"",
+                            "Type": {
+                              "ClrType": "System.String, System.Private.CoreLib"
+                            }
+                          }
+                        ],
+                        "NamedArguments": []
+                      }
+                    ]
+                  },
+                  "IsCollection": true
+                },
+                {
+                  "Name": "emailDescription",
+                  "Type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  },
+                  "Attributes": {
+                    "Values": [
+                      {
+                        "Type": {
+                          "ClrType": "Newtonsoft.Json.JsonPropertyAttribute, Newtonsoft.Json"
+                        },
+                        "ConstructorArguments": [
+                          {
+                            "Value": "\"emailDescription\"",
+                            "Type": {
+                              "ClrType": "System.String, System.Private.CoreLib"
+                            }
+                          }
+                        ],
+                        "NamedArguments": []
+                      },
+                      {
+                        "Type": {
+                          "ClrType": "System.ComponentModel.DisplayNameAttribute, System.ComponentModel.Primitives"
+                        },
+                        "ConstructorArguments": [
+                          {
+                            "Value": "\"emailDescription\"",
+                            "Type": {
+                              "ClrType": "System.String, System.Private.CoreLib"
+                            }
+                          }
+                        ],
+                        "NamedArguments": []
+                      }
+                    ]
+                  }
+                },
+                {
+                  "Name": "emailType",
+                  "Type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  },
+                  "Attributes": {
+                    "Values": [
+                      {
+                        "Type": {
+                          "ClrType": "Newtonsoft.Json.JsonPropertyAttribute, Newtonsoft.Json"
+                        },
+                        "ConstructorArguments": [
+                          {
+                            "Value": "\"emailType\"",
+                            "Type": {
+                              "ClrType": "System.String, System.Private.CoreLib"
+                            }
+                          }
+                        ],
+                        "NamedArguments": []
+                      },
+                      {
+                        "Type": {
+                          "ClrType": "System.ComponentModel.DisplayNameAttribute, System.ComponentModel.Primitives"
+                        },
+                        "ConstructorArguments": [
+                          {
+                            "Value": "\"emailType\"",
+                            "Type": {
+                              "ClrType": "System.String, System.Private.CoreLib"
+                            }
+                          }
+                        ],
+                        "NamedArguments": []
+                      }
+                    ]
+                  }
+                },
+                {
+                  "Name": "hasAttachments",
+                  "Type": {
+                    "ClrType": "System.Nullable`1[[System.Boolean, System.Private.CoreLib]], System.Private.CoreLib"
+                  },
+                  "Attributes": {
+                    "Values": [
+                      {
+                        "Type": {
+                          "ClrType": "Newtonsoft.Json.JsonPropertyAttribute, Newtonsoft.Json"
+                        },
+                        "ConstructorArguments": [
+                          {
+                            "Value": "\"hasAttachments\"",
+                            "Type": {
+                              "ClrType": "System.String, System.Private.CoreLib"
+                            }
+                          }
+                        ],
+                        "NamedArguments": []
+                      },
+                      {
+                        "Type": {
+                          "ClrType": "System.ComponentModel.DisplayNameAttribute, System.ComponentModel.Primitives"
+                        },
+                        "ConstructorArguments": [
+                          {
+                            "Value": "\"hasAttachments\"",
+                            "Type": {
+                              "ClrType": "System.String, System.Private.CoreLib"
+                            }
+                          }
+                        ],
+                        "NamedArguments": []
+                      }
+                    ]
+                  }
+                },
+                {
+                  "Name": "relatedCaseInstanceID",
+                  "Type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  },
+                  "Attributes": {
+                    "Values": [
+                      {
+                        "Type": {
+                          "ClrType": "Newtonsoft.Json.JsonPropertyAttribute, Newtonsoft.Json"
+                        },
+                        "ConstructorArguments": [
+                          {
+                            "Value": "\"relatedCaseInstanceID\"",
+                            "Type": {
+                              "ClrType": "System.String, System.Private.CoreLib"
+                            }
+                          }
+                        ],
+                        "NamedArguments": []
+                      },
+                      {
+                        "Type": {
+                          "ClrType": "System.ComponentModel.DisplayNameAttribute, System.ComponentModel.Primitives"
+                        },
+                        "ConstructorArguments": [
+                          {
+                            "Value": "\"relatedCaseInstanceID\"",
+                            "Type": {
+                              "ClrType": "System.String, System.Private.CoreLib"
+                            }
+                          }
+                        ],
+                        "NamedArguments": []
+                      }
+                    ]
+                  }
+                },
+                {
+                  "Name": "relatedRecordID",
+                  "Type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  },
+                  "Attributes": {
+                    "Values": [
+                      {
+                        "Type": {
+                          "ClrType": "Newtonsoft.Json.JsonPropertyAttribute, Newtonsoft.Json"
+                        },
+                        "ConstructorArguments": [
+                          {
+                            "Value": "\"relatedRecordID\"",
+                            "Type": {
+                              "ClrType": "System.String, System.Private.CoreLib"
+                            }
+                          }
+                        ],
+                        "NamedArguments": []
+                      },
+                      {
+                        "Type": {
+                          "ClrType": "System.ComponentModel.DisplayNameAttribute, System.ComponentModel.Primitives"
+                        },
+                        "ConstructorArguments": [
+                          {
+                            "Value": "\"relatedRecordID\"",
+                            "Type": {
+                              "ClrType": "System.String, System.Private.CoreLib"
+                            }
+                          }
+                        ],
+                        "NamedArguments": []
+                      }
+                    ]
+                  }
+                },
+                {
+                  "Name": "requiresResponse",
+                  "Type": {
+                    "ClrType": "System.Nullable`1[[System.Boolean, System.Private.CoreLib]], System.Private.CoreLib"
+                  },
+                  "Attributes": {
+                    "Values": [
+                      {
+                        "Type": {
+                          "ClrType": "Newtonsoft.Json.JsonPropertyAttribute, Newtonsoft.Json"
+                        },
+                        "ConstructorArguments": [
+                          {
+                            "Value": "\"requiresResponse\"",
+                            "Type": {
+                              "ClrType": "System.String, System.Private.CoreLib"
+                            }
+                          }
+                        ],
+                        "NamedArguments": []
+                      },
+                      {
+                        "Type": {
+                          "ClrType": "System.ComponentModel.DisplayNameAttribute, System.ComponentModel.Primitives"
+                        },
+                        "ConstructorArguments": [
+                          {
+                            "Value": "\"requiresResponse\"",
+                            "Type": {
+                              "ClrType": "System.String, System.Private.CoreLib"
+                            }
+                          }
+                        ],
+                        "NamedArguments": []
+                      }
+                    ]
+                  }
+                }
+              ],
+              "Values": [],
+              "BaseType": null
+            },
+            "actionItems": {
+              "Name": "actionItems",
+              "Properties": [
+                {
+                  "Name": "details",
+                  "Type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  },
+                  "Attributes": {
+                    "Values": [
+                      {
+                        "Type": {
+                          "ClrType": "Newtonsoft.Json.JsonPropertyAttribute, Newtonsoft.Json"
+                        },
+                        "ConstructorArguments": [
+                          {
+                            "Value": "\"details\"",
+                            "Type": {
+                              "ClrType": "System.String, System.Private.CoreLib"
+                            }
+                          }
+                        ],
+                        "NamedArguments": []
+                      },
+                      {
+                        "Type": {
+                          "ClrType": "System.ComponentModel.DisplayNameAttribute, System.ComponentModel.Primitives"
+                        },
+                        "ConstructorArguments": [
+                          {
+                            "Value": "\"details\"",
+                            "Type": {
+                              "ClrType": "System.String, System.Private.CoreLib"
+                            }
+                          }
+                        ],
+                        "NamedArguments": []
+                      }
+                    ]
+                  }
+                },
+                {
+                  "Name": "item",
+                  "Type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  },
+                  "Attributes": {
+                    "Values": [
+                      {
+                        "Type": {
+                          "ClrType": "Newtonsoft.Json.JsonPropertyAttribute, Newtonsoft.Json"
+                        },
+                        "ConstructorArguments": [
+                          {
+                            "Value": "\"item\"",
+                            "Type": {
+                              "ClrType": "System.String, System.Private.CoreLib"
+                            }
+                          }
+                        ],
+                        "NamedArguments": []
+                      },
+                      {
+                        "Type": {
+                          "ClrType": "System.ComponentModel.DisplayNameAttribute, System.ComponentModel.Primitives"
+                        },
+                        "ConstructorArguments": [
+                          {
+                            "Value": "\"item\"",
+                            "Type": {
+                              "ClrType": "System.String, System.Private.CoreLib"
+                            }
+                          }
+                        ],
+                        "NamedArguments": []
+                      }
+                    ]
+                  }
+                }
+              ],
+              "Values": [],
+              "BaseType": null
+            },
+            "attachedDocumentInfo": {
+              "Name": "attachedDocumentInfo",
+              "Properties": [
+                {
+                  "Name": "extractedFields",
+                  "Type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  },
+                  "Attributes": {
+                    "Values": [
+                      {
+                        "Type": {
+                          "ClrType": "Newtonsoft.Json.JsonPropertyAttribute, Newtonsoft.Json"
+                        },
+                        "ConstructorArguments": [
+                          {
+                            "Value": "\"extractedFields\"",
+                            "Type": {
+                              "ClrType": "System.String, System.Private.CoreLib"
+                            }
+                          }
+                        ],
+                        "NamedArguments": []
+                      },
+                      {
+                        "Type": {
+                          "ClrType": "System.ComponentModel.DisplayNameAttribute, System.ComponentModel.Primitives"
+                        },
+                        "ConstructorArguments": [
+                          {
+                            "Value": "\"extractedFields\"",
+                            "Type": {
+                              "ClrType": "System.String, System.Private.CoreLib"
+                            }
+                          }
+                        ],
+                        "NamedArguments": []
+                      }
+                    ]
+                  }
+                },
+                {
+                  "Name": "fileName",
+                  "Type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  },
+                  "Attributes": {
+                    "Values": [
+                      {
+                        "Type": {
+                          "ClrType": "Newtonsoft.Json.JsonPropertyAttribute, Newtonsoft.Json"
+                        },
+                        "ConstructorArguments": [
+                          {
+                            "Value": "\"fileName\"",
+                            "Type": {
+                              "ClrType": "System.String, System.Private.CoreLib"
+                            }
+                          }
+                        ],
+                        "NamedArguments": []
+                      },
+                      {
+                        "Type": {
+                          "ClrType": "System.ComponentModel.DisplayNameAttribute, System.ComponentModel.Primitives"
+                        },
+                        "ConstructorArguments": [
+                          {
+                            "Value": "\"fileName\"",
+                            "Type": {
+                              "ClrType": "System.String, System.Private.CoreLib"
+                            }
+                          }
+                        ],
+                        "NamedArguments": []
+                      }
+                    ]
+                  }
+                },
+                {
+                  "Name": "fileType",
+                  "Type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  },
+                  "Attributes": {
+                    "Values": [
+                      {
+                        "Type": {
+                          "ClrType": "Newtonsoft.Json.JsonPropertyAttribute, Newtonsoft.Json"
+                        },
+                        "ConstructorArguments": [
+                          {
+                            "Value": "\"fileType\"",
+                            "Type": {
+                              "ClrType": "System.String, System.Private.CoreLib"
+                            }
+                          }
+                        ],
+                        "NamedArguments": []
+                      },
+                      {
+                        "Type": {
+                          "ClrType": "System.ComponentModel.DisplayNameAttribute, System.ComponentModel.Primitives"
+                        },
+                        "ConstructorArguments": [
+                          {
+                            "Value": "\"fileType\"",
+                            "Type": {
+                              "ClrType": "System.String, System.Private.CoreLib"
+                            }
+                          }
+                        ],
+                        "NamedArguments": []
+                      }
+                    ]
+                  }
+                }
+              ],
+              "Values": [],
+              "BaseType": null
+            }
+          },
+          "Metadata": {
+            "UniqueAssemblyIdentityId": "9241995d-da53-48f8-80a2-1d46745e1c2d"
+          },
+          "Version": 1
+        },
+        "Hash": "fyNBaeT2TSK/2HFMGQZVjXyOH6b2PmQrIik19b6sHls=",
+        "BundleName": "Agent___Email_Intake__content_agent_json_Output"
+      },
+      "EntityAssemblyKey": {
+        "Name": "UiPath.System.Activities.ViewModels.SWEntities.Agent___Email_Intake__content_agent_json_Output",
+        "Hash": "ZnlOQmFlVDJUU0svMkhGTUdRWlZqWHlPSDZiMlBtUXJJaWsxOWI2c0hscz0",
+        "AssemblyName": "Agent___Email_Intake.AwwRD3WIqIE1dTpIT4VxuPq"
+      }
+    }
+  ]
+}

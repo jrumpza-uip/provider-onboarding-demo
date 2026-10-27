@@ -1,0 +1,62 @@
+{
+  "docVersion": "1.0.0",
+  "resource": {
+    "name": "RPA - Log Activity",
+    "kind": "process",
+    "type": "process",
+    "apiVersion": "orchestrator.uipath.com/v1",
+    "projectKey": "aec7e2ed-5176-4407-97fc-28add60109c8",
+    "isOverridable": true,
+    "dependencies": [
+      {
+        "name": "RPA - Log Activity",
+        "kind": "package"
+      }
+    ],
+    "runtimeDependencies": [],
+    "files": [],
+    "folders": [
+      {
+        "fullyQualifiedName": "solution_folder"
+      }
+    ],
+    "spec": {
+      "entryPointUniqueId": null,
+      "inputArgumentsSchema": null,
+      "outputArgumentsSchema": null,
+      "inputArgumentsSchemaV2": null,
+      "outputArgumentsSchemaV2": null,
+      "type": "Process",
+      "name": "RPA - Log Activity",
+      "description": null,
+      "package": {
+        "key": "7a087c6e-fbba-4a32-8703-a03a7d621d37"
+      },
+      "packageName": "Provider.Onboarding.process.RPA.Log.Activity",
+      "packageVersion": null,
+      "entryPointName": null,
+      "inputArguments": null,
+      "jobPriority": "Medium",
+      "hiddenForAttendedUser": false,
+      "alwaysRunning": false,
+      "autoStartProcess": false,
+      "jobRecording": "Disabled",
+      "targetFrameworkValue": "Portable",
+      "duration": 40,
+      "frequency": 500,
+      "quality": 100,
+      "remoteControlAccess": "None",
+      "retentionAction": "Delete",
+      "retentionPeriod": 30,
+      "retentionBucketRef": null,
+      "staleRetentionAction": "Delete",
+      "staleRetentionPeriod": 180,
+      "staleRetentionBucketRef": null,
+      "entryPoints": null,
+      "connections": null,
+      "tags": []
+    },
+    "locks": [],
+    "key": "7416ab7e-f1a7-4e06-8993-fbfb160c858d"
+  }
+}

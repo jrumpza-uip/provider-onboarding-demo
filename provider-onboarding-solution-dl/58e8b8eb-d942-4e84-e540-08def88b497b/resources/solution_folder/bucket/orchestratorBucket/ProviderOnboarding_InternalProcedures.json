@@ -1,0 +1,27 @@
+{
+  "docVersion": "1.0.0",
+  "resource": {
+    "name": "ProviderOnboarding_InternalProcedures",
+    "kind": "bucket",
+    "type": "orchestratorBucket",
+    "apiVersion": "orchestrator.uipath.com/v1",
+    "isOverridable": true,
+    "dependencies": [],
+    "runtimeDependencies": [],
+    "files": [],
+    "folders": [
+      {
+        "fullyQualifiedName": "solution_folder"
+      }
+    ],
+    "spec": {
+      "type": "Orchestrator",
+      "name": "ProviderOnboarding_InternalProcedures",
+      "description": null,
+      "options": null,
+      "tags": []
+    },
+    "locks": [],
+    "key": "8acdb9f3-457e-498c-8a13-d8ef4b761bc2"
+  }
+}

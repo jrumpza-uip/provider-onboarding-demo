@@ -1,0 +1,6 @@
+{
+  "ProjectType": "Process",
+  "Name": "RPA - Process Incoming Email",
+  "Description": null,
+  "MainFile": "Main.xaml"
+}

@@ -1,0 +1,19 @@
+{
+  "$resourceType": "context",
+  "id": "09f1e449-7023-41ad-a207-0648d047d0f5",
+  "referenceKey": null,
+  "name": "Entities",
+  "description": "Retrieve the record associated with the input recordId",
+  "contextType": "datafabricentityset",
+  "entitySet": [
+    {
+      "id": "a7063ae3-cd7f-f111-b337-000d3ab0e5e5",
+      "referenceKey": "a7063ae3-cd7f-f111-b337-000d3ab0e5e5",
+      "name": "ProviderOnboardingMainRecord",
+      "folderId": "43da200c-7c81-49b9-8831-9467eedb697b",
+      "folderDisplayName": "AMER Presales/HLS/Demo/Provider Onboarding",
+      "description": "",
+      "entityType": "native"
+    }
+  ]
+}

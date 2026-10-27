@@ -1,0 +1,29 @@
+{
+  "version": "3.0.0.0",
+  "bundleHash": "NuysiEJWyWdkcaEl9i8qOkdfKW1CDbll0z8PLABeyO0",
+  "addedAssemblyNames": [],
+  "discardedAssemblyNames": [
+    "DataFabric.Entities.9taLJ3jjY8R1tjVJY4crhSA"
+  ],
+  "discardedAssemblyReplacements": {
+    "DataFabric.Entities.9taLJ3jjY8R1tjVJY4crhSA": "DataFabric.Entities.lOeJf8fQzD1FGoJQNfZAB"
+  },
+  "assembliesJitInfo": {
+    "DeserializeJSONd4a2e.rl1MgDOzdS149y0Q2fA2hQ3": {
+      "createdAt": "2026-08-10T16:29:34.915393-05:00",
+      "providerName": "CustomEntities",
+      "rootNamespace": "UiPath.Web.Activities.ViewModels.SWEntities.DeserializeJSONd4a2e7.Bundle",
+      "typeNames": [
+        "DeserializeJSONd4a2e7"
+      ]
+    },
+    "DeserializeJSON05b29.3v3LD3kZKZL14hPYm2sQjgm1": {
+      "createdAt": "2026-08-10T16:53:38.186596-05:00",
+      "providerName": "CustomEntities",
+      "rootNamespace": "UiPath.Web.Activities.ViewModels.SWEntities.DeserializeJSON05b29f.Bundle",
+      "typeNames": [
+        "DeserializeJSON05b29f"
+      ]
+    }
+  }
+}

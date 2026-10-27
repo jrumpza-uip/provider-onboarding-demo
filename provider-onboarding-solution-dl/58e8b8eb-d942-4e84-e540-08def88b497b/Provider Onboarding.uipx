@@ -1,0 +1,38 @@
+{
+  "DocVersion": "1.0.0",
+  "StudioMinVersion": "2025.04.0",
+  "SolutionId": "58e8b8eb-d942-4e84-e540-08def88b497b",
+  "Projects": [
+    {
+      "Type": "Agent",
+      "ProjectRelativePath": "Agent - Email Intake/project.uiproj",
+      "Id": "8ff445d4-23b9-4fd8-a0b1-043f638ae85b"
+    },
+    {
+      "Type": "Agent",
+      "ProjectRelativePath": "Agent - Onboarding Status/project.uiproj",
+      "Id": "077b1ac3-4c07-4b65-a6b8-3c863659f0ba"
+    },
+    {
+      "Type": "Process",
+      "ProjectRelativePath": "RPA - Process Received Documents/project.uiproj",
+      "Id": "3c4ea452-22fd-47e4-b200-6356c649911b"
+    },
+    {
+      "Type": "Process",
+      "ProjectRelativePath": "RPA - Log Activity/project.uiproj",
+      "Id": "aec7e2ed-5176-4407-97fc-28add60109c8"
+    },
+    {
+      "Type": "Process",
+      "ProjectRelativePath": "RPA - Process Incoming Email/project.uiproj",
+      "Id": "99d6e315-4939-4b17-ac54-21ee3ec24951"
+    },
+    {
+      "Type": "Process",
+      "ProjectRelativePath": "Email Test/project.uiproj",
+      "Id": "5d8980b7-46db-4a4c-825b-21a4682835b2"
+    }
+  ],
+  "AutomationHubIdeaUrl": null
+}

@@ -1,0 +1,23 @@
+{
+  "zoom": 1.36,
+  "agentPosition": {
+    "x": 0,
+    "y": 0
+  },
+  "resourceNodes": [
+    {
+      "id": "agent=>Entities:09f1e449-7023-41ad-a207-0648d047d0f5",
+      "position": {
+        "x": -64,
+        "y": 384
+      }
+    },
+    {
+      "id": "agent=>ProviderOnboarding_InternalProceduresIndex:0aba68f5-5941-49db-af71-74ab2f3d88cc",
+      "position": {
+        "x": 96,
+        "y": 384
+      }
+    }
+  ]
+}

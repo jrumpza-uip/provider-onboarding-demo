@@ -1,0 +1,311 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main"
+ xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities"
+ xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+ xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation"
+ xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation"
+ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib"
+ xmlns:uasj="clr-namespace:UiPath.Activities.System.Jobs;assembly=UiPath.System.Activities"
+ xmlns:ui="http://schemas.uipath.com/workflow/activities"
+ xmlns:umam="clr-namespace:UiPath.MicrosoftOffice365.Activities.Mail;assembly=UiPath.MicrosoftOffice365.Activities"
+ xmlns:umame="clr-namespace:UiPath.MicrosoftOffice365.Activities.Mail.Enums;assembly=UiPath.MicrosoftOffice365.Activities"
+ xmlns:umamf="clr-namespace:UiPath.MicrosoftOffice365.Activities.Mail.Filters;assembly=UiPath.MicrosoftOffice365.Activities"
+ xmlns:umamm="clr-namespace:UiPath.MicrosoftOffice365.Activities.Mail.Models;assembly=UiPath.MicrosoftOffice365.Activities"
+ xmlns:umm="clr-namespace:UiPath.MicrosoftOffice365.Models;assembly=UiPath.MicrosoftOffice365"
+ xmlns:ummm="clr-namespace:UiPath.MicrosoftOffice365.Mail.Models;assembly=UiPath.MicrosoftOffice365"
+ xmlns:upad="clr-namespace:UiPath.Platform.Activities.DataMapping;assembly=UiPath.Platform"
+ xmlns:upd="clr-namespace:UiPath.Platform.DataMapping;assembly=UiPath.Platform"
+ xmlns:upr="clr-namespace:UiPath.Platform.ResourceHandling;assembly=UiPath.Platform"
+ xmlns:usau="clr-namespace:UiPath.Shared.Activities.Utils;assembly=UiPath.MicrosoftOffice365.Activities"
+ xmlns:usavsab="clr-namespace:UiPath.System.Activities.ViewModels.SWEntities.Agent___Email_Intake__content_agent_json_Input.Bundle;assembly=Agent___Email_Intake.6Kq9a3GsShO1nhb0T27czyV4"
+ xmlns:usavsab1="clr-namespace:UiPath.System.Activities.ViewModels.SWEntities.Agent___Email_Intake__content_agent_json_Output.Bundle;assembly=Agent___Email_Intake.AwwRD3WIqIE1dTpIT4VxuPq"
+ xmlns:usavsrb="clr-namespace:UiPath.System.Activities.ViewModels.SWEntities.RPA___Process_Received_Documents_Main_xaml_Input.Bundle;assembly=RPA___Process_Receiv.znjfE4DXeAQ11SH6H268X2w"
+ xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="52">
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Activities</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Mail.Enums</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Models</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.Shared.Services.Graph.Mail.Models</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Mail.Filters</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Contracts</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Mail.Enums</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Filters</x:String>
+      <x:String>UiPath.Shared.Activities.Utils</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Mail.Models</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Mail</x:String>
+      <x:String>UiPath.Shared.Activities.ConnectionService.Contracts</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Enums</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Mail.Models</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Files.Enums</x:String>
+      <x:String>UiPath.Activities.System.Jobs</x:String>
+      <x:String>Microsoft.Rest</x:String>
+      <x:String>UiPath.Orchestrator.Client.Models</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.Core.Activities.Orchestrator</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Utilities</x:String>
+      <x:String>UiPath.Productivity.Activities.Diagnostics</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Mail.Triggers</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>Newtonsoft.Json</x:String>
+      <x:String>Newtonsoft.Json.Linq</x:String>
+      <x:String>UiPath.System.Activities.ViewModels.SWEntities.RPA___Process_Received_Documents_Input.Bundle</x:String>
+      <x:String>UiPath.System.Activities.ViewModels.SWEntities.RPA___Process_Received_Documents_Main_xaml_Input.Bundle</x:String>
+      <x:String>UiPath.Shared.Services.Graph.Mail.Contracts</x:String>
+      <x:String>UiPath.System.Activities.ViewModels.SWEntities.Agent___Email_Intake__content_agent_json_Input.Bundle</x:String>
+      <x:String>UiPath.System.Activities.ViewModels.SWEntities.Agent___Email_Intake__content_agent_json_Output.Bundle</x:String>
+      <x:String>System.Net.Mime</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="29">
+      <AssemblyReference>Agent___Email_Intake.AwwRD3WIqIE1dTpIT4VxuPq</AssemblyReference>
+      <AssemblyReference>Agent___Email_Intake.6Kq9a3GsShO1nhb0T27czyV4</AssemblyReference>
+      <AssemblyReference>RPA___Process_Receiv.znjfE4DXeAQ11SH6H268X2w</AssemblyReference>
+      <AssemblyReference>RPA___Process_Receiv.3oJ1duK9fS1E944Q1U71db4</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Net.Primitives</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>Newtonsoft.Json</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Runtime</AssemblyReference>
+      <AssemblyReference>netstandard</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>UiPath.MicrosoftOffice365.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.Graph</AssemblyReference>
+      <AssemblyReference>UiPath.MicrosoftOffice365</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.Specialized</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>Microsoft.Rest.ClientRuntime</AssemblyReference>
+      <AssemblyReference>System.Net.Http</AssemblyReference>
+      <AssemblyReference>UiPath.OrchestratorClient</AssemblyReference>
+      <AssemblyReference>System.Reflection.Primitives</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap:VirtualizedContainerService.HintSize="356,732" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="scg:List(upr:IResource)" Default="[new System.Collections.Generic.List(Of UiPath.Platform.ResourceHandling.IResource) From {  }]" Name="receivedAttachments" />
+      <Variable x:TypeArguments="ummm:O365AttachmentLocalItem[]" Default="[new UiPath.MicrosoftOffice365.Mail.Models.O365AttachmentLocalItem() {  }]" Name="downloadedAttachments">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:String x:Key="SourceIdRef">DownloadEmailAttachments_1</x:String>
+            <x:String x:Key="SourcePropertyName">NewResult</x:String>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </Variable>
+      <Variable x:TypeArguments="usavsab1:Agent___Email_Intake__content_agent_json_Output" Default="[new UiPath.System.Activities.ViewModels.SWEntities.Agent___Email_Intake__content_agent_json_Output.Bundle.Agent___Email_Intake__content_agent_json_Output]" Name="outputArguments">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:String x:Key="SourceIdRef">RunJob_1</x:String>
+            <x:String x:Key="SourcePropertyName">Output</x:String>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </Variable>
+      <Variable x:TypeArguments="umm:Office365Message" Name="email">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:String x:Key="SourceIdRef">GetNewestEmail_1</x:String>
+            <x:String x:Key="SourcePropertyName">Result</x:String>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </Variable>
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:ManualTrigger Result="{x:Null}" DisplayName="Manual Trigger" sap2010:WorkflowViewState.IdRef="ManualTrigger_1" />
+    <umam:GetNewestEmail ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" FolderIdBackup="{x:Reference __ReferenceID0}" FreeTextFilter="{x:Null}" Mailbox="{x:Null}" MailboxBackup="{x:Reference __ReferenceID1}" ManualEntryFolder="{x:Null}" QueryFilter="{x:Null}" AuthScopesInvalid="False" BodyAsHtml="False" BrowserFolder="Inbox" BrowserFolderId="AQMkADM5OQAwMTk0NS1lN2U4LTQwM2UtOWQxNC0wNjI4M2FjMDRkZjIALgAAA7Kgv9d92ddMhcpHlQHrxCEBALAfp4QMChhGrIEXWHi00cMAAAIBDAAAAA==" ConnectionId="36e7d52f-b038-4898-8d71-db84048d3eb7" DisplayName="Get Newest Email" FilterSelectionMode="ConditionBuilder" sap2010:WorkflowViewState.IdRef="GetNewestEmail_1" Importance="Any" IncludeAttachments="None" MarkAsRead="False" Result="[email]" SelectionMode="Browse" UnreadOnly="False" UseConnectionService="True" UseSharedMailbox="False" WithAttachmentsOnly="False">
+      <umam:GetNewestEmail.Filter>
+        <umamf:MailFilterCollection LogicalOperator="And">
+          <umamf:MailFilterCollection.Filters>
+            <umamf:MailFilterElement DateValue="{x:Null}" Criteria="Subject" DateOperator="NewerThan" InStringValue="provider onboarding" StringOperator="Contains" TypeOperator="Equals" TypeValue="Email" />
+          </umamf:MailFilterCollection.Filters>
+        </umamf:MailFilterCollection>
+      </umam:GetNewestEmail.Filter>
+      <umam:GetNewestEmail.FilterSelectionBackup>
+        <usau:BackupSlot x:TypeArguments="umame:FilterMode" StoredValue="ConditionBuilder">
+          <usau:BackupSlot.BackupValues>
+            <scg:Dictionary x:TypeArguments="umame:FilterMode, scg:List(x:Object)" />
+          </usau:BackupSlot.BackupValues>
+        </usau:BackupSlot>
+      </umam:GetNewestEmail.FilterSelectionBackup>
+      <umam:GetNewestEmail.MailFolderArgument>
+        <umamm:MailFolderArgument ConnectionDescriptor="{x:Null}" ManualEntryFolder="{x:Null}" BrowserFolder="Inbox" BrowserFolderId="AQMkADM5OQAwMTk0NS1lN2U4LTQwM2UtOWQxNC0wNjI4M2FjMDRkZjIALgAAA7Kgv9d92ddMhcpHlQHrxCEBALAfp4QMChhGrIEXWHi00cMAAAIBDAAAAA==" ConnectionKey="36e7d52f-b038-4898-8d71-db84048d3eb7" SelectionMode="Browse">
+          <umamm:MailFolderArgument.Backup>
+            <usau:BackupSlot x:TypeArguments="umame:ItemSelectionMode" x:Name="__ReferenceID0" StoredValue="Browse">
+              <usau:BackupSlot.BackupValues>
+                <scg:Dictionary x:TypeArguments="umame:ItemSelectionMode, scg:List(x:Object)" />
+              </usau:BackupSlot.BackupValues>
+            </usau:BackupSlot>
+          </umamm:MailFolderArgument.Backup>
+        </umamm:MailFolderArgument>
+      </umam:GetNewestEmail.MailFolderArgument>
+      <umam:GetNewestEmail.MailboxArg>
+        <umamm:MailboxArgument SharedMailbox="{x:Null}" UseSharedMailbox="False">
+          <umamm:MailboxArgument.Backup>
+            <usau:BackupSlot x:TypeArguments="umame:MailboxSelectionMode" x:Name="__ReferenceID1" StoredValue="NoMailbox">
+              <usau:BackupSlot.BackupValues>
+                <scg:List x:TypeArguments="x:Object" x:Key="NoMailbox" Capacity="1">
+                  <x:Null />
+                </scg:List>
+                <scg:List x:TypeArguments="x:Object" x:Key="UseISMailbox" Capacity="1">
+                  <x:Null />
+                </scg:List>
+                <scg:List x:TypeArguments="x:Object" x:Key="UseMailbox" Capacity="2">
+                  <InArgument x:TypeArguments="x:String" />
+                  <x:Null />
+                </scg:List>
+              </usau:BackupSlot.BackupValues>
+            </usau:BackupSlot>
+          </umamm:MailboxArgument.Backup>
+        </umamm:MailboxArgument>
+      </umam:GetNewestEmail.MailboxArg>
+    </umam:GetNewestEmail>
+    <umam:DownloadEmailAttachments ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" DestinationPath="{x:Null}" Filter="{x:Null}" FilterByFileNames="{x:Null}" Result="{x:Null}" AuthScopesInvalid="False" ConflictResolution="Fail" ConnectionId="36e7d52f-b038-4898-8d71-db84048d3eb7" DisplayName="Download Email Attachments" Email="[email]" ExcludeInlineAttachments="False" sap2010:WorkflowViewState.IdRef="DownloadEmailAttachments_1" NewResult="[downloadedAttachments]" SearchMode="UseSimple" UseConnectionService="True" />
+    <ui:ForEach x:TypeArguments="ummm:O365AttachmentLocalItem" CurrentIndex="{x:Null}" sap:WorkflowViewStateService.ViewState="{x:Null}" DisplayName="For Each currentFile" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[downloadedAttachments]">
+      <ui:ForEach.Body>
+        <ActivityAction x:TypeArguments="ummm:O365AttachmentLocalItem">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="ummm:O365AttachmentLocalItem" Name="currentFile" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="" sap2010:WorkflowViewState.IdRef="Sequence_5">
+            <AddToCollection x:TypeArguments="upr:IResource" sap:WorkflowViewStateService.ViewState="{x:Null}" Collection="[receivedAttachments]" DisplayName="Add To Collection" sap2010:WorkflowViewState.IdRef="AddToCollection`1_2" Item="[currentFile]" />
+          </Sequence>
+        </ActivityAction>
+      </ui:ForEach.Body>
+    </ui:ForEach>
+    <ui:LogMessage DisplayName="Log Message" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Email located with &quot; + receivedAttachments.Count.ToString + &quot; attachments and subject: &quot; + email.Subject]" />
+    <ui:CommentOut DisplayName="Disabled activities 3" sap2010:WorkflowViewState.IdRef="CommentOut_4">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="Ignored Activities" sap2010:WorkflowViewState.IdRef="Sequence_9">
+          <uasj:RunJob DisplayName="Run Agent: Email Intake Agent" sap2010:WorkflowViewState.IdRef="RunJob_1" ProcessName="Agent - Email Intake">
+            <uasj:RunJob.Arguments>
+              <scg:Dictionary x:TypeArguments="x:String, Argument" />
+            </uasj:RunJob.Arguments>
+            <uasj:RunJob.Input>
+              <InArgument x:TypeArguments="usavsab:Agent___Email_Intake__content_agent_json_Input">
+                <upad:DataMappingPocoActivity x:TypeArguments="usavsab:Agent___Email_Intake__content_agent_json_Input" sap2010:WorkflowViewState.IdRef="DataMappingPocoActivity`1_1" ParentPath="">
+                  <upad:DataMappingPocoActivity.MappingInputs>
+                    <scg:List x:TypeArguments="upd:MappingInput" Capacity="4">
+                      <upd:MappingInput PropertyName="attachments" PropertyType="scg:List(upr:IResource)">
+                        <upd:MappingInput.Value>
+                          <InArgument x:TypeArguments="scg:List(upr:IResource)">[receivedAttachments]</InArgument>
+                        </upd:MappingInput.Value>
+                      </upd:MappingInput>
+                      <upd:MappingInput PropertyName="emailBody" PropertyType="x:String">
+                        <upd:MappingInput.Value>
+                          <InArgument x:TypeArguments="x:String">[email.Body]</InArgument>
+                        </upd:MappingInput.Value>
+                      </upd:MappingInput>
+                      <upd:MappingInput PropertyName="emailSender" PropertyType="x:String">
+                        <upd:MappingInput.Value>
+                          <InArgument x:TypeArguments="x:String">[email.FromAddress]</InArgument>
+                        </upd:MappingInput.Value>
+                      </upd:MappingInput>
+                      <upd:MappingInput PropertyName="emailSubject" PropertyType="x:String">
+                        <upd:MappingInput.Value>
+                          <InArgument x:TypeArguments="x:String">[email.Subject]</InArgument>
+                        </upd:MappingInput.Value>
+                      </upd:MappingInput>
+                    </scg:List>
+                  </upad:DataMappingPocoActivity.MappingInputs>
+                </upad:DataMappingPocoActivity>
+              </InArgument>
+            </uasj:RunJob.Input>
+            <uasj:RunJob.Output>
+              <OutArgument x:TypeArguments="usavsab1:Agent___Email_Intake__content_agent_json_Output">[outputArguments]</OutArgument>
+            </uasj:RunJob.Output>
+          </uasj:RunJob>
+        </Sequence>
+      </ui:CommentOut.Body>
+    </ui:CommentOut>
+    <ui:CommentOut DisplayName="Disabled activities 4" sap2010:WorkflowViewState.IdRef="CommentOut_5">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="Ignored Activities" sap2010:WorkflowViewState.IdRef="Sequence_10">
+          <If Condition="[outputArguments.attachedDocumentInfo.Count &gt; 0]" DisplayName="If" sap2010:WorkflowViewState.IdRef="If_1">
+            <If.Then>
+              <Sequence sap2010:WorkflowViewState.IdRef="Sequence_2">
+                <uasj:RunJob DisplayName="Run RPA: RPA - Process Received Documents Main.xaml" EntryPointPath="Main.xaml" sap2010:WorkflowViewState.IdRef="RunJob_2" ProcessName="RPA - Process Received Documents">
+                  <uasj:RunJob.Arguments>
+                    <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                  </uasj:RunJob.Arguments>
+                  <uasj:RunJob.Input>
+                    <InArgument x:TypeArguments="usavsrb:RPA___Process_Received_Documents_Main_xaml_Input">
+                      <upad:DataMappingPocoActivity x:TypeArguments="usavsrb:RPA___Process_Received_Documents_Main_xaml_Input" sap2010:WorkflowViewState.IdRef="DataMappingPocoActivity`1_2" ParentPath="">
+                        <upad:DataMappingPocoActivity.MappingInputs>
+                          <scg:List x:TypeArguments="upd:MappingInput" Capacity="4">
+                            <upd:MappingInput PropertyName="documentsReceived_Data" PropertyType="scg:List(x:Object)">
+                              <upd:MappingInput.Value>
+                                <InArgument x:TypeArguments="scg:List(x:Object)">
+                                  <upad:DataMappingEnumerableActivity x:TypeArguments="x:Object, usavsab1:attachedDocumentInfo, scg:List(x:Object)" CurrentIndexName="documentsReceived_Data_currentIndex1" CurrentValueName="documentsReceived_Data_currentValue1" PropertyName="documentsReceived_Data" Values="[outputArguments.attachedDocumentInfo]">
+                                    <ActivityFunc x:TypeArguments="usavsab1:attachedDocumentInfo, x:Int32, x:Object">
+                                      <ActivityFunc.Argument1>
+                                        <DelegateInArgument x:TypeArguments="usavsab1:attachedDocumentInfo" Name="documentsReceived_Data_currentValue1" />
+                                      </ActivityFunc.Argument1>
+                                      <ActivityFunc.Argument2>
+                                        <DelegateInArgument x:TypeArguments="x:Int32" Name="documentsReceived_Data_currentIndex1" />
+                                      </ActivityFunc.Argument2>
+                                    </ActivityFunc>
+                                  </upad:DataMappingEnumerableActivity>
+                                </InArgument>
+                              </upd:MappingInput.Value>
+                            </upd:MappingInput>
+                            <upd:MappingInput PropertyName="documentsReceived_Files" PropertyType="scg:List(upr:IResource)">
+                              <upd:MappingInput.Value>
+                                <InArgument x:TypeArguments="scg:List(upr:IResource)">[receivedAttachments]</InArgument>
+                              </upd:MappingInput.Value>
+                            </upd:MappingInput>
+                            <upd:MappingInput PropertyName="recordId" PropertyType="x:String">
+                              <upd:MappingInput.Value>
+                                <InArgument x:TypeArguments="x:String">[outputArguments.relatedRecordID]</InArgument>
+                              </upd:MappingInput.Value>
+                            </upd:MappingInput>
+                          </scg:List>
+                        </upad:DataMappingPocoActivity.MappingInputs>
+                      </upad:DataMappingPocoActivity>
+                    </InArgument>
+                  </uasj:RunJob.Input>
+                  <uasj:RunJob.Output>
+                    <OutArgument x:TypeArguments="x:String" />
+                  </uasj:RunJob.Output>
+                </uasj:RunJob>
+              </Sequence>
+            </If.Then>
+            <If.Else>
+              <Sequence sap2010:WorkflowViewState.IdRef="Sequence_3" />
+            </If.Else>
+          </If>
+        </Sequence>
+      </ui:CommentOut.Body>
+    </ui:CommentOut>
+  </Sequence>
+</Activity>

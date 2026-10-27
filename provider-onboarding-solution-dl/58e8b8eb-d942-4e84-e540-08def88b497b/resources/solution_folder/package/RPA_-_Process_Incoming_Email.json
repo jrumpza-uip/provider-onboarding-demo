@@ -1,0 +1,26 @@
+{
+  "docVersion": "1.0.0",
+  "resource": {
+    "name": "RPA - Process Incoming Email",
+    "kind": "package",
+    "apiVersion": "orchestrator.uipath.com/v1",
+    "projectKey": "99d6e315-4939-4b17-ac54-21ee3ec24951",
+    "isOverridable": true,
+    "dependencies": [],
+    "runtimeDependencies": [],
+    "files": [],
+    "folders": [
+      {
+        "fullyQualifiedName": "solution_folder"
+      }
+    ],
+    "spec": {
+      "fileName": null,
+      "fileReference": null,
+      "name": "RPA - Process Incoming Email",
+      "description": null
+    },
+    "locks": [],
+    "key": "d9a8b1df-3b89-4b07-8a04-8bae9eef68cd"
+  }
+}

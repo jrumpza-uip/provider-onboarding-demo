@@ -1,0 +1,144 @@
+{
+  "fileName": "evaluation-set-default.json",
+  "id": "ccf85b30-220b-46a9-b450-574cc0d057f8",
+  "name": "Default Evaluation Set",
+  "batchSize": 10,
+  "timeoutMinutes": 20,
+  "evaluatorRefs": [
+    "e3e48b0c-6f5c-421c-be50-2ea33e27fa3b"
+  ],
+  "evaluations": [
+    {
+      "id": "2d3a9c94-55e7-46b7-b15c-f0bcc69a8297",
+      "name": "Debug Run 8/18/2026, 3:47:42 PM",
+      "inputs": {
+        "recordId": "94fdd3ea-5490-f111-b337-0022489f4ea4"
+      },
+      "expectedOutput": {
+        "openItems": [
+          {
+            "item": "Credential List",
+            "sourceField": "Received_CredentialList",
+            "category": "New Hire Document",
+            "responsibleParty": "New Hire",
+            "status": "Missing",
+            "recommendedNextAction": "Contact the new hire to request the Credential List or confirm that it was submitted."
+          },
+          {
+            "item": "CV",
+            "sourceField": "Received_CV",
+            "category": "New Hire Document",
+            "responsibleParty": "New Hire",
+            "status": "Missing",
+            "recommendedNextAction": "Contact the new hire to request the CV or confirm that it was submitted."
+          },
+          {
+            "item": "Headshot",
+            "sourceField": "Received_Headshot",
+            "category": "New Hire Document",
+            "responsibleParty": "New Hire",
+            "status": "Missing",
+            "recommendedNextAction": "Contact the new hire to request the Headshot or confirm that it was submitted."
+          },
+          {
+            "item": "I-9",
+            "sourceField": "Received_I9",
+            "category": "New Hire Document",
+            "responsibleParty": "New Hire",
+            "status": "Missing",
+            "recommendedNextAction": "Contact the new hire to request the I-9 or confirm that it was submitted."
+          },
+          {
+            "item": "Identification",
+            "sourceField": "Received_ID",
+            "category": "New Hire Document",
+            "responsibleParty": "New Hire",
+            "status": "Missing",
+            "recommendedNextAction": "Contact the new hire to request the Identification document or confirm that it was submitted."
+          },
+          {
+            "item": "License",
+            "sourceField": "Received_License",
+            "category": "New Hire Document",
+            "responsibleParty": "New Hire",
+            "status": "Missing",
+            "recommendedNextAction": "Contact the new hire to request the License or confirm that it was submitted."
+          },
+          {
+            "item": "NHP",
+            "sourceField": "Received_NHP",
+            "category": "New Hire Document",
+            "responsibleParty": "New Hire",
+            "status": "Missing",
+            "recommendedNextAction": "Contact the new hire to request the NHP or confirm that it was submitted."
+          },
+          {
+            "item": "Screening documentation",
+            "sourceField": "Received_Screening",
+            "category": "New Hire Document",
+            "responsibleParty": "New Hire",
+            "status": "Missing",
+            "recommendedNextAction": "Contact the new hire to request the Screening documentation or confirm that it was submitted."
+          },
+          {
+            "item": "EID",
+            "sourceField": "Received_EID",
+            "category": "Internal Team Document",
+            "responsibleParty": "Internal Team",
+            "status": "Missing",
+            "recommendedNextAction": "Contact the responsible internal team to send the EID or confirm that it was provided."
+          },
+          {
+            "item": "New Hire List",
+            "sourceField": "Received_NewHireList",
+            "category": "Internal Team Document",
+            "responsibleParty": "Internal Team",
+            "status": "Missing",
+            "recommendedNextAction": "Contact HR representative Nathan Drake (joseph.rumpza@uipath.com) to send the New Hire List or confirm that it was provided."
+          },
+          {
+            "item": "Background Check",
+            "sourceField": "Completed_BackgroundCheck",
+            "category": "Internal Team Task",
+            "responsibleParty": "Internal Team",
+            "status": "Incomplete",
+            "recommendedNextAction": "Contact HR representative Nathan Drake (joseph.rumpza@uipath.com) to complete the Background Check and update or confirm its status."
+          },
+          {
+            "item": "HRIS Preparation",
+            "sourceField": "Completed_HRISPrep",
+            "category": "Internal Team Task",
+            "responsibleParty": "Internal Team",
+            "status": "Incomplete",
+            "recommendedNextAction": "Contact HRIS representative Neo Cortex (joseph.rumpza@uipath.com) to complete HRIS Preparation and update or confirm its status."
+          },
+          {
+            "item": "Physical",
+            "sourceField": "Completed_Physical",
+            "category": "Internal Team Task",
+            "responsibleParty": "Internal Team",
+            "status": "Incomplete",
+            "recommendedNextAction": "Contact Employee Health representative Ian Itor (joseph.rumpza@uipath.com) to complete the Physical and update or confirm its status."
+          }
+        ],
+        "onboardingSummary": "Daniel R. Okafor’s onboarding record shows no listed requirements as complete. Outstanding new-hire documents are the Credential List, CV, Headshot, I-9, Identification, License, NHP, and Screening documentation. Outstanding internal-team documents are the EID and New Hire List. Outstanding internal-team tasks are the Background Check, HRIS Preparation, and Physical. Priority next steps are to follow up with the new hire for all eight documents and with internal teams for the EID, New Hire List, and completion-status updates for the three internal tasks."
+      },
+      "expectedAgentBehavior": "",
+      "simulationInstructions": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "evalSetId": "ccf85b30-220b-46a9-b450-574cc0d057f8",
+      "createdAt": "2026-08-18T20:47:42.685Z",
+      "updatedAt": "2026-08-18T20:47:42.685Z",
+      "source": "firstSuccessfulRun"
+    }
+  ],
+  "modelSettings": [],
+  "agentMemoryEnabled": false,
+  "agentMemorySettings": [],
+  "lineByLineEvaluation": false,
+  "createdAt": "2026-08-18T20:45:44.044Z",
+  "updatedAt": "2026-08-18T20:47:42.685Z",
+  "category": 1
+}

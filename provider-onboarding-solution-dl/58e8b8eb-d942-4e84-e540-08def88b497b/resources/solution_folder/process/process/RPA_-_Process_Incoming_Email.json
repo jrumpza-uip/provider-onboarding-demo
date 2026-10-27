@@ -1,0 +1,62 @@
+{
+  "docVersion": "1.0.0",
+  "resource": {
+    "name": "RPA - Process Incoming Email",
+    "kind": "process",
+    "type": "process",
+    "apiVersion": "orchestrator.uipath.com/v1",
+    "projectKey": "99d6e315-4939-4b17-ac54-21ee3ec24951",
+    "isOverridable": true,
+    "dependencies": [
+      {
+        "name": "RPA - Process Incoming Email",
+        "kind": "package"
+      }
+    ],
+    "runtimeDependencies": [],
+    "files": [],
+    "folders": [
+      {
+        "fullyQualifiedName": "solution_folder"
+      }
+    ],
+    "spec": {
+      "entryPointUniqueId": null,
+      "inputArgumentsSchema": null,
+      "outputArgumentsSchema": null,
+      "inputArgumentsSchemaV2": null,
+      "outputArgumentsSchemaV2": null,
+      "type": "Process",
+      "name": "RPA - Process Incoming Email",
+      "description": null,
+      "package": {
+        "key": "d9a8b1df-3b89-4b07-8a04-8bae9eef68cd"
+      },
+      "packageName": "Provider.Onboarding.process.RPA.Process.Incoming.Email",
+      "packageVersion": null,
+      "entryPointName": null,
+      "inputArguments": null,
+      "jobPriority": "Medium",
+      "hiddenForAttendedUser": false,
+      "alwaysRunning": false,
+      "autoStartProcess": false,
+      "jobRecording": "Disabled",
+      "targetFrameworkValue": "Portable",
+      "duration": 40,
+      "frequency": 500,
+      "quality": 100,
+      "remoteControlAccess": "None",
+      "retentionAction": "Delete",
+      "retentionPeriod": 30,
+      "retentionBucketRef": null,
+      "staleRetentionAction": "Delete",
+      "staleRetentionPeriod": 180,
+      "staleRetentionBucketRef": null,
+      "entryPoints": null,
+      "connections": null,
+      "tags": []
+    },
+    "locks": [],
+    "key": "bb1ef1ac-07e0-4c0a-9652-1caa31b084cd"
+  }
+}

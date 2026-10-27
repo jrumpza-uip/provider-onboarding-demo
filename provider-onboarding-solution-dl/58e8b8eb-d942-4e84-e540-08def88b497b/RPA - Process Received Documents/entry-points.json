@@ -1,0 +1,66 @@
+{
+  "$schema": "https://cloud.uipath.com/draft/2024-12/entry-point",
+  "$id": "entry-points.json",
+  "entryPoints": [
+    {
+      "filePath": "Main.xaml",
+      "uniqueId": "06246b30-f53f-4a68-a3dc-4413e2a08a22",
+      "type": "Process",
+      "input": {
+        "type": "object",
+        "properties": {
+          "recordId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "documentsReceived_Data": {
+            "type": "array",
+            "items": {
+              "type": "object"
+            },
+            "x-default-expression": "new System.Object() {  }"
+          },
+          "documentsReceived_Files": {
+            "type": "array",
+            "items": {
+              "$ref": "#/definitions/job-attachment"
+            },
+            "x-default-expression": "new UiPath.Platform.ResourceHandling.IResource() {  }"
+          }
+        },
+        "required": [],
+        "definitions": {
+          "job-attachment": {
+            "type": "object",
+            "properties": {
+              "ID": {
+                "type": "string",
+                "description": "Orchestrator attachment key"
+              },
+              "FullName": {
+                "type": "string",
+                "description": "File name"
+              },
+              "MimeType": {
+                "type": "string",
+                "description": "The MIME type of the content, such as \"application/json\" or \"image/png"
+              },
+              "Metadata": {
+                "type": "object",
+                "description": "Dictionary<string, string> of metadata",
+                "additionalProperties": {
+                  "type": "string"
+                }
+              }
+            },
+            "required": [
+              "ID"
+            ],
+            "x-uipath-resource-kind": "JobAttachment"
+          }
+        }
+      },
+      "output": null
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "Result": "Failure",
+  "Message": "No compatible version of '@uipath/docsai-tool' found for CLI v0.1.9 (needs 0.1.x).",
+  "Instructions": "Run 'uip tools install @uipath/docsai-tool' to install the latest version manually."
+}
+{
+  "Result": "Failure",
+  "Message": "Failed to auto-install '@uipath/docsai-tool': npm error code ENOTFOUND\nnpm error syscall getaddrinfo\nnpm error errno ENOTFOUND\nnpm error network request to https://registry.npmjs.org/@uipath%2fdocsai-tool failed, reason: getaddrinfo ENOTFOUND registry.npmjs.org\nnpm error network This is a problem related to network connectivity.\nnpm error network In most cases you are behind a proxy or have bad network settings.\nnpm error network\nnpm error network If you are behind a proxy, please make sure that the\nnpm error network 'proxy' config is set properly.  See: 'npm help config'\nnpm error Log files were not written due to an error writing to the directory: /Users/josephrumpza/.npm/_logs\nnpm error You can rerun the command with `--loglevel=verbose` to see the logs in your terminal",
+  "Instructions": "Run 'uip tools install @uipath/docsai-tool' to install manually."
+}
+{
+  "Result": "ValidationError",
+  "Message": "error: unknown command 'docsai'",
+  "Instructions": "Check command arguments and options. Use --help for usage information."
+}

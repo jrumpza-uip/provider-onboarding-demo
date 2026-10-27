@@ -1,0 +1,73 @@
+{
+  "$schema": "https://cloud.uipath.com/draft/2024-12/entry-point",
+  "$id": "entry-points.json",
+  "entryPoints": [
+    {
+      "filePath": "/content/agent.json",
+      "type": "agent",
+      "uniqueId": "8741963d-56f4-4959-a38c-825b38caa250",
+      "input": {
+        "type": "object",
+        "required": [
+          "recordId"
+        ],
+        "properties": {
+          "recordId": {
+            "type": "string",
+            "description": "Exact Data Fabric record ID for the new-hire onboarding record."
+          }
+        },
+        "title": "Inputs"
+      },
+      "output": {
+        "type": "object",
+        "required": [
+          "openItems",
+          "onboardingSummary"
+        ],
+        "properties": {
+          "openItems": {
+            "type": "array",
+            "description": "One separate entry for each incomplete or unverifiable onboarding requirement.",
+            "items": {
+              "type": "object",
+              "required": [
+                "item",
+                "sourceField",
+                "category",
+                "responsibleParty",
+                "status",
+                "recommendedNextAction"
+              ],
+              "properties": {
+                "item": {
+                  "type": "string"
+                },
+                "sourceField": {
+                  "type": "string"
+                },
+                "category": {
+                  "type": "string"
+                },
+                "responsibleParty": {
+                  "type": "string"
+                },
+                "status": {
+                  "type": "string"
+                },
+                "recommendedNextAction": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "onboardingSummary": {
+            "type": "string",
+            "description": "Professional end-of-day summary of completed requirements, outstanding requirements, and recommended next actions."
+          }
+        },
+        "title": "Outputs"
+      }
+    }
+  ]
+}

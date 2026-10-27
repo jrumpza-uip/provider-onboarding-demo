@@ -1,0 +1,26 @@
+{
+  "docVersion": "1.0.0",
+  "resource": {
+    "name": "Email Test",
+    "kind": "package",
+    "apiVersion": "orchestrator.uipath.com/v1",
+    "projectKey": "5d8980b7-46db-4a4c-825b-21a4682835b2",
+    "isOverridable": true,
+    "dependencies": [],
+    "runtimeDependencies": [],
+    "files": [],
+    "folders": [
+      {
+        "fullyQualifiedName": "solution_folder"
+      }
+    ],
+    "spec": {
+      "fileName": null,
+      "fileReference": null,
+      "name": "Email Test",
+      "description": null
+    },
+    "locks": [],
+    "key": "4681f19e-77f1-41cb-82f4-9c0b5dd2f0c9"
+  }
+}

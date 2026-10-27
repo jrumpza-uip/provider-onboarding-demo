@@ -1,0 +1,19 @@
+{
+  "$resourceType": "context",
+  "id": "efc9925f-7692-4e9f-8595-2eb271671fb4",
+  "referenceKey": null,
+  "name": "Entities",
+  "description": "Use this to find the onboarding case related to the incoming query. If there are multiple cases identified, select the one that does NOT have an Onboarding Phase of \"Onboarding complete\". You can use the email body as well as the email sender (look at the \"Candidate Email\" and \"Assigned Navigator\" fields) to help find associated records.",
+  "contextType": "datafabricentityset",
+  "entitySet": [
+    {
+      "id": "a7063ae3-cd7f-f111-b337-000d3ab0e5e5",
+      "referenceKey": "a7063ae3-cd7f-f111-b337-000d3ab0e5e5",
+      "name": "ProviderOnboardingMainRecord",
+      "folderId": "43da200c-7c81-49b9-8831-9467eedb697b",
+      "folderDisplayName": "AMER Presales/HLS/Demo/Provider Onboarding",
+      "description": "",
+      "entityType": "native"
+    }
+  ]
+}

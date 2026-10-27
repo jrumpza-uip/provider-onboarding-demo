@@ -1,0 +1,26 @@
+{
+  "docVersion": "1.0.0",
+  "resource": {
+    "name": "RPA - Log Activity",
+    "kind": "package",
+    "apiVersion": "orchestrator.uipath.com/v1",
+    "projectKey": "aec7e2ed-5176-4407-97fc-28add60109c8",
+    "isOverridable": true,
+    "dependencies": [],
+    "runtimeDependencies": [],
+    "files": [],
+    "folders": [
+      {
+        "fullyQualifiedName": "solution_folder"
+      }
+    ],
+    "spec": {
+      "fileName": null,
+      "fileReference": null,
+      "name": "RPA - Log Activity",
+      "description": null
+    },
+    "locks": [],
+    "key": "7a087c6e-fbba-4a32-8703-a03a7d621d37"
+  }
+}

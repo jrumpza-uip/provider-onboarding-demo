@@ -1,0 +1,101 @@
+{
+  "docVersion": "1.0.0",
+  "tenants": [
+    {
+      "tenantKey": "bd829329-42ff-40aa-96dc-95a78168275a",
+      "resources": [
+        {
+          "solutionResourceKey": "a7063ae3-cd7f-f111-b337-000d3ab0e5e5",
+          "reprovisioningIndex": 0,
+          "overwrite": {
+            "resourceKey": "a7063ae3-cd7f-f111-b337-000d3ab0e5e5",
+            "resourceName": "ProviderOnboardingMainRecord",
+            "folderKey": "43da200c-7c81-49b9-8831-9467eedb697b",
+            "folderFullyQualifiedName": "AMER Presales/HLS/Demo/Provider Onboarding",
+            "folderPath": "4332993a-91e0-4b3c-84ca-c4b47bf6e386.32fda45b-efb5-4637-abf8-a1045409537b.9b22f83e-3725-4491-82d2-0086331b419f.43da200c-7c81-49b9-8831-9467eedb697b",
+            "type": "Reference",
+            "kind": "entity"
+          }
+        },
+        {
+          "solutionResourceKey": "343e0fec-ca0d-4090-dd43-08def7f33996",
+          "reprovisioningIndex": 0,
+          "overwrite": {
+            "resourceKey": "343e0fec-ca0d-4090-dd43-08def7f33996",
+            "resourceName": "ProviderOnboarding_InternalProceduresIndex",
+            "folderKey": "43da200c-7c81-49b9-8831-9467eedb697b",
+            "folderFullyQualifiedName": "AMER Presales/HLS/Demo/Provider Onboarding",
+            "folderPath": "4332993a-91e0-4b3c-84ca-c4b47bf6e386.32fda45b-efb5-4637-abf8-a1045409537b.9b22f83e-3725-4491-82d2-0086331b419f.43da200c-7c81-49b9-8831-9467eedb697b",
+            "type": "Reference",
+            "kind": "index"
+          }
+        },
+        {
+          "solutionResourceKey": "8acdb9f3-457e-498c-8a13-d8ef4b761bc2",
+          "reprovisioningIndex": 0,
+          "overwrite": {
+            "resourceKey": "8acdb9f3-457e-498c-8a13-d8ef4b761bc2",
+            "resourceName": "ProviderOnboarding_InternalProcedures",
+            "folderKey": "43da200c-7c81-49b9-8831-9467eedb697b",
+            "folderFullyQualifiedName": "AMER Presales/HLS/Demo/Provider Onboarding",
+            "folderPath": "4332993a-91e0-4b3c-84ca-c4b47bf6e386.32fda45b-efb5-4637-abf8-a1045409537b.9b22f83e-3725-4491-82d2-0086331b419f.43da200c-7c81-49b9-8831-9467eedb697b",
+            "type": "Reference",
+            "kind": "bucket"
+          }
+        },
+        {
+          "solutionResourceKey": "2a09dd42-4a90-f111-b337-000d3ab0e5e5",
+          "reprovisioningIndex": 0,
+          "overwrite": {
+            "resourceKey": "2a09dd42-4a90-f111-b337-000d3ab0e5e5",
+            "resourceName": "ProviderOnboardingActivityLog",
+            "folderKey": "43da200c-7c81-49b9-8831-9467eedb697b",
+            "folderFullyQualifiedName": "AMER Presales/HLS/Demo/Provider Onboarding",
+            "folderPath": "4332993a-91e0-4b3c-84ca-c4b47bf6e386.32fda45b-efb5-4637-abf8-a1045409537b.9b22f83e-3725-4491-82d2-0086331b419f.43da200c-7c81-49b9-8831-9467eedb697b",
+            "type": "Reference",
+            "kind": "entity"
+          }
+        },
+        {
+          "solutionResourceKey": "84b3024e-2b14-4375-a392-5f105230f576",
+          "reprovisioningIndex": 0,
+          "overwrite": {
+            "resourceKey": "84b3024e-2b14-4375-a392-5f105230f576",
+            "resourceName": "ProviderOnboarding_Documentation",
+            "folderKey": "43da200c-7c81-49b9-8831-9467eedb697b",
+            "folderFullyQualifiedName": "AMER Presales/HLS/Demo/Provider Onboarding",
+            "folderPath": "4332993a-91e0-4b3c-84ca-c4b47bf6e386.32fda45b-efb5-4637-abf8-a1045409537b.9b22f83e-3725-4491-82d2-0086331b419f.43da200c-7c81-49b9-8831-9467eedb697b",
+            "type": "Reference",
+            "kind": "bucket"
+          }
+        },
+        {
+          "solutionResourceKey": "5fee0d3d-4b90-f111-b337-000d3ab0e5e5",
+          "reprovisioningIndex": 0,
+          "overwrite": {
+            "resourceKey": "5fee0d3d-4b90-f111-b337-000d3ab0e5e5",
+            "resourceName": "ProviderOnboardingDocuments",
+            "folderKey": "43da200c-7c81-49b9-8831-9467eedb697b",
+            "folderFullyQualifiedName": "AMER Presales/HLS/Demo/Provider Onboarding",
+            "folderPath": "4332993a-91e0-4b3c-84ca-c4b47bf6e386.32fda45b-efb5-4637-abf8-a1045409537b.9b22f83e-3725-4491-82d2-0086331b419f.43da200c-7c81-49b9-8831-9467eedb697b",
+            "type": "Reference",
+            "kind": "entity"
+          }
+        },
+        {
+          "solutionResourceKey": "36e7d52f-b038-4898-8d71-db84048d3eb7",
+          "reprovisioningIndex": 0,
+          "overwrite": {
+            "resourceKey": "36e7d52f-b038-4898-8d71-db84048d3eb7",
+            "resourceName": "joseph.rumpza@uipath.com",
+            "folderKey": "43da200c-7c81-49b9-8831-9467eedb697b",
+            "folderFullyQualifiedName": "AMER Presales/HLS/Demo/Provider Onboarding",
+            "folderPath": "4332993a-91e0-4b3c-84ca-c4b47bf6e386.32fda45b-efb5-4637-abf8-a1045409537b.9b22f83e-3725-4491-82d2-0086331b419f.43da200c-7c81-49b9-8831-9467eedb697b",
+            "type": "Reference",
+            "kind": "connection"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,163 @@
+{
+  "$schema": "https://cloud.uipath.com/draft/2024-12/entry-point",
+  "$id": "entry-points.json",
+  "entryPoints": [
+    {
+      "filePath": "/content/agent.json",
+      "type": "agent",
+      "uniqueId": "4a2fba29-80f5-45ec-bd5f-ab4982e0cfed",
+      "input": {
+        "type": "object",
+        "properties": {
+          "emailSubject": {
+            "type": "string",
+            "description": "The subject of the email"
+          },
+          "emailBody": {
+            "type": "string",
+            "description": "The body of the email"
+          },
+          "attachments": {
+            "type": "array",
+            "description": "The attached files",
+            "items": {
+              "$ref": "#/definitions/job-attachment"
+            },
+            "definitions": {
+              "job-attachment": {
+                "type": "object",
+                "properties": {
+                  "ID": {
+                    "type": "string",
+                    "description": "Orchestrator attachment key"
+                  },
+                  "FullName": {
+                    "type": "string",
+                    "description": "File name"
+                  },
+                  "MimeType": {
+                    "type": "string",
+                    "description": "The MIME type of the content, such as \"application/json\" or \"image/png\""
+                  },
+                  "Metadata": {
+                    "type": "object",
+                    "description": "Dictionary<string, string> of metadata",
+                    "additionalProperties": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "required": [
+                  "ID"
+                ],
+                "x-uipath-resource-kind": "JobAttachment"
+              }
+            }
+          },
+          "emailSender": {
+            "type": "string",
+            "description": "The sender of the incoming email"
+          }
+        },
+        "definitions": {
+          "job-attachment": {
+            "type": "object",
+            "required": [
+              "ID"
+            ],
+            "x-uipath-resource-kind": "JobAttachment",
+            "properties": {
+              "ID": {
+                "type": "string",
+                "description": "Orchestrator attachment key"
+              },
+              "FullName": {
+                "type": "string",
+                "description": "File name"
+              },
+              "MimeType": {
+                "type": "string",
+                "description": "The MIME type of the content, such as \"application/json\" or \"image/png\""
+              },
+              "Metadata": {
+                "type": "object",
+                "description": "Dictionary<string, string> of metadata",
+                "additionalProperties": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "title": "Inputs"
+      },
+      "output": {
+        "type": "object",
+        "properties": {
+          "emailType": {
+            "type": "string",
+            "description": "The specific email type received"
+          },
+          "emailDescription": {
+            "type": "string",
+            "description": "A brief description of the email message/request"
+          },
+          "hasAttachments": {
+            "type": "boolean",
+            "description": "True if the email contains an attached file"
+          },
+          "relatedCaseInstanceID": {
+            "type": "string",
+            "description": "The relevant data fabric entity record \"CaseInstanceID\" field, if found."
+          },
+          "relatedRecordID": {
+            "type": "string",
+            "description": "The relevant data fabric entity record \"Id\" field, if found."
+          },
+          "requiresResponse": {
+            "type": "boolean",
+            "description": "Whether the email requires a response"
+          },
+          "actionItems": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "item": {
+                  "type": "string",
+                  "description": "A very brief description of the item to be addressed in the email"
+                },
+                "details": {
+                  "type": "string",
+                  "description": "Details on the item. This could be the status of the item reflected in the email, or the next action that you suggest based on the email content"
+                }
+              }
+            }
+          },
+          "attachedDocumentInfo": {
+            "type": "array",
+            "description": "Information for each of the documents that were attached to the email",
+            "items": {
+              "type": "object",
+              "properties": {
+                "fileName": {
+                  "type": "string",
+                  "description": "The name of the document"
+                },
+                "fileType": {
+                  "type": "string",
+                  "description": "The type of the document as determined by ProviderOnboarding_IntakeForms"
+                },
+                "extractedFields": {
+                  "type": "string",
+                  "description": "The non-empty fields extracted from the document, as output by ProviderOnboarding_IntakeForms. Put these in JSON format."
+                }
+              }
+            }
+          }
+        },
+        "title": "Outputs"
+      }
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "name": "RPA - Process Incoming Email",
+  "projectId": "7eae4095-4b4c-42b9-b1ca-ee9afc5f01a0",
+  "previousProjectId": "2c5094e8-955d-436d-a76a-922ac9ba54e6",
+  "main": "Main.xaml",
+  "dependencies": {
+    "UiPath.IntegrationService.Activities": "1.34.0-beta.20260917.6",
+    "UiPath.MicrosoftOffice365.Activities": "3.12.10",
+    "UiPath.System.Activities": "26.8.2",
+    "UiPath.WebAPI.Activities": "2.6.0-alpha.13139192"
+  },
+  "webServices": [],
+  "entitiesStores": [],
+  "schemaVersion": "4.0",
+  "studioVersion": "26.0.194.0",
+  "projectVersion": "1.0.0",
+  "runtimeOptions": {
+    "autoDispose": false,
+    "netFrameworkLazyLoading": false,
+    "isPausable": true,
+    "isAttended": false,
+    "isNonProd": false,
+    "requiresUserInteraction": false,
+    "supportsPersistence": true,
+    "workflowSerialization": "NewtonsoftJson",
+    "excludedLoggedData": [
+      "Private:*",
+      "*password*"
+    ],
+    "executionType": "Workflow",
+    "readyForPiP": false,
+    "startsInPiP": false,
+    "mustRestoreAllDependencies": true,
+    "pipType": "ChildSession"
+  },
+  "designOptions": {
+    "projectProfile": "Developement",
+    "outputType": "Process",
+    "libraryOptions": {
+      "privateWorkflows": []
+    },
+    "processOptions": {
+      "ignoredFiles": []
+    },
+    "fileInfoCollection": [],
+    "saveToCloud": false
+  },
+  "expressionLanguage": "VisualBasic",
+  "entryPoints": [
+    {
+      "filePath": "Main.xaml",
+      "uniqueId": "30f17a96-d582-41bf-88f0-444a157c001f",
+      "input": [],
+      "output": []
+    }
+  ],
+  "isTemplate": false,
+  "templateProjectData": {},
+  "publishData": {},
+  "targetFramework": "Portable"
+}

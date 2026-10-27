@@ -1,0 +1,26 @@
+{
+  "docVersion": "1.0.0",
+  "resource": {
+    "name": "RPA - Process Received Documents",
+    "kind": "package",
+    "apiVersion": "orchestrator.uipath.com/v1",
+    "projectKey": "3c4ea452-22fd-47e4-b200-6356c649911b",
+    "isOverridable": true,
+    "dependencies": [],
+    "runtimeDependencies": [],
+    "files": [],
+    "folders": [
+      {
+        "fullyQualifiedName": "solution_folder"
+      }
+    ],
+    "spec": {
+      "fileName": null,
+      "fileReference": null,
+      "name": "RPA - Process Received Documents",
+      "description": null
+    },
+    "locks": [],
+    "key": "52236dfe-2074-420f-b80a-296ce8dc8fa0"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "ProjectType": "Process",
+  "Name": "RPA - Process Received Documents",
+  "Description": null,
+  "MainFile": "Main.xaml"
+}

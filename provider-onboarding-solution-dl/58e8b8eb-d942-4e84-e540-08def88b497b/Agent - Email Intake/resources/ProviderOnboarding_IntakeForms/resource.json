@@ -1,0 +1,64 @@
+{
+  "$resourceType": "tool",
+  "id": "75ca8244-ec47-4186-8113-a347326b1f68",
+  "name": "ProviderOnboarding_IntakeForms",
+  "description": "Use this to extract data from documents",
+  "location": "external",
+  "type": "ixp",
+  "isEnabled": true,
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "attachment": {
+        "$ref": "#/definitions/job-attachment",
+        "description": "File to extract data from."
+      }
+    },
+    "required": [
+      "attachment"
+    ],
+    "definitions": {
+      "job-attachment": {
+        "type": "object",
+        "properties": {
+          "ID": {
+            "type": "string",
+            "description": "Orchestrator attachment key"
+          },
+          "FullName": {
+            "type": "string",
+            "description": "File name"
+          },
+          "MimeType": {
+            "type": "string",
+            "description": "The MIME type of the content, such as \"application/json\" or \"image/png\""
+          },
+          "Metadata": {
+            "type": "object",
+            "description": "Dictionary<string, string> of metadata",
+            "additionalProperties": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "ID"
+        ],
+        "x-uipath-resource-kind": "JobAttachment"
+      }
+    }
+  },
+  "outputSchema": {
+    "type": "object",
+    "properties": {}
+  },
+  "settings": {},
+  "guardrail": {
+    "policies": []
+  },
+  "argumentProperties": {},
+  "properties": {
+    "projectName": "ProviderOnboarding_IntakeForms",
+    "versionTag": "live"
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "version": "3.0.0.0",
+  "bundleHash": "qfLUFjPgCFAoB56d5NBFaUodMr6Lixp1itln0Hvjc",
+  "addedAssemblyNames": [],
+  "discardedAssemblyNames": [],
+  "discardedAssemblyReplacements": {},
+  "assembliesJitInfo": {
+    "RPA___Process_Receiv.3oJ1duK9fS1E944Q1U71db4": {
+      "createdAt": "2026-08-18T11:20:09.240213-05:00",
+      "providerName": "CustomEntities",
+      "rootNamespace": "UiPath.System.Activities.ViewModels.SWEntities.RPA___Process_Received_Documents_Input.Bundle",
+      "typeNames": [
+        "RPA___Process_Received_Documents_Input"
+      ]
+    },
+    "RPA___Process_Receiv.znjfE4DXeAQ11SH6H268X2w": {
+      "createdAt": "2026-08-18T11:20:35.470757-05:00",
+      "providerName": "CustomEntities",
+      "rootNamespace": "UiPath.System.Activities.ViewModels.SWEntities.RPA___Process_Received_Documents_Main_xaml_Input.Bundle",
+      "typeNames": [
+        "RPA___Process_Received_Documents_Main_xaml_Input"
+      ]
+    },
+    "Agent___Email_Intake.6Kq9a3GsShO1nhb0T27czyV4": {
+      "createdAt": "2026-08-18T11:22:58.008179-05:00",
+      "providerName": "CustomEntities",
+      "rootNamespace": "UiPath.System.Activities.ViewModels.SWEntities.Agent___Email_Intake__content_agent_json_Input.Bundle",
+      "typeNames": [
+        "Agent___Email_Intake__content_agent_json_Input"
+      ]
+    },
+    "Agent___Email_Intake.AwwRD3WIqIE1dTpIT4VxuPq": {
+      "createdAt": "2026-08-18T11:22:58.070115-05:00",
+      "providerName": "CustomEntities",
+      "rootNamespace": "UiPath.System.Activities.ViewModels.SWEntities.Agent___Email_Intake__content_agent_json_Output.Bundle",
+      "typeNames": [
+        "Agent___Email_Intake__content_agent_json_Output",
+        "actionItems",
+        "attachedDocumentInfo"
+      ]
+    }
+  }
+}

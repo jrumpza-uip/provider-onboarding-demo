@@ -1,0 +1,9 @@
+{
+  "reportedAt": "2026-08-10 16:39:35.831 GMT-5",
+  "surface": "Studio Web debug",
+  "targetCollection": "newDocumentRecords",
+  "downstreamActivity": "Create Multiple Entity Records",
+  "exceptionType": "System.InvalidOperationException",
+  "message": "The property 'Collection' of 'Add To Collection' is not initialized.",
+  "faultingFrame": "System.Activities.Statements.AddToCollection<T>.Execute(CodeActivityContext context)"
+}

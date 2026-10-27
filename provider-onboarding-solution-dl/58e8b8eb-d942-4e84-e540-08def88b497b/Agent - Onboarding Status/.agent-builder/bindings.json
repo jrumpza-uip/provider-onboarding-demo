@@ -1,0 +1,41 @@
+{
+  "version": "2.0",
+  "resources": [
+    {
+      "resource": "entity",
+      "key": "a7063ae3-cd7f-f111-b337-000d3ab0e5e5",
+      "value": {
+        "name": {
+          "defaultValue": "ProviderOnboardingMainRecord",
+          "isExpression": false,
+          "displayName": "Entity name"
+        },
+        "folderPath": {
+          "defaultValue": "43da200c-7c81-49b9-8831-9467eedb697b",
+          "isExpression": false,
+          "displayName": "Folder path"
+        }
+      },
+      "metadata": {
+        "bindingsVersion": "2.2",
+        "solutionsSupport": "true",
+        "scope": "folder"
+      }
+    },
+    {
+      "resource": "index",
+      "key": "ProviderOnboarding_InternalProceduresIndex",
+      "value": {
+        "name": {
+          "defaultValue": "ProviderOnboarding_InternalProceduresIndex",
+          "isExpression": false,
+          "displayName": "Index Name"
+        }
+      },
+      "metadata": {
+        "bindingsVersion": "2.2",
+        "solutionsSupport": "true"
+      }
+    }
+  ]
+}

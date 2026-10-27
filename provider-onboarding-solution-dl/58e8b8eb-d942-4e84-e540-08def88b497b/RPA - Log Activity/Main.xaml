@@ -1,0 +1,144 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main"
+ xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities"
+ xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+ xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib"
+ xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation"
+ xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation"
+ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib"
+ xmlns:this="clr-namespace:"
+ xmlns:uda="clr-namespace:UiPath.DataService.Activities;assembly=UiPath.DataService.Activities.Core"
+ xmlns:udacsdeb="clr-namespace:UiPath.DataService.Activities.Core.SWEntities.DataFabric.Entities.Bundle;assembly=DataFabric.Entities.ixdIO3IeYWF1y46lF1bIB4W"
+ xmlns:udam="clr-namespace:UiPath.DataService.Activities.Models;assembly=UiPath.DataService.Activities.Core"
+ xmlns:ui="http://schemas.uipath.com/workflow/activities"
+ xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_ActivityCategory" Type="InArgument(x:String)" />
+    <x:Property Name="in_ActivityDetails" Type="InArgument(x:String)" />
+    <x:Property Name="in_ActivityName" Type="InArgument(x:String)" />
+    <x:Property Name="in_CaseInstanceid" Type="InArgument(x:String)" />
+    <x:Property Name="in_MainRecordId" Type="InArgument(x:String)" />
+    <x:Property Name="in_SourceSystem" Type="InArgument(x:String)" />
+  </x:Members>
+  <this:Main.in_ActivityCategory>
+    <InArgument x:TypeArguments="x:String" />
+  </this:Main.in_ActivityCategory>
+  <this:Main.in_ActivityDetails>
+    <InArgument x:TypeArguments="x:String" />
+  </this:Main.in_ActivityDetails>
+  <this:Main.in_ActivityName>
+    <InArgument x:TypeArguments="x:String" />
+  </this:Main.in_ActivityName>
+  <this:Main.in_CaseInstanceid>
+    <InArgument x:TypeArguments="x:String" />
+  </this:Main.in_CaseInstanceid>
+  <this:Main.in_MainRecordId>
+    <InArgument x:TypeArguments="x:String" />
+  </this:Main.in_MainRecordId>
+  <this:Main.in_SourceSystem>
+    <InArgument x:TypeArguments="x:String" />
+  </this:Main.in_SourceSystem>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="23">
+      <x:String>UiPath.DataService.Activities</x:String>
+      <x:String>UiPath.DataService.Definition</x:String>
+      <x:String>UiPath.DataService.Activities.Models</x:String>
+      <x:String>System</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Activities</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>Newtonsoft.Json</x:String>
+      <x:String>Newtonsoft.Json.Linq</x:String>
+      <x:String>UiPath.DataService.Activities.Core.SWEntities.DataFabric.Entities.Bundle</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="20">
+      <AssemblyReference>DataFabric.Entities.ixdIO3IeYWF1y46lF1bIB4W</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Net.Primitives</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>Newtonsoft.Json</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Runtime</AssemblyReference>
+      <AssemblyReference>netstandard</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>UiPath.DataService.Activities.Core</AssemblyReference>
+      <AssemblyReference>UiPath.DataService.Definition</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>UiPath.DataService.Core</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Annotations</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap:VirtualizedContainerService.HintSize="356,732" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:ManualTrigger Result="{x:Null}" DisplayName="Manual Trigger" sap2010:WorkflowViewState.IdRef="ManualTrigger_1" />
+    <uda:CreateEntityRecord x:TypeArguments="udacsdeb:ProviderOnboardingActivityLog_2a09dd42_4a90_f111_b337_000d3ab0e5e5" InputEntity="{x:Null}" IsInRecordView="{x:Null}" OutputEntity="{x:Null}" sap:WorkflowViewStateService.ViewState="{x:Null}" VisibleDynamicPropertiesInfo="{x:Null}" ContinueOnError="False" DisplayName="Create Entity Record" EntityId="2a09dd42-4a90-f111-b337-000d3ab0e5e5" ExpansionDepth="2" sap2010:WorkflowViewState.IdRef="CreateEntityRecord`1_1" InputEntityInFieldView="[new UiPath.DataService.Activities.Core.SWEntities.DataFabric.Entities.Bundle.ProviderOnboardingActivityLog_2a09dd42_4a90_f111_b337_000d3ab0e5e5() With {  .ActivityCategory = in_ActivityCategory,  .ActivityDetails = in_ActivityDetails,  .ActivityName = string.Format(&quot;{0}&quot;, in_ActivityName),  .ActivityTimestamp = DateTime.Now,  .CaseInstanceID = string.Format(&quot;{0}&quot;, in_CaseInstanceid),  .MainRecordID = string.Format(&quot;{0}&quot;, in_MainRecordId),  .SourceSystem = string.Format(&quot;{0}&quot;, in_SourceSystem) }]" ScopeValue="Folder" SolutionEntityKey="2a09dd42-4a90-f111-b337-000d3ab0e5e5" SolutionEntityName="ProviderOnboardingActivityLog" TimeoutInMs="30000">
+      <uda:CreateEntityRecord.State>
+        <udam:RecordState>
+          <udam:RecordState.SelectedFields>
+            <scg:List x:TypeArguments="udam:DynamicEntityField" Capacity="7">
+              <udam:DynamicEntityField Id="3809dd42-4a90-f111-b337-000d3ab0e5e5" Name="ActivityCategory">
+                <udam:DynamicEntityField.ArgumentValue>
+                  <InArgument x:TypeArguments="x:String">[in_ActivityCategory]</InArgument>
+                </udam:DynamicEntityField.ArgumentValue>
+              </udam:DynamicEntityField>
+              <udam:DynamicEntityField Id="3709dd42-4a90-f111-b337-000d3ab0e5e5" Name="ActivityDetails">
+                <udam:DynamicEntityField.ArgumentValue>
+                  <InArgument x:TypeArguments="x:String">[in_ActivityDetails]</InArgument>
+                </udam:DynamicEntityField.ArgumentValue>
+              </udam:DynamicEntityField>
+              <udam:DynamicEntityField Id="3609dd42-4a90-f111-b337-000d3ab0e5e5" Name="ActivityName">
+                <udam:DynamicEntityField.ArgumentValue>
+                  <InArgument x:TypeArguments="x:String">[string.Format("{0}", in_ActivityName)]</InArgument>
+                </udam:DynamicEntityField.ArgumentValue>
+              </udam:DynamicEntityField>
+              <udam:DynamicEntityField Id="3909dd42-4a90-f111-b337-000d3ab0e5e5" Name="ActivityTimestamp">
+                <udam:DynamicEntityField.ArgumentValue>
+                  <InArgument x:TypeArguments="s:DateTimeOffset">[DateTime.Now]</InArgument>
+                </udam:DynamicEntityField.ArgumentValue>
+              </udam:DynamicEntityField>
+              <udam:DynamicEntityField Id="3a09dd42-4a90-f111-b337-000d3ab0e5e5" Name="CaseInstanceID">
+                <udam:DynamicEntityField.ArgumentValue>
+                  <InArgument x:TypeArguments="x:String">[string.Format("{0}", in_CaseInstanceid)]</InArgument>
+                </udam:DynamicEntityField.ArgumentValue>
+              </udam:DynamicEntityField>
+              <udam:DynamicEntityField Id="3409dd42-4a90-f111-b337-000d3ab0e5e5" Name="MainRecordID">
+                <udam:DynamicEntityField.ArgumentValue>
+                  <InArgument x:TypeArguments="x:String">[string.Format("{0}", in_MainRecordId)]</InArgument>
+                </udam:DynamicEntityField.ArgumentValue>
+              </udam:DynamicEntityField>
+              <udam:DynamicEntityField Id="3509dd42-4a90-f111-b337-000d3ab0e5e5" Name="SourceSystem">
+                <udam:DynamicEntityField.ArgumentValue>
+                  <InArgument x:TypeArguments="x:String">[string.Format("{0}", in_SourceSystem)]</InArgument>
+                </udam:DynamicEntityField.ArgumentValue>
+              </udam:DynamicEntityField>
+            </scg:List>
+          </udam:RecordState.SelectedFields>
+        </udam:RecordState>
+      </uda:CreateEntityRecord.State>
+    </uda:CreateEntityRecord>
+  </Sequence>
+</Activity>

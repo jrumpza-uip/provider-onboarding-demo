@@ -1,0 +1,146 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main"
+ xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities"
+ xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+ xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation"
+ xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation"
+ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib"
+ xmlns:this="clr-namespace:"
+ xmlns:ui="http://schemas.uipath.com/workflow/activities"
+ xmlns:umame="clr-namespace:UiPath.MicrosoftOffice365.Activities.Mail.Enums;assembly=UiPath.MicrosoftOffice365.Activities"
+ xmlns:umamf="clr-namespace:UiPath.MicrosoftOffice365.Activities.Mail.Filters;assembly=UiPath.MicrosoftOffice365.Activities"
+ xmlns:umamm="clr-namespace:UiPath.MicrosoftOffice365.Activities.Mail.Models;assembly=UiPath.MicrosoftOffice365.Activities"
+ xmlns:umamt="clr-namespace:UiPath.MicrosoftOffice365.Activities.Mail.Triggers;assembly=UiPath.MicrosoftOffice365.Activities"
+ xmlns:usau="clr-namespace:UiPath.Shared.Activities.Utils;assembly=UiPath.MicrosoftOffice365.Activities"
+ xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="UiPathEventConnector" Type="InArgument(x:String)" />
+    <x:Property Name="UiPathEvent" Type="InArgument(x:String)" />
+    <x:Property Name="UiPathEventObjectType" Type="InArgument(x:String)" />
+    <x:Property Name="UiPathEventObjectId" Type="InArgument(x:String)" />
+  </x:Members>
+  <this:Main.UiPathEventConnector>
+    <InArgument x:TypeArguments="x:String" />
+  </this:Main.UiPathEventConnector>
+  <this:Main.UiPathEvent>
+    <InArgument x:TypeArguments="x:String" />
+  </this:Main.UiPathEvent>
+  <this:Main.UiPathEventObjectType>
+    <InArgument x:TypeArguments="x:String" />
+  </this:Main.UiPathEventObjectType>
+  <this:Main.UiPathEventObjectId>
+    <InArgument x:TypeArguments="x:String" />
+  </this:Main.UiPathEventObjectId>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="36">
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Activities</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Mail.Models</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Models</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.Shared.Services.Graph.Mail.Models</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Mail.Filters</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Contracts</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Mail.Enums</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Filters</x:String>
+      <x:String>UiPath.Shared.Activities.Utils</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Mail.Enums</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Utilities</x:String>
+      <x:String>UiPath.Productivity.Activities.Diagnostics</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Mail.Triggers</x:String>
+      <x:String>UiPath.Shared.Activities.ConnectionService.Contracts</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>Newtonsoft.Json</x:String>
+      <x:String>Newtonsoft.Json.Linq</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="21">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Net.Primitives</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>Newtonsoft.Json</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Runtime</AssemblyReference>
+      <AssemblyReference>netstandard</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>UiPath.MicrosoftOffice365.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.Graph</AssemblyReference>
+      <AssemblyReference>UiPath.MicrosoftOffice365</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.Specialized</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap:VirtualizedContainerService.HintSize="356,732" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <umamt:NewEmailReceived BrowserFolderName="{x:Null}" ConnectionAccountName="{x:Null}" ConnectionId="{x:Null}" ContinueOnError="{x:Null}" JobData="{x:Null}" Mailbox="{x:Null}" MailboxBackup="{x:Reference __ReferenceID0}" Result="{x:Null}" AuthScopesInvalid="False" BodyAsHtml="False" DisplayName="Email Received" FilterExpression="((contains(subject,'provider onboarding')))" sap2010:WorkflowViewState.IdRef="NewEmailReceived_1" IncludeAttachments="True" MarkAsRead="False" UiPathEvent="[UiPathEvent]" UiPathEventConnector="[UiPathEventConnector]" UiPathEventObjectId="[UiPathEventObjectId]" UiPathEventObjectType="[UiPathEventObjectType]" UseConnectionService="True" UseSharedMailbox="False" WithAttachmentsOnly="False">
+      <umamt:NewEmailReceived.Filter>
+        <umamf:TriggerMailFilterCollection LogicalOperator="And">
+          <umamf:TriggerMailFilterCollection.Filters>
+            <umamf:TriggerMailFilterElement ImportanceValuesList="{x:Null}" ArrayStringOperator="Contains" BodyOperator="Contains" Criteria="Subject" ImportanceOperator="Equals" ImportanceValue="Low" StringOperator="Contains" StringValue="provider onboarding" TypeOperator="Equals" TypeValue="Email" />
+          </umamf:TriggerMailFilterCollection.Filters>
+        </umamf:TriggerMailFilterCollection>
+      </umamt:NewEmailReceived.Filter>
+      <umamt:NewEmailReceived.MailFolderArg>
+        <umamm:TriggerMailFolderArgument BrowserFolderId="{x:Null}" ConnectionDescriptor="{x:Null}" FolderName="{x:Null}" ConnectionKey="36e7d52f-b038-4898-8d71-db84048d3eb7" IsBound="False" SelectionMode="Browse">
+          <umamm:TriggerMailFolderArgument.Backup>
+            <usau:BackupSlot x:TypeArguments="umame:ItemSelectionMode" StoredValue="Browse">
+              <usau:BackupSlot.BackupValues>
+                <scg:Dictionary x:TypeArguments="umame:ItemSelectionMode, scg:List(x:Object)" />
+              </usau:BackupSlot.BackupValues>
+            </usau:BackupSlot>
+          </umamm:TriggerMailFolderArgument.Backup>
+        </umamm:TriggerMailFolderArgument>
+      </umamt:NewEmailReceived.MailFolderArg>
+      <umamt:NewEmailReceived.MailboxArg>
+        <umamm:TriggerMailboxArgument SharedMailbox="{x:Null}" UseSharedMailbox="False">
+          <umamm:TriggerMailboxArgument.Backup>
+            <usau:BackupSlot x:TypeArguments="umame:MailboxSelectionMode" x:Name="__ReferenceID0" StoredValue="NoMailbox">
+              <usau:BackupSlot.BackupValues>
+                <scg:List x:TypeArguments="x:Object" x:Key="NoMailbox" Capacity="1">
+                  <x:Null />
+                </scg:List>
+                <scg:List x:TypeArguments="x:Object" x:Key="UseISMailbox" Capacity="1">
+                  <x:Null />
+                </scg:List>
+                <scg:List x:TypeArguments="x:Object" x:Key="UseMailbox" Capacity="2">
+                  <x:Null />
+                  <x:Null />
+                </scg:List>
+              </usau:BackupSlot.BackupValues>
+            </usau:BackupSlot>
+          </umamm:TriggerMailboxArgument.Backup>
+        </umamm:TriggerMailboxArgument>
+      </umamt:NewEmailReceived.MailboxArg>
+    </umamt:NewEmailReceived>
+    <ui:LogMessage DisplayName="Log Message" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Email found&quot;]" />
+  </Sequence>
+</Activity>

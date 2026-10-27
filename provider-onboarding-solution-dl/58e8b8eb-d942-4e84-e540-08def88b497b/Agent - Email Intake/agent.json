@@ -1,0 +1,339 @@
+{
+  "version": "1.2.0",
+  "settings": {
+    "model": "gpt-5.6-terra",
+    "maxTokens": 128000,
+    "temperature": 0,
+    "engine": "basic-v2",
+    "maxIterations": 25,
+    "mode": "standard"
+  },
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "emailSubject": {
+        "type": "string",
+        "description": "The subject of the email"
+      },
+      "emailBody": {
+        "type": "string",
+        "description": "The body of the email"
+      },
+      "attachments": {
+        "type": "array",
+        "description": "The attached files",
+        "items": {
+          "$ref": "#/definitions/job-attachment"
+        },
+        "definitions": {
+          "job-attachment": {
+            "type": "object",
+            "properties": {
+              "ID": {
+                "type": "string",
+                "description": "Orchestrator attachment key"
+              },
+              "FullName": {
+                "type": "string",
+                "description": "File name"
+              },
+              "MimeType": {
+                "type": "string",
+                "description": "The MIME type of the content, such as \"application/json\" or \"image/png\""
+              },
+              "Metadata": {
+                "type": "object",
+                "description": "Dictionary<string, string> of metadata",
+                "additionalProperties": {
+                  "type": "string"
+                }
+              }
+            },
+            "required": [
+              "ID"
+            ],
+            "x-uipath-resource-kind": "JobAttachment"
+          }
+        }
+      },
+      "emailSender": {
+        "type": "string",
+        "description": "The sender of the incoming email"
+      }
+    },
+    "definitions": {
+      "job-attachment": {
+        "type": "object",
+        "required": [
+          "ID"
+        ],
+        "x-uipath-resource-kind": "JobAttachment",
+        "properties": {
+          "ID": {
+            "type": "string",
+            "description": "Orchestrator attachment key"
+          },
+          "FullName": {
+            "type": "string",
+            "description": "File name"
+          },
+          "MimeType": {
+            "type": "string",
+            "description": "The MIME type of the content, such as \"application/json\" or \"image/png\""
+          },
+          "Metadata": {
+            "type": "object",
+            "description": "Dictionary<string, string> of metadata",
+            "additionalProperties": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  },
+  "outputSchema": {
+    "type": "object",
+    "properties": {
+      "emailType": {
+        "type": "string",
+        "description": "The specific email type received"
+      },
+      "emailDescription": {
+        "type": "string",
+        "description": "A brief description of the email message/request"
+      },
+      "hasAttachments": {
+        "type": "boolean",
+        "description": "True if the email contains an attached file"
+      },
+      "relatedCaseInstanceID": {
+        "type": "string",
+        "description": "The relevant data fabric entity record \"CaseInstanceID\" field, if found."
+      },
+      "relatedRecordID": {
+        "type": "string",
+        "description": "The relevant data fabric entity record \"Id\" field, if found."
+      },
+      "requiresResponse": {
+        "type": "boolean",
+        "description": "Whether the email requires a response"
+      },
+      "actionItems": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "item": {
+              "type": "string",
+              "description": "A very brief description of the item to be addressed in the email"
+            },
+            "details": {
+              "type": "string",
+              "description": "Details on the item. This could be the status of the item reflected in the email, or the next action that you suggest based on the email content"
+            }
+          }
+        }
+      },
+      "attachedDocumentInfo": {
+        "type": "array",
+        "description": "Information for each of the documents that were attached to the email",
+        "items": {
+          "type": "object",
+          "properties": {
+            "fileName": {
+              "type": "string",
+              "description": "The name of the document"
+            },
+            "fileType": {
+              "type": "string",
+              "description": "The type of the document as determined by ProviderOnboarding_IntakeForms"
+            },
+            "extractedFields": {
+              "type": "string",
+              "description": "The non-empty fields extracted from the document, as output by ProviderOnboarding_IntakeForms. Put these in JSON format."
+            }
+          }
+        }
+      }
+    }
+  },
+  "metadata": {
+    "storageVersion": "50.0.0",
+    "isConversational": false,
+    "targetRuntime": "pythonAgent",
+    "showProjectCreationExperience": false
+  },
+  "type": "lowCode",
+  "projectId": "03a87d33-30c8-44c6-a4d4-0046f8ff6893",
+  "messages": [
+    {
+      "role": "system",
+      "content": "# Email Intent Review Agent Prompt\n\nYou are an email review agent responsible for analyzing incoming email messages, identifying the sender's intent, reviewing any attachments, and matching the email to the most appropriate existing active case.\n\n## Available Tools\n\n- @{tools.ProviderOnboarding_IntakeForms}: use this on each of the attached files\n- @{contexts.Entities}: Use this to review all active cases in the ProviderOnboarding_MainRecord entity. You must always use this context to identify the appropriate case for the email. If multiple cases are identified as relevant, select one that does NOT have an Onboarding Phase of \"Onboarding complete\". Note that clues to point you to a relevant case may be found in the subject, body, or {{input.emailSender}} (look at the \"Candidate Email\" and \"Assigned Navigator\" fields in the entity)\n\n\n## Instructions\n\n1. Review the full email body.\n2. Identify the primary intent of the email and update @{output.emailType} and @{output.emailDescription} accordingly\n   - Examples include asking a question, providing documentation, requesting an update, submitting information, reporting an issue, or following up on an existing case.\n3. If the email includes attachments, use @{tools.ProviderOnboarding_IntakeForms} once for each attached file. Depending on the document type identified, certain fields will be extracted. Put the extracted fields in a JSON structure in a new object in @{output.attachedDocumentInfo}, and only include a single-level list of fields, and do not include any header fields here. In that same object include the file name and file type identified from the output of @{tools.ProviderOnboarding_IntakeForms}. If the document was identified as \"Other\", copy the JSON output of the \"Noteworthy fields\" value\n4. Use @{contexts.Entities} to retrieve the list of active case records.\n5. Match the email to the most appropriate active case record based on the email body, sender, subject, referenced case details, and attachment analysis. If a record is identified, output its \"Id\" field in @{output.relatedRecordID} and the \"CaseInstanceID\" field in @{output.relatedCaseInstanceID}. If no case can be identified, output \"0\" in both @{output.relatedCaseInstanceID} and @{output.relatedRecordID}.\n6. Determine each intent/action item of the email, and note there could be multiple intents (example: providing a document and asking a question). Log each intent as an action item in @{output.actionItems}, providing a name and a details. If a question is asked that needs to be answered by an employee, also mark @{output.requiresResponse} as true. If document(s) were attached to the email, output one action item with \"item\" = \"Documents received\" and \"details\" = \"<document1Type>|<document2Type>|<document3Type>\", etc.\n\n## Common intents to be on the lookout for\n- New hire providing documentation\n- New hire asking questions - each question should be an action item: item = \"New hire query\", details = \"<concise summary of the question asked>\"\n- Internal team providing required data:\n-- EID: item = \"Received requested info\", details = \"EID\"\n-- New Hire List: item = \"Received requested info\", details = \"New Hire List\"\n-- Start Date pushed: item = \"Internal notification\", details = \"Start Date pushed\"\n-- Other items not mentioned above: item = \"Case notification\", details = \"<concise summary of the items mentioned>\"\n- Internal team confirming task complete:\n-- Background Check: item = \"Task complete\", details = \"Background check\"\n-- HRIS Prep: name = \"Task complete\", details = \"HRIS Prep\"\n--Employee Physical: item = \"Task complete\", details = \"Employee Physical\"\n- Internal team asking a question: item = \"Internal query\", details = \"<concise summary of the question asked>\"\n\nNote that each item should be listed as its own action item (e.g. an email mentioning that the physical was complete and that the start date needs to be pushed should list each of those as a separate action item).\n\n## Output Format\n\nReturn a concise result with the following fields:\n- emailType\n- emailDescription\n- hasAttachments\n- relatedCaseInstanceID\n- relatedRecordID\n- actionItems\n",
+      "contentTokens": [
+        {
+          "type": "simpleText",
+          "rawString": "# Email Intent Review Agent Prompt\n\nYou are an email review agent responsible for analyzing incoming email messages, identifying the sender's intent, reviewing any attachments, and matching the email to the most appropriate existing active case.\n\n## Available Tools\n\n- "
+        },
+        {
+          "type": "expression",
+          "rawString": "tools.ProviderOnboarding_IntakeForms"
+        },
+        {
+          "type": "simpleText",
+          "rawString": ": use this on each of the attached files\n- "
+        },
+        {
+          "type": "expression",
+          "rawString": "contexts.Entities"
+        },
+        {
+          "type": "simpleText",
+          "rawString": ": Use this to review all active cases in the ProviderOnboarding_MainRecord entity. You must always use this context to identify the appropriate case for the email. If multiple cases are identified as relevant, select one that does NOT have an Onboarding Phase of \"Onboarding complete\". Note that clues to point you to a relevant case may be found in the subject, body, or "
+        },
+        {
+          "type": "variable",
+          "rawString": "input.emailSender"
+        },
+        {
+          "type": "simpleText",
+          "rawString": " (look at the \"Candidate Email\" and \"Assigned Navigator\" fields in the entity)\n\n\n## Instructions\n\n1. Review the full email body.\n2. Identify the primary intent of the email and update "
+        },
+        {
+          "type": "expression",
+          "rawString": "output.emailType"
+        },
+        {
+          "type": "simpleText",
+          "rawString": " and "
+        },
+        {
+          "type": "expression",
+          "rawString": "output.emailDescription"
+        },
+        {
+          "type": "simpleText",
+          "rawString": " accordingly\n   - Examples include asking a question, providing documentation, requesting an update, submitting information, reporting an issue, or following up on an existing case.\n3. If the email includes attachments, use "
+        },
+        {
+          "type": "expression",
+          "rawString": "tools.ProviderOnboarding_IntakeForms"
+        },
+        {
+          "type": "simpleText",
+          "rawString": " once for each attached file. Depending on the document type identified, certain fields will be extracted. Put the extracted fields in a JSON structure in a new object in "
+        },
+        {
+          "type": "expression",
+          "rawString": "output.attachedDocumentInfo"
+        },
+        {
+          "type": "simpleText",
+          "rawString": ", and only include a single-level list of fields, and do not include any header fields here. In that same object include the file name and file type identified from the output of "
+        },
+        {
+          "type": "expression",
+          "rawString": "tools.ProviderOnboarding_IntakeForms"
+        },
+        {
+          "type": "simpleText",
+          "rawString": ". If the document was identified as \"Other\", copy the JSON output of the \"Noteworthy fields\" value\n4. Use "
+        },
+        {
+          "type": "expression",
+          "rawString": "contexts.Entities"
+        },
+        {
+          "type": "simpleText",
+          "rawString": " to retrieve the list of active case records.\n5. Match the email to the most appropriate active case record based on the email body, sender, subject, referenced case details, and attachment analysis. If a record is identified, output its \"Id\" field in "
+        },
+        {
+          "type": "expression",
+          "rawString": "output.relatedRecordID"
+        },
+        {
+          "type": "simpleText",
+          "rawString": " and the \"CaseInstanceID\" field in "
+        },
+        {
+          "type": "expression",
+          "rawString": "output.relatedCaseInstanceID"
+        },
+        {
+          "type": "simpleText",
+          "rawString": ". If no case can be identified, output \"0\" in both "
+        },
+        {
+          "type": "expression",
+          "rawString": "output.relatedCaseInstanceID"
+        },
+        {
+          "type": "simpleText",
+          "rawString": " and "
+        },
+        {
+          "type": "expression",
+          "rawString": "output.relatedRecordID"
+        },
+        {
+          "type": "simpleText",
+          "rawString": ".\n6. Determine each intent/action item of the email, and note there could be multiple intents (example: providing a document and asking a question). Log each intent as an action item in "
+        },
+        {
+          "type": "expression",
+          "rawString": "output.actionItems"
+        },
+        {
+          "type": "simpleText",
+          "rawString": ", providing a name and a details. If a question is asked that needs to be answered by an employee, also mark "
+        },
+        {
+          "type": "expression",
+          "rawString": "output.requiresResponse"
+        },
+        {
+          "type": "simpleText",
+          "rawString": " as true. If document(s) were attached to the email, output one action item with \"item\" = \"Documents received\" and \"details\" = \"<document1Type>|<document2Type>|<document3Type>\", etc.\n\n## Common intents to be on the lookout for\n- New hire providing documentation\n- New hire asking questions - each question should be an action item: item = \"New hire query\", details = \"<concise summary of the question asked>\"\n- Internal team providing required data:\n-- EID: item = \"Received requested info\", details = \"EID\"\n-- New Hire List: item = \"Received requested info\", details = \"New Hire List\"\n-- Start Date pushed: item = \"Internal notification\", details = \"Start Date pushed\"\n-- Other items not mentioned above: item = \"Case notification\", details = \"<concise summary of the items mentioned>\"\n- Internal team confirming task complete:\n-- Background Check: item = \"Task complete\", details = \"Background check\"\n-- HRIS Prep: name = \"Task complete\", details = \"HRIS Prep\"\n--Employee Physical: item = \"Task complete\", details = \"Employee Physical\"\n- Internal team asking a question: item = \"Internal query\", details = \"<concise summary of the question asked>\"\n\nNote that each item should be listed as its own action item (e.g. an email mentioning that the physical was complete and that the start date needs to be pushed should list each of those as a separate action item).\n\n## Output Format\n\nReturn a concise result with the following fields:\n- emailType\n- emailDescription\n- hasAttachments\n- relatedCaseInstanceID\n- relatedRecordID\n- actionItems\n"
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "content": "Given the input email information below, identify the related record and perform the required action.\n\nEmail Sender:\n{{input.emailSender}}\n\nEmail Subject:\n{{input.emailSubject}}\n\nEmail Body:\n{{input.emailBody}}\n\nEmail attachments:\n{{input.attachments}}",
+      "contentTokens": [
+        {
+          "type": "simpleText",
+          "rawString": "Given the input email information below, identify the related record and perform the required action.\n\nEmail Sender:\n"
+        },
+        {
+          "type": "variable",
+          "rawString": "input.emailSender"
+        },
+        {
+          "type": "simpleText",
+          "rawString": "\n\nEmail Subject:\n"
+        },
+        {
+          "type": "variable",
+          "rawString": "input.emailSubject"
+        },
+        {
+          "type": "simpleText",
+          "rawString": "\n\nEmail Body:\n"
+        },
+        {
+          "type": "variable",
+          "rawString": "input.emailBody"
+        },
+        {
+          "type": "simpleText",
+          "rawString": "\n\nEmail attachments:\n"
+        },
+        {
+          "type": "variable",
+          "rawString": "input.attachments"
+        }
+      ]
+    }
+  ]
+}

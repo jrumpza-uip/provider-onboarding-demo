@@ -1,0 +1,6 @@
+{
+  "ProjectType": "Process",
+  "Name": "RPA - Log Activity",
+  "Description": null,
+  "MainFile": "Main.xaml"
+}

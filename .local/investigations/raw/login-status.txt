@@ -1,0 +1,9 @@
+{
+  "Result": "Success",
+  "Code": "LogIn",
+  "Data": {
+    "Status": "Expired",
+    "Organization": "N/A",
+    "Tenant": "N/A"
+  }
+}

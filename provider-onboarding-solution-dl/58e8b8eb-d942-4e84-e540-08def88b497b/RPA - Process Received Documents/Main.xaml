@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" this:Main.documentsReceived_Data="[new System.Object() {  }]" this:Main.documentsReceived_Files="[new UiPath.Platform.ResourceHandling.IResource() {  }]" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:uasc="clr-namespace:UiPath.Activities.System.Collections;assembly=UiPath.System.Activities" xmlns:ucas="clr-namespace:UiPath.Core.Activities.Storage;assembly=UiPath.System.Activities" xmlns:uda="clr-namespace:UiPath.DataService.Activities;assembly=UiPath.DataService.Activities.Core" xmlns:udacsdeb="clr-namespace:UiPath.DataService.Activities.Core.SWEntities.DataFabric.Entities.Bundle;assembly=DataFabric.Entities.lOeJf8fQzD1FGoJQNfZAB" xmlns:udam="clr-namespace:UiPath.DataService.Activities.Models;assembly=UiPath.DataService.Activities.Core" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:upr="clr-namespace:UiPath.Platform.ResourceHandling;assembly=UiPath.Platform" xmlns:uwavsdb="clr-namespace:UiPath.Web.Activities.ViewModels.SWEntities.DeserializeJSON05b29f.Bundle;assembly=DeserializeJSON05b29.3v3LD3kZKZL14hPYm2sQjgm1" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="recordId" Type="InArgument(s:Guid)" />
+    <x:Property Name="documentsReceived_Data" Type="InArgument(s:Object[])" />
+    <x:Property Name="documentsReceived_Files" Type="InArgument(upr:IResource[])" />
+  </x:Members>
+  <this:Main.recordId>
+    <InArgument x:TypeArguments="s:Guid" />
+  </this:Main.recordId>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="37">
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>UiPath.DataService.Activities</x:String>
+      <x:String>UiPath.DataService.Definition</x:String>
+      <x:String>UiPath.DataService.Activities.Models</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.Activities.System.Collections</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>UiPath.Core.Activities.Storage</x:String>
+      <x:String>UiPath.Core.Activities.Orchestrator</x:String>
+      <x:String>UiPath.Web.Activities.JSON.Models</x:String>
+      <x:String>Newtonsoft.Json.Linq</x:String>
+      <x:String>Newtonsoft.Json</x:String>
+      <x:String>System.Dynamic</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Collections.Specialized</x:String>
+      <x:String>UiPath.Web.Activities</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.DataService.Activities.Core.SWEntities.DataFabric.Entities.Bundle</x:String>
+      <x:String>UiPath.Web.Activities.ViewModels.SWEntities.DeserializeJSONd4a2e7.Bundle</x:String>
+      <x:String>UiPath.Web.Activities.ViewModels.SWEntities.DeserializeJSON05b29f.Bundle</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="29">
+      <AssemblyReference>DeserializeJSON05b29.3v3LD3kZKZL14hPYm2sQjgm1</AssemblyReference>
+      <AssemblyReference>DeserializeJSONd4a2e.rl1MgDOzdS149y0Q2fA2hQ3</AssemblyReference>
+      <AssemblyReference>DataFabric.Entities.lOeJf8fQzD1FGoJQNfZAB</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Net.Primitives</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>Newtonsoft.Json</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Runtime</AssemblyReference>
+      <AssemblyReference>netstandard</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>UiPath.DataService.Activities.Core</AssemblyReference>
+      <AssemblyReference>UiPath.DataService.Definition</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
+      <AssemblyReference>System.Reflection.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.DataService.Core</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Annotations</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap:VirtualizedContainerService.HintSize="356,732" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="scg:List(udacsdeb:ProviderOnboardingDocuments_5fee0d3d_4b90_f111_b337_000d3ab0e5e5)" Default="[new list(of ProviderOnboardingDocuments_5fee0d3d_4b90_f111_b337_000d3ab0e5e5)]" Name="newDocumentRecords" />
+      <Variable x:TypeArguments="uwavsdb:DeserializeJSON05b29f" Default="[new UiPath.Web.Activities.ViewModels.SWEntities.DeserializeJSON05b29f.Bundle.DeserializeJSON05b29f]" Name="jsonObject" />
+      <Variable x:TypeArguments="udacsdeb:ProviderOnboardingDocuments_5fee0d3d_4b90_f111_b337_000d3ab0e5e5" Name="documentRecordItem" />
+      <Variable x:TypeArguments="scg:List(x:String)" Default="[new System.Collections.Generic.List(Of System.String) From {  }]" Name="receivedDocumentTypes" />
+      <Variable x:TypeArguments="udacsdeb:ProviderOnboardingMainRecord_a7063ae3_cd7f_f111_b337_000d3ab0e5e5" Default="[new UiPath.DataService.Activities.Core.SWEntities.DataFabric.Entities.Bundle.ProviderOnboardingMainRecord_a7063ae3_cd7f_f111_b337_000d3ab0e5e5]" Name="mainRecord">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:String x:Key="SourceIdRef">GetEntityRecordById`1_1</x:String>
+            <x:String x:Key="SourcePropertyName">OutputEntity</x:String>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </Variable>
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:ManualTrigger Result="{x:Null}" DisplayName="Manual Trigger" sap2010:WorkflowViewState.IdRef="ManualTrigger_1" />
+    <If Condition="[Not If(documentsReceived_Files Is Nothing, True, Not documentsReceived_Files.Any)]" DisplayName="If email contained documents" sap2010:WorkflowViewState.IdRef="If_1">
+      <If.Then>
+        <Sequence sap2010:WorkflowViewState.IdRef="Sequence_5">
+          <uda:GetEntityRecordById x:TypeArguments="udacsdeb:ProviderOnboardingMainRecord_a7063ae3_cd7f_f111_b337_000d3ab0e5e5" sap:WorkflowViewStateService.ViewState="{x:Null}" ContinueOnError="False" DisplayName="Load Main Record" EntityId="a7063ae3-cd7f-f111-b337-000d3ab0e5e5" ExpansionDepth="2" sap2010:WorkflowViewState.IdRef="GetEntityRecordById`1_1" OutputEntity="[mainRecord]" RecordId="[recordId]" ScopeValue="Folder" SolutionEntityKey="a7063ae3-cd7f-f111-b337-000d3ab0e5e5" SolutionEntityName="ProviderOnboardingMainRecord" TimeoutInMs="30000" />
+          <Sequence DisplayName="Upload received documents" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each currentItem" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[documentsReceived_Data]">
+              <ui:ForEach.Body>
+                <ActivityAction x:TypeArguments="x:Object">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="x:Object" Name="currentItem" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                    <ui:DeserializeJson x:TypeArguments="uwavsdb:DeserializeJSON05b29f" Settings="{x:Null}" sap:WorkflowViewStateService.ViewState="{x:Null}" DisplayName="Deserialize JSON" sap2010:WorkflowViewState.IdRef="DeserializeJson`1_1" JsonObject="[jsonObject]" JsonSample="{}{&#xA;          &quot;fileName&quot;: &quot;test1&quot;,&#xA;          &quot;fileType&quot;: &quot;test2&quot;,&#xA;          &quot;extractedFields&quot;: &quot;{\&quot;Medical School\&quot;:\&quot;Sample Northeast College of Medicine\&quot;,\&quot;Residency\&quot;:\&quot;Harborview Example Medical Center - Emergency Medicine\&quot;,\&quot;Board Certification\&quot;:\&quot;American Board of Emergency Medicine - Board Certified\&quot;,\&quot;NPI\&quot;:\&quot;1888888888\&quot;,\&quot;Emergency Contact Name\&quot;:\&quot;Jordan Ellis\&quot;,\&quot;Emergeny Contact Relationship\&quot;:\&quot;Spouse\&quot;,\&quot;Emergeny Contact Number\&quot;:\&quot;(609) 555-0183\&quot;}&quot;&#xA;        }" JsonString="[currentItem.ToString()]" />
+                    <ucas:UploadStorageFile Path="{x:Null}" TimeoutMS="{x:Null}" Destination="[recordId.ToString() + &quot;/&quot;]" DisplayName="Upload Storage File" FileName="[jsonObject.fileName]" FileResource="[documentsReceived_Files.FirstOrDefault(Function(file) file.FullName = jsonObject.fileName)]" sap2010:WorkflowViewState.IdRef="UploadStorageFile_1" StorageBucketName="ProviderOnboarding_Documentation" />
+                    <ui:LogMessage DisplayName="Log Message" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;File uploaded to Storage Bucket with path: &quot; + recordId.ToString() + &quot;/&quot; + jsonObject.fileName]" />
+                    <Assign DisplayName="Prepare new Entity row" sap2010:WorkflowViewState.IdRef="Assign_5">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="udacsdeb:ProviderOnboardingDocuments_5fee0d3d_4b90_f111_b337_000d3ab0e5e5">[documentRecordItem]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="udacsdeb:ProviderOnboardingDocuments_5fee0d3d_4b90_f111_b337_000d3ab0e5e5">[new UiPath.DataService.Activities.Core.SWEntities.DataFabric.Entities.Bundle.ProviderOnboardingDocuments_5fee0d3d_4b90_f111_b337_000d3ab0e5e5]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <Assign DisplayName="Assign File Name" sap2010:WorkflowViewState.IdRef="Assign_1">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:String">[documentRecordItem.SourceFileName]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:String">[jsonObject.fileName]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <Assign DisplayName="Assign File Type" sap2010:WorkflowViewState.IdRef="Assign_2">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:String">[documentRecordItem.DocumentType]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:String">[jsonObject.fileType]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <Assign DisplayName="Assign Document Status" sap2010:WorkflowViewState.IdRef="Assign_3">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:String">[documentRecordItem.DocumentStatus]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:String">Received</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <Assign DisplayName="Assign Received Date" sap2010:WorkflowViewState.IdRef="Assign_4">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="s:DateTimeOffset">[documentRecordItem.ReceivedDate]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="s:DateTimeOffset">[DateTime.Now]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <Assign DisplayName="Assign Main Record ID" sap2010:WorkflowViewState.IdRef="Assign_6">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:String">[documentRecordItem.MainRecordID]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:String">[recordId.ToString()]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <Assign DisplayName="Assign Case Instance ID" sap2010:WorkflowViewState.IdRef="Assign_7">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:String">[documentRecordItem.CaseInstanceID]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:String">[mainRecord.CaseReferenceID]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <Assign DisplayName="Assign Storage Bucket Path" sap2010:WorkflowViewState.IdRef="Assign_8">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:String">[documentRecordItem.StorageBucketPath]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:String">[recordId.ToString() + "/" + jsonObject.fileName]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <AddToCollection x:TypeArguments="udacsdeb:ProviderOnboardingDocuments_5fee0d3d_4b90_f111_b337_000d3ab0e5e5" sap:WorkflowViewStateService.ViewState="{x:Null}" Collection="[newDocumentRecords]" DisplayName="Add To bulk Entity Record creation" sap2010:WorkflowViewState.IdRef="AddToCollection`1_1" Item="[documentRecordItem]" />
+                    <uasc:AppendItemToCollection x:TypeArguments="x:String" sap:WorkflowViewStateService.ViewState="{x:Null}" Collection="[receivedDocumentTypes]" DisplayName="Add To Received Document Type List" sap2010:WorkflowViewState.IdRef="AppendItemToCollection`1_1">
+                      <uasc:AppendItemToCollection.Items>
+                        <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
+                          <InArgument x:TypeArguments="x:String">[jsonObject.fileType]</InArgument>
+                        </scg:List>
+                      </uasc:AppendItemToCollection.Items>
+                    </uasc:AppendItemToCollection>
+                  </Sequence>
+                </ActivityAction>
+              </ui:ForEach.Body>
+            </ui:ForEach>
+            <uda:CreateMultipleEntityRecords x:TypeArguments="udacsdeb:ProviderOnboardingDocuments_5fee0d3d_4b90_f111_b337_000d3ab0e5e5" FailedRecords="{x:Null}" OutputRecords="{x:Null}" sap:WorkflowViewStateService.ViewState="{x:Null}" ContinueBatchOnFailure="True" ContinueOnError="False" DisplayName="Create Multiple Entity Records" EntityId="5fee0d3d-4b90-f111-b337-000d3ab0e5e5" ExpansionDepth="2" sap2010:WorkflowViewState.IdRef="CreateMultipleEntityRecords`1_1" InputRecords="[newDocumentRecords]" ScopeValue="Folder" SolutionEntityKey="5fee0d3d-4b90-f111-b337-000d3ab0e5e5" SolutionEntityName="ProviderOnboardingDocuments" TimeoutInMs="30000" />
+            <ui:LogMessage DisplayName="Log Message 1" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Files added to document tracker entity&quot;]" />
+          </Sequence>
+        </Sequence>
+      </If.Then>
+      <If.Else>
+        <Sequence sap2010:WorkflowViewState.IdRef="Sequence_6">
+          <ui:LogMessage DisplayName="Log Message 2" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Email did not contain any documents&quot;]" />
+        </Sequence>
+      </If.Else>
+    </If>
+    <Sequence DisplayName="Update Main Record" sap2010:WorkflowViewState.IdRef="Sequence_4">
+      <uda:UpdateEntityRecord x:TypeArguments="udacsdeb:ProviderOnboardingMainRecord_a7063ae3_cd7f_f111_b337_000d3ab0e5e5" InputEntity="{x:Null}" IsInRecordView="{x:Null}" OutputEntity="{x:Null}" Version="{x:Null}" sap:WorkflowViewStateService.ViewState="{x:Null}" VisibleDynamicPropertiesInfo="{x:Null}" ContinueOnError="False" DisplayName="Update Entity Record" EntityId="a7063ae3-cd7f-f111-b337-000d3ab0e5e5" ExpansionDepth="2" sap2010:WorkflowViewState.IdRef="UpdateEntityRecord`1_1" InputEntityInFieldView="[new UiPath.DataService.Activities.Core.SWEntities.DataFabric.Entities.Bundle.ProviderOnboardingMainRecord_a7063ae3_cd7f_f111_b337_000d3ab0e5e5() With {  .ReceivedCredentialList = If(receivedDocumentTypes.Contains(&quot;Credential List&quot;), True, mainRecord.ReceivedCredentialList),  .ReceivedCV = If(receivedDocumentTypes.Contains(&quot;CV&quot;), True, mainRecord.ReceivedCV),  .ReceivedHeadshot = If(receivedDocumentTypes.Contains(&quot;Headshot&quot;), True, mainRecord.ReceivedHeadshot),  .ReceivedI9 = If(receivedDocumentTypes.Contains(&quot;I9&quot;), True, mainRecord.ReceivedI9),  .ReceivedID = If(receivedDocumentTypes.Contains(&quot;ID&quot;), True, mainRecord.ReceivedID),  .ReceivedLicense = If(receivedDocumentTypes.Contains(&quot;NJ License, CDS, DEA&quot;), True, mainRecord.ReceivedLicense),  .ReceivedNewHireList = If(receivedDocumentTypes.Contains(&quot;New Hire List&quot;), True, mainRecord.ReceivedNewHireList),  .ReceivedNHP = If(receivedDocumentTypes.Contains(&quot;New Hire Paperwork&quot;), True, mainRecord.ReceivedNHP),  .ReceivedScreening = If(receivedDocumentTypes.Contains(&quot;DCA, OIG, Debarment&quot;), True, mainRecord.ReceivedScreening), .Id = recordId }]" RecordId="[recordId]" ScopeValue="Folder" SolutionEntityKey="a7063ae3-cd7f-f111-b337-000d3ab0e5e5" SolutionEntityName="ProviderOnboardingMainRecord" TimeoutInMs="30000">
+        <uda:UpdateEntityRecord.State>
+          <udam:RecordState>
+            <udam:RecordState.SelectedFields>
+              <scg:List x:TypeArguments="udam:DynamicEntityField" Capacity="9">
+                <udam:DynamicEntityField Id="c4063ae3-cd7f-f111-b337-000d3ab0e5e5" Name="ReceivedCredentialList">
+                  <udam:DynamicEntityField.ArgumentValue>
+                    <InArgument x:TypeArguments="x:Boolean">[If(receivedDocumentTypes.Contains("Credential List"), True, mainRecord.ReceivedCredentialList)]</InArgument>
+                  </udam:DynamicEntityField.ArgumentValue>
+                </udam:DynamicEntityField>
+                <udam:DynamicEntityField Id="c5063ae3-cd7f-f111-b337-000d3ab0e5e5" Name="ReceivedCV">
+                  <udam:DynamicEntityField.ArgumentValue>
+                    <InArgument x:TypeArguments="x:Boolean">[If(receivedDocumentTypes.Contains("CV"), True, mainRecord.ReceivedCV)]</InArgument>
+                  </udam:DynamicEntityField.ArgumentValue>
+                </udam:DynamicEntityField>
+                <udam:DynamicEntityField Id="c6063ae3-cd7f-f111-b337-000d3ab0e5e5" Name="ReceivedHeadshot">
+                  <udam:DynamicEntityField.ArgumentValue>
+                    <InArgument x:TypeArguments="x:Boolean">[If(receivedDocumentTypes.Contains("Headshot"), True, mainRecord.ReceivedHeadshot)]</InArgument>
+                  </udam:DynamicEntityField.ArgumentValue>
+                </udam:DynamicEntityField>
+                <udam:DynamicEntityField Id="c1063ae3-cd7f-f111-b337-000d3ab0e5e5" Name="ReceivedI9">
+                  <udam:DynamicEntityField.ArgumentValue>
+                    <InArgument x:TypeArguments="x:Boolean">[If(receivedDocumentTypes.Contains("I9"), True, mainRecord.ReceivedI9)]</InArgument>
+                  </udam:DynamicEntityField.ArgumentValue>
+                </udam:DynamicEntityField>
+                <udam:DynamicEntityField Id="c7063ae3-cd7f-f111-b337-000d3ab0e5e5" Name="ReceivedID">
+                  <udam:DynamicEntityField.ArgumentValue>
+                    <InArgument x:TypeArguments="x:Boolean">[If(receivedDocumentTypes.Contains("ID"), True, mainRecord.ReceivedID)]</InArgument>
+                  </udam:DynamicEntityField.ArgumentValue>
+                </udam:DynamicEntityField>
+                <udam:DynamicEntityField Id="c3063ae3-cd7f-f111-b337-000d3ab0e5e5" Name="ReceivedLicense">
+                  <udam:DynamicEntityField.ArgumentValue>
+                    <InArgument x:TypeArguments="x:Boolean">[If(receivedDocumentTypes.Contains("NJ License, CDS, DEA"), True, mainRecord.ReceivedLicense)]</InArgument>
+                  </udam:DynamicEntityField.ArgumentValue>
+                </udam:DynamicEntityField>
+                <udam:DynamicEntityField Id="c9063ae3-cd7f-f111-b337-000d3ab0e5e5" Name="ReceivedNewHireList">
+                  <udam:DynamicEntityField.ArgumentValue>
+                    <InArgument x:TypeArguments="x:Boolean">[If(receivedDocumentTypes.Contains("New Hire List"), True, mainRecord.ReceivedNewHireList)]</InArgument>
+                  </udam:DynamicEntityField.ArgumentValue>
+                </udam:DynamicEntityField>
+                <udam:DynamicEntityField Id="c0063ae3-cd7f-f111-b337-000d3ab0e5e5" Name="ReceivedNHP">
+                  <udam:DynamicEntityField.ArgumentValue>
+                    <InArgument x:TypeArguments="x:Boolean">[If(receivedDocumentTypes.Contains("New Hire Paperwork"), True, mainRecord.ReceivedNHP)]</InArgument>
+                  </udam:DynamicEntityField.ArgumentValue>
+                </udam:DynamicEntityField>
+                <udam:DynamicEntityField Id="c2063ae3-cd7f-f111-b337-000d3ab0e5e5" Name="ReceivedScreening">
+                  <udam:DynamicEntityField.ArgumentValue>
+                    <InArgument x:TypeArguments="x:Boolean">[If(receivedDocumentTypes.Contains("DCA, OIG, Debarment"), True, mainRecord.ReceivedScreening)]</InArgument>
+                  </udam:DynamicEntityField.ArgumentValue>
+                </udam:DynamicEntityField>
+              </scg:List>
+            </udam:RecordState.SelectedFields>
+          </udam:RecordState>
+        </uda:UpdateEntityRecord.State>
+      </uda:UpdateEntityRecord>
+    </Sequence>
+  </Sequence>
+</Activity>

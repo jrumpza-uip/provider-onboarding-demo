@@ -1,0 +1,29 @@
+{
+  "docVersion": "1.0.0",
+  "resource": {
+    "name": "joseph.rumpza@uipath.com",
+    "kind": "connection",
+    "type": "uipath-microsoft-outlook365",
+    "apiVersion": "integrationservice.uipath.com/v1",
+    "isOverridable": true,
+    "dependencies": [],
+    "runtimeDependencies": [],
+    "files": [],
+    "folders": [
+      {
+        "fullyQualifiedName": "solution_folder"
+      }
+    ],
+    "spec": {
+      "connectorName": "Microsoft Outlook 365",
+      "name": "joseph.rumpza@uipath.com",
+      "description": null,
+      "authenticationType": "AuthenticateAfterDeployment",
+      "connectorVersion": "1.42.1",
+      "connectorKey": "uipath-microsoft-outlook365",
+      "pollingInterval": 5
+    },
+    "locks": [],
+    "key": "36e7d52f-b038-4898-8d71-db84048d3eb7"
+  }
+}

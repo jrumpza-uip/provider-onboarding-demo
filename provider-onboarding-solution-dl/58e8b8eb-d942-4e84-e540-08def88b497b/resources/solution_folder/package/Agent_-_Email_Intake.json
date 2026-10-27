@@ -1,0 +1,26 @@
+{
+  "docVersion": "1.0.0",
+  "resource": {
+    "name": "Agent - Email Intake",
+    "kind": "package",
+    "apiVersion": "orchestrator.uipath.com/v1",
+    "projectKey": "8ff445d4-23b9-4fd8-a0b1-043f638ae85b",
+    "isOverridable": true,
+    "dependencies": [],
+    "runtimeDependencies": [],
+    "files": [],
+    "folders": [
+      {
+        "fullyQualifiedName": "solution_folder"
+      }
+    ],
+    "spec": {
+      "fileName": null,
+      "fileReference": null,
+      "name": "Agent - Email Intake",
+      "description": null
+    },
+    "locks": [],
+    "key": "c3013d82-d3b7-4cfc-a42b-913df6432940"
+  }
+}

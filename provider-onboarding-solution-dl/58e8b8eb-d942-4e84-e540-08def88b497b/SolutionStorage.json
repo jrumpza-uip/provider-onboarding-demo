@@ -1,0 +1,29 @@
+{
+  "SolutionId": "58e8b8eb-d942-4e84-e540-08def88b497b",
+  "Projects": [
+    {
+      "ProjectId": "03a87d33-30c8-44c6-a4d4-0046f8ff6893",
+      "ProjectRelativePath": "Agent - Email Intake/project.uiproj"
+    },
+    {
+      "ProjectId": "b804659c-847b-4d40-8fa1-0a80924a27c6",
+      "ProjectRelativePath": "Agent - Onboarding Status/project.uiproj"
+    },
+    {
+      "ProjectId": "80312c24-0f8b-4347-b00a-2ec644172225",
+      "ProjectRelativePath": "RPA - Process Received Documents/project.uiproj"
+    },
+    {
+      "ProjectId": "c623d4d3-b906-4fe4-8bbc-d8a06b9550ad",
+      "ProjectRelativePath": "RPA - Log Activity/project.uiproj"
+    },
+    {
+      "ProjectId": "7eae4095-4b4c-42b9-b1ca-ee9afc5f01a0",
+      "ProjectRelativePath": "RPA - Process Incoming Email/project.uiproj"
+    },
+    {
+      "ProjectId": "3ad5575c-6a8e-40aa-99e5-f0b2838033ba",
+      "ProjectRelativePath": "Email Test/project.uiproj"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "docVersion": "1.0.0",
+  "resource": {
+    "name": "ProviderOnboarding_Documentation",
+    "kind": "bucket",
+    "type": "orchestratorBucket",
+    "apiVersion": "orchestrator.uipath.com/v1",
+    "isOverridable": true,
+    "dependencies": [],
+    "runtimeDependencies": [],
+    "files": [],
+    "folders": [
+      {
+        "fullyQualifiedName": "solution_folder"
+      }
+    ],
+    "spec": {
+      "type": "Orchestrator",
+      "name": "ProviderOnboarding_Documentation",
+      "description": null,
+      "options": null,
+      "tags": []
+    },
+    "locks": [],
+    "key": "84b3024e-2b14-4375-a392-5f105230f576"
+  }
+}

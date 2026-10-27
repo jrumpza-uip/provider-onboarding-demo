@@ -1,0 +1,25 @@
+{
+  "$resourceType": "context",
+  "id": "0aba68f5-5941-49db-af71-74ab2f3d88cc",
+  "referenceKey": "343e0fec-ca0d-4090-dd43-08def7f33996",
+  "name": "ProviderOnboarding_InternalProceduresIndex",
+  "description": "Find the relevant internal team and contact information for whom needs to be reached for follow-up items",
+  "contextType": "index",
+  "folderPath": "solution_folder",
+  "indexName": "ProviderOnboarding_InternalProceduresIndex",
+  "settings": {
+    "query": {
+      "description": "The query for the Semantic strategy.",
+      "variant": "dynamic"
+    },
+    "threshold": 0,
+    "resultCount": 3,
+    "retrievalMode": "semantic",
+    "folderPathPrefix": {
+      "variant": "static"
+    },
+    "fileExtension": {
+      "value": "All"
+    }
+  }
+}

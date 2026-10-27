@@ -1,0 +1,26 @@
+{
+  "docVersion": "1.0.0",
+  "resource": {
+    "name": "Agent - Onboarding Status",
+    "kind": "package",
+    "apiVersion": "orchestrator.uipath.com/v1",
+    "projectKey": "077b1ac3-4c07-4b65-a6b8-3c863659f0ba",
+    "isOverridable": true,
+    "dependencies": [],
+    "runtimeDependencies": [],
+    "files": [],
+    "folders": [
+      {
+        "fullyQualifiedName": "solution_folder"
+      }
+    ],
+    "spec": {
+      "fileName": null,
+      "fileReference": null,
+      "name": "Agent - Onboarding Status",
+      "description": null
+    },
+    "locks": [],
+    "key": "d8b3a306-fc45-448f-b6d0-700bb8ab12a6"
+  }
+}
